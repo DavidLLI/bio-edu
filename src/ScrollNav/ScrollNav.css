@@ -1,0 +1,33 @@
+.scroll-general {
+
+}
+
+.scroll-general:hover {
+	text-shadow: 1px  1px     #FFFF66, 
+    			-1px  1px     #FFFF66, 
+    			 1px -1px     #FFFF66, 
+    			-1px -1px     #FFFF66,
+     			 1px  1px 5px #555;
+}
+
+.scroll-focus {
+	font-size: 100px;
+}
+
+.scroll-1off {
+	font-size: 60px;
+}
+
+.scroll-2off {
+	font-size: 40px;
+}
+
+.scroll-unfocus {
+	font-size: 30px;
+}
+
+ul {
+	list-style-type: none;
+	display: block;
+	text-align: left;
+}
