@@ -1,9 +1,15 @@
 .scroll-nav {
-  
+  width: 30%;
+}
+
+.interface-page {
+  width: 70%;
+  background-color: #DDA0DD;
 }
 
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: horizontal;
 }
 
 .App-logo {

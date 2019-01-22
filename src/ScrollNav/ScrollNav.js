@@ -27,6 +27,7 @@ class ScrollNav extends Component {
 
 	handleClick(e, index) {
 		this.setState({focus: index});
+		this.props.onPageChange(index);
 	}
 
   render() {
