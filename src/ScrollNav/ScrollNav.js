@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import _ from 'lodash';
+
+import { changeFocus, changePage } from '../actions/ScrollbarAction';
+import store from "../stores/rootStore";
 
 import './ScrollNav.css';
 
 class ScrollNav extends Component {
 	constructor(props) {
 		super(props);
+		let pageArr = _.range(1, this.props.pageSubtitles.length + 1);
 		this.state = {
-			'pageArr': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-			'focus': 0
+			'pageArr': pageArr
 		};
 
 		this.handleWheel = this.handleWheel.bind(this);
@@ -15,20 +20,20 @@ class ScrollNav extends Component {
 	}
 
 	handleWheel(e) {
-		let focusAfter = this.state.focus + (e.deltaY / 200);
-		if (focusAfter > 9) {
-			focusAfter = 9;
+		let focusAfter = store.getState().focus + (e.deltaY / 200);
+		if (focusAfter > this.props.pageSubtitles.length - 1) {
+			focusAfter = this.props.pageSubtitles.length - 1;
 		}
 		if (focusAfter < 0) {
 			focusAfter = 0;
 		}
-		this.setState({focus: focusAfter});
+		store.dispatch(changeFocus(focusAfter));
 		e.preventDefault();
 	}
 
 	handleClick(e, index) {
-		this.setState({focus: index});
-		this.props.onPageChange(index);
+		store.dispatch(changeFocus(index));
+		store.dispatch(changePage(index));
 	}
 
 	calculateFontSize(index, focus) {
@@ -50,26 +55,37 @@ class ScrollNav extends Component {
       <div onWheel={this.handleWheel} 
       		className="ScrollNav">
       	<label className='pointer'>
-      		-----------------
+      		-----------------------------------
       	</label>
       	<ul>
 	        {this.state.pageArr.map((page, index) => {
-	        	let fontSize = this.calculateFontSize(index, this.state.focus);
+	        	let fontSize = this.calculateFontSize(index, store.getState().focus);
 	        	let opacity = Math.max(0, (fontSize - 40)) / 60;
-	        	let ulPosition = -100 * (this.state.focus - index);
-	        	if (index < this.state.focus) {
-	        		ulPosition = -65 * (this.state.focus - index);
+	        	let ulPosition = -100 * (store.getState().focus - index);
+	        	if (index < store.getState().focus) {
+	        		ulPosition = -65 * (store.getState().focus - index);
 	        	}
 	        	let selected = '';
 
-	        	if (this.props.currentPage === index) {
+	        	if (store.getState().currentPage === index) {
 	        		selected = ' nav-selected';
 	        	}
 	        	return (
 	        		<li key={index} 
 	        			className={'scroll-general' + selected}
-	        			style={{fontSize: fontSize, opacity: opacity, top: ulPosition}}
-	        			onClick={(e) => this.handleClick(e, index)}>{page}</li>
+	        			style={{opacity: opacity}}
+	        			onClick={(e) => this.handleClick(e, index)}>
+	        			<div className='scroll-item'>
+		        			<label className='page-number'
+		        					style={{fontSize: fontSize, top: ulPosition}}>
+		        				{page}
+		        			</label>
+		        			<label className='page-subtitle'
+		        					style={{fontSize: fontSize * 0.5, top: ulPosition + fontSize * 0.4}}>
+		        				{this.props.pageSubtitles[index]}
+		        			</label>
+	        			</div>
+	        		</li>
 	        	);
 	        })}
         </ul>
@@ -78,4 +94,23 @@ class ScrollNav extends Component {
   }
 }
 
-export default ScrollNav;
+const mapStateToProps = state => {
+  return {
+    focus: state.focus
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    changeFocus: focus => {
+      dispatch(changeFocus(focus))
+    }
+  }
+}
+
+const VisibleScrollNav = connect(
+  	mapStateToProps,
+  	mapDispatchToProps
+)(ScrollNav);
+
+export default VisibleScrollNav;

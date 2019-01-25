@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import store from '../stores/rootStore';
 
 import './InteractivePage.css';
 
@@ -12,7 +14,7 @@ class InteractivePage extends Component {
   render() {
     return (
       <div className="interactive-page">
-        {'Interface ' + (this.props.currentPage)}
+        {'Interface ' + (store.getState().currentPage + 1)}
         <div className='hint-button'>
         	<Circle className='svg-hint-button'/>
         </div>
@@ -21,6 +23,12 @@ class InteractivePage extends Component {
   }
 }
 
-export default InteractivePage;
+const mapStateToProps = state => {
+  return {
+    currentPage: state.currentPage
+  }
+}
+
+export default connect(mapStateToProps)(InteractivePage);
 
 
