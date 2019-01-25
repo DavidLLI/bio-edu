@@ -23,6 +23,7 @@ class ScrollNav extends Component {
 			focusAfter = 0;
 		}
 		this.setState({focus: focusAfter});
+		e.preventDefault();
 	}
 
 	handleClick(e, index) {
@@ -30,26 +31,63 @@ class ScrollNav extends Component {
 		this.props.onPageChange(index);
 	}
 
+	calculateFontSize(index, focus) {
+		let fontSize = 60 - 10 * Math.abs(focus - index);
+    	if (index <= Math.round(focus) + 1 &&
+    			index >= Math.round(focus) - 1) {
+    		fontSize = 100 - 30 * Math.abs(focus - index);
+    		if (index == 0) {
+    			console.log('+-1');
+	        	console.log(fontSize);
+	        }
+
+    	}
+    	else if (index <= Math.round(focus) + 2 &&
+    			index >= Math.round(focus) - 2) {
+    		fontSize = 85 - 20 * Math.abs(focus - index);
+    		if (index == 0) {
+    			console.log('+-2');
+	        	console.log(fontSize);
+	        }
+    	}
+    	else {
+    		if (index == 0) {
+    			console.log('else');
+	        	console.log(fontSize);
+	        }
+    	}
+    	fontSize = Math.max(fontSize, 0);
+    	return fontSize;
+	}
+
+	calculateLengthBeforePointer() {
+
+	}
+
   render() {
     return (
-      <div onWheel={this.handleWheel} className="ScrollNav">
+      <div onWheel={this.handleWheel} 
+      		className="ScrollNav">
+      	<label className='pointer'>
+      		-----------------
+      	</label>
       	<ul>
 	        {this.state.pageArr.map((page, index) => {
-	        	let style = 'scroll-unfocus';
-	        	if (index === Math.round(this.state.focus)) {
-	        		style = 'scroll-focus';
+	        	let fontSize = this.calculateFontSize(index, this.state.focus);
+	        	let opacity = Math.max(0, (fontSize - 40)) / 60;
+	        	let ulPosition = -100 * (this.state.focus - index);
+	        	if (index < this.state.focus) {
+	        		ulPosition = -65 * (this.state.focus - index);
 	        	}
-	        	else if (index === Math.round(this.state.focus) + 1 ||
-	        			index === Math.round(this.state.focus) - 1) {
-	        		style = 'scroll-1off';
-	        	}
-	        	else if (index === Math.round(this.state.focus) + 2 ||
-	        			index === Math.round(this.state.focus) - 2) {
-	        		style = 'scroll-2off';
+	        	let selected = '';
+
+	        	if (this.props.currentPage === index) {
+	        		selected = ' nav-selected';
 	        	}
 	        	return (
 	        		<li key={index} 
-	        			className={style + ' scroll-general'}
+	        			className={'scroll-general' + selected}
+	        			style={{fontSize: fontSize, opacity: opacity, top: ulPosition}}
 	        			onClick={(e) => this.handleClick(e, index)}>{page}</li>
 	        	);
 	        })}

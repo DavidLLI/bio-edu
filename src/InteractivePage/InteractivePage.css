@@ -1,0 +1,10 @@
+.interactive-page{
+	background-color: #DDA0DD;
+	height: 100%;
+}
+
+.svg-hint-button {
+	fill: #BA55D3;
+	stroke: #DA70D6;
+	stroke-width: 10px;
+}

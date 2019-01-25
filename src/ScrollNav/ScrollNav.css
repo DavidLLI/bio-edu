@@ -7,27 +7,40 @@
     			-1px  1px     #FFFF66, 
     			 1px -1px     #FFFF66, 
     			-1px -1px     #FFFF66,
+     			 1px  1px 5px #555; 
+}
+
+.ScrollNav {
+	position: absolute;
+	top: 200px;
+}
+
+.nav-selected {
+	text-shadow: 1px  1px     #32CD32, 
+    			-1px  1px     #32CD32, 
+    			 1px -1px     #32CD32, 
+    			-1px -1px     #32CD32,
      			 1px  1px 5px #555;
 }
 
-.scroll-focus {
-	font-size: 100px;
+.nav-selected:hover {
+	text-shadow: 1px  1px     #32CD32, 
+    			-1px  1px     #32CD32, 
+    			 1px -1px     #32CD32, 
+    			-1px -1px     #32CD32,
+     			 1px  1px 5px #555 !important;
 }
 
-.scroll-1off {
-	font-size: 60px;
+.pointer {
+	position: relative;
+	top: 50px;
 }
 
-.scroll-2off {
-	font-size: 40px;
-}
-
-.scroll-unfocus {
-	font-size: 30px;
+li {
+	position: absolute;
 }
 
 ul {
 	list-style-type: none;
-	display: block;
-	text-align: left;
+	height: 500px;
 }

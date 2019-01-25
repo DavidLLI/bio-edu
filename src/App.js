@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import ScrollNav from './ScrollNav/ScrollNav';
+import InteractivePage from './InteractivePage/InteractivePage';
 
 import './App.css';
 
@@ -23,10 +24,12 @@ class App extends Component {
       <div className="App">
         <div className="scroll-nav">
           <ScrollNav
+            currentPage={this.state.currentPage}
             onPageChange={this.handlePageChange} />
         </div>
         <div className="interface-page">
-          {'Interface ' + (this.state.currentPage + 1)}
+          <InteractivePage 
+            currentPage={this.state.currentPage + 1}/>
         </div>
       </div>
     );
