@@ -96,7 +96,8 @@ class ScrollNav extends Component {
 
 const mapStateToProps = state => {
   return {
-    focus: state.focus
+    focus: state.focus,
+    currentPage: state.currentPage
   }
 }
 
