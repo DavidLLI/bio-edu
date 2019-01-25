@@ -36,32 +36,13 @@ class ScrollNav extends Component {
     	if (index <= Math.round(focus) + 1 &&
     			index >= Math.round(focus) - 1) {
     		fontSize = 100 - 30 * Math.abs(focus - index);
-    		if (index == 0) {
-    			console.log('+-1');
-	        	console.log(fontSize);
-	        }
-
     	}
     	else if (index <= Math.round(focus) + 2 &&
     			index >= Math.round(focus) - 2) {
     		fontSize = 85 - 20 * Math.abs(focus - index);
-    		if (index == 0) {
-    			console.log('+-2');
-	        	console.log(fontSize);
-	        }
-    	}
-    	else {
-    		if (index == 0) {
-    			console.log('else');
-	        	console.log(fontSize);
-	        }
     	}
     	fontSize = Math.max(fontSize, 0);
     	return fontSize;
-	}
-
-	calculateLengthBeforePointer() {
-
 	}
 
   render() {
