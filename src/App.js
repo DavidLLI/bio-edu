@@ -30,6 +30,16 @@ class App extends Component {
   }
 
   render() {
+    let currentPage = store.getState().currentPage;
+
+    let backButtonDisable = '';
+    let nextButtonDisable = '';
+    if (currentPage === 0) {
+      backButtonDisable = ' disabled';
+    }
+    if (currentPage === this.state.pageSubtitles.length - 1) {
+      nextButtonDisable = ' disabled';
+    }
     return (
       <div className="App">
         <div className="scroll-nav">
@@ -39,13 +49,13 @@ class App extends Component {
         <div className='content-right'>
           <div className='navigation-buttons'>
             <div className='back-button'>
-              <BackButton className='back-button-svg' 
-                          onClick={() => this.changePage(store.getState().currentPage - 1)}/>
+              <BackButton className={'back-button-svg' + backButtonDisable} 
+                          onClick={() => this.changePage(currentPage - 1)}/>
             </div>
             <div className='between-button-blank' />
             <div className='next-button'>
-              <NextButton className='next-button-svg'
-                          onClick={() => this.changePage(store.getState().currentPage + 1)}/>
+              <NextButton className={'next-button-svg' + nextButtonDisable}
+                          onClick={() => this.changePage(currentPage + 1)}/>
             </div>
           </div>
           <div className="interface-page">
@@ -57,4 +67,10 @@ class App extends Component {
   }
 }
 
-export default connect()(App);
+const mapStateToProps = state => {
+  return {
+    currentPage: state.currentPage
+  }
+}
+
+export default connect(mapStateToProps)(App);

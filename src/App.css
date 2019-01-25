@@ -38,7 +38,13 @@
   fill: grey;
 }
 
+.disabled {
+  fill: #C0C0C0;
+}
 
+.disabled:hover {
+  fill: #C0C0C0 !important; 
+}
 
 
 
