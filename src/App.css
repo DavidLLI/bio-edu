@@ -14,7 +14,7 @@
 .navigation-buttons {
   display: flex;
   flex-direction: horizontal;
-  height: 50%;
+  height: 30%;
   margin: 20px;
 }
 
