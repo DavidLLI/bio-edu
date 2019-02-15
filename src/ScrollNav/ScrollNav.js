@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
-import { changeFocus, changePage } from '../actions/ScrollbarAction';
-import store from "../stores/rootStore";
+import { changeFocus, changePage } from '../reduxStates/actions/ScrollbarAction';
+import store from "../reduxStates/stores/rootStore";
 
 import './ScrollNav.css';
 
 class ScrollNav extends Component {
 	constructor(props) {
 		super(props);
-		let pageArr = _.range(1, this.props.pageSubtitles.length + 1);
+		let pageArr = _.range(1, store.getState().pageSubtitles.length + 1);
 		this.state = {
 			'pageArr': pageArr
 		};
@@ -20,9 +20,10 @@ class ScrollNav extends Component {
 	}
 
 	handleWheel(e) {
+		let subtitles = store.getState().pageSubtitles;
 		let focusAfter = store.getState().focus + (e.deltaY / 200);
-		if (focusAfter > this.props.pageSubtitles.length - 1) {
-			focusAfter = this.props.pageSubtitles.length - 1;
+		if (focusAfter > subtitles.length - 1) {
+			focusAfter = subtitles.length - 1;
 		}
 		if (focusAfter < 0) {
 			focusAfter = 0;
@@ -82,7 +83,7 @@ class ScrollNav extends Component {
 		        			</label>
 		        			<label className='page-subtitle'
 		        					style={{fontSize: fontSize * 0.5, top: ulPosition + fontSize * 0.4}}>
-		        				{this.props.pageSubtitles[index]}
+		        				{store.getState().pageSubtitles[index]}
 		        			</label>
 	        			</div>
 	        		</li>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import store from '../stores/rootStore';
+import store from '../reduxStates/stores/rootStore';
 
 import './InteractivePage.css';
 

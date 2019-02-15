@@ -11,45 +11,6 @@
   flex-direction: horizontal;
 }
 
-.navigation-buttons {
-  display: flex;
-  flex-direction: horizontal;
-  height: 30%;
-  margin: 20px;
-}
-
-.back-button {
-  width: 15%;
-}
-
-.back-button-svg:hover {
-  fill: grey;
-}
-
-.between-button-blank {
-  width: 70%;
-}
-
-.next-button {
-  width: 15%;
-}
-
-.next-button-svg:hover {
-  fill: grey;
-}
-
-.disabled {
-  fill: #C0C0C0;
-}
-
-.disabled:hover {
-  fill: #C0C0C0 !important; 
-}
-
-
-
-
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;

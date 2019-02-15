@@ -1,6 +1,7 @@
 import { CHANGE_FOCUS, CHANGE_PAGE } from "../constants/action-types";
 
 const initialState = {
+  pageSubtitles: ['Subtitle', 'Subtitle', 'Subtitle', 'Subtitle', 'Subtitle', 'Subtitle', 'Subtitle', 'Subtitle', 'Subtitle', 'Subtitle', 'Subtitle'],
 	focus: 0,
 	currentPage: 0
 };
