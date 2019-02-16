@@ -53,11 +53,11 @@ class ContentSlider extends Component {
         if (this.sliding === false && store.getState().sliding === false) {
             let currentPage = store.getState().currentPage;
             if (e.deltaY > wheelAmount || e.deltaY < -wheelAmount) {
+                this.sliding = true;
                 let uniqueTimer = setTimeout(() => {
                     this.sliding = false;
                     clearTimeout(uniqueTimer);
                 }, SLIDING_SPEED * 1.5);
-                this.sliding = true;
             }
             
             if (e.deltaY > wheelAmount) {
