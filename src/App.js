@@ -7,6 +7,7 @@ import { changeFocus, changePage } from './reduxStates/actions/ScrollbarAction';
 import ScrollNav from './ScrollNav/ScrollNav';
 import ButtonNav from './ButtonNav/ButtonNav';
 import InteractivePage from './InteractivePage/InteractivePage';
+import ContentSlider from './ContentSlider/ContentSlider';
 
 import './App.css';
 
@@ -22,14 +23,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <ContentSlider />
         <div className="scroll-nav">
           <ScrollNav />
         </div>
         <div className='content-right'>
           <ButtonNav />
-          <div className="interface-page">
-            <InteractivePage />
-          </div>
         </div>
       </div>
     );

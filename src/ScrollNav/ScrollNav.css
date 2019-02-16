@@ -33,7 +33,7 @@
 
 .pointer {
 	position: relative;
-	top: 100px;
+	top: 85px;
 }
 
 li {
@@ -52,6 +52,6 @@ ul {
 	left: 60px;
 }
 
-.page-subtitle {
+.page-title {
 	position: absolute;
 }

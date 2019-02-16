@@ -17,14 +17,13 @@ class ButtonNav extends Component {
 	}
 
 	changePage(page) {
-    	if (page >= 0 && page < store.getState().pageSubtitles.length) {
-      		store.dispatch(changeFocus(page));
+    	if (store.getState().sliding === false) {
       		store.dispatch(changePage(page));
     	}
   	}
 
   	render() {
-  		let pageSubtitles = store.getState().pageSubtitles;
+  		let pageData = store.getState().pageData;
 	    let currentPage = store.getState().currentPage;
 
 	    let backButtonDisable = '';
@@ -32,7 +31,7 @@ class ButtonNav extends Component {
 	    if (currentPage === 0) {
 	      	backButtonDisable = ' disabled';
 	    }
-	    if (currentPage === pageSubtitles.length - 1) {
+	    if (currentPage === pageData.length - 1) {
 	      	nextButtonDisable = ' disabled';
 	    }
 
@@ -42,7 +41,6 @@ class ButtonNav extends Component {
 	              <BackButton className={'back-button-svg' + backButtonDisable} 
 	                          onClick={() => this.changePage(currentPage - 1)}/>
 	            </div>
-	            <div className='between-button-blank' />
 	            <div className='next-button'>
 	              <NextButton className={'next-button-svg' + nextButtonDisable}
 	                          onClick={() => this.changePage(currentPage + 1)}/>
@@ -54,6 +52,7 @@ class ButtonNav extends Component {
 
 const mapStateToProps = state => {
 	return {
+		sliding: state.sliding,
 	    currentPage: state.currentPage
 	}
 }

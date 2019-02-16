@@ -10,7 +10,7 @@ import './ScrollNav.css';
 class ScrollNav extends Component {
 	constructor(props) {
 		super(props);
-		let pageArr = _.range(1, store.getState().pageSubtitles.length + 1);
+		let pageArr = _.range(1, store.getState().pageData.length + 1);
 		this.state = {
 			'pageArr': pageArr
 		};
@@ -20,10 +20,10 @@ class ScrollNav extends Component {
 	}
 
 	handleWheel(e) {
-		let subtitles = store.getState().pageSubtitles;
+		let pageData = store.getState().pageData;
 		let focusAfter = store.getState().focus + (e.deltaY / 200);
-		if (focusAfter > subtitles.length - 1) {
-			focusAfter = subtitles.length - 1;
+		if (focusAfter > pageData.length - 1) {
+			focusAfter = pageData.length - 1;
 		}
 		if (focusAfter < 0) {
 			focusAfter = 0;
@@ -33,7 +33,6 @@ class ScrollNav extends Component {
 	}
 
 	handleClick(e, index) {
-		store.dispatch(changeFocus(index));
 		store.dispatch(changePage(index));
 	}
 
@@ -81,10 +80,7 @@ class ScrollNav extends Component {
 		        					style={{fontSize: fontSize, top: ulPosition}}>
 		        				{page}
 		        			</label>
-		        			<label className='page-subtitle'
-		        					style={{fontSize: fontSize * 0.5, top: ulPosition + fontSize * 0.4}}>
-		        				{store.getState().pageSubtitles[index]}
-		        			</label>
+		        			
 	        			</div>
 	        		</li>
 	        	);
@@ -95,10 +91,18 @@ class ScrollNav extends Component {
   }
 }
 
+/*
+<label className='page-title'
+		style={{fontSize: fontSize * 0.5, top: ulPosition + fontSize * 0.4}}>
+	{store.getState().pageData[index].title}
+</label>
+*/
+
 const mapStateToProps = state => {
   return {
     focus: state.focus,
-    currentPage: state.currentPage
+    currentPage: state.currentPage,
+    sliding: state.sliding
   }
 }
 

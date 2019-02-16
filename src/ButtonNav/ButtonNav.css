@@ -1,24 +1,35 @@
 .navigation-buttons {
   display: flex;
-  flex-direction: horizontal;
+  flex-direction: column;
   height: 30%;
-  margin: 20px;
+  position: relative;
+  top: 85vh;
+  z-index: 1;
+  left: 63vw;
 }
 
 .back-button {
-  width: 15%;
+  z-index: 1;
+  width: 50px;
+}
+
+.back-button-svg {
+  fill: white;
 }
 
 .back-button-svg:hover {
   fill: grey;
 }
 
-.between-button-blank {
-  width: 70%;
+.next-button {
+  z-index: 1;
+  width: 50px;
+  position: relative;
+  left: 10px;
 }
 
-.next-button {
-  width: 15%;
+.next-button-svg {
+  fill: white;
 }
 
 .next-button-svg:hover {

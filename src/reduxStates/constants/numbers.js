@@ -1,0 +1,1 @@
+export const SLIDING_SPEED = 900;

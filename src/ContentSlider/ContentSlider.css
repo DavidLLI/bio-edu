@@ -1,0 +1,61 @@
+.content-slider {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.title {
+	position: relative;
+	font-weight: 900;
+	font-size: 4vmin;
+	text-transform: capitalize;
+	letter-spacing: 0.01em;
+	line-height: 0.91;
+	color:#fff;
+	margin: 3vmin 5vmin 3.5vmin 5vmin;
+	top: 30vh;
+}
+
+.theme {
+	position: relative;
+	top: 20vh;
+	font-weight: 900;
+	font-size: 1.7vmin; 
+	text-transform:uppercase;
+	font-family:Poppins;
+	letter-spacing: 10px;
+	margin: 3vmin 5vmin 3.5vmin 5vmin;
+	color:lightblue;
+}
+
+.images {
+	height: 100vh;
+	width: 60%;
+}
+
+.text-content {
+	text-align: center;
+	background-color: black;
+	height: 100vh;
+	width: 40%;
+}
+
+.description {
+	position: relative;
+	top: 30vh;
+	font-size: 2vmin;
+	line-height: 1.7;
+	font-weight: 300;
+	color:#fff;
+	margin: 3vmin 5vmin 3.5vmin 5vmin;
+}
+
+.list-item {
+	height: 100%;
+  	width: 100%;
+  	overflow: hidden;
+  	display: flex !important; 
+  	flex-direction: row;
+  	z-index: -1;
+}
