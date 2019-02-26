@@ -36,7 +36,10 @@ class ContentSlider extends Component {
         if (e.pageX / windowWidth / 0.6 <= 1) {
         	this.setState({ progress: e.pageX / windowWidth / 0.6 });
         }
-        else {
+        else if (e.pageX / windowWidth / 0.6 < 0) {
+        	this.setState({ progress: 0 });
+        }
+        else if (e.pageX / windowWidth / 0.6 > 1) {
         	this.setState({ progress: 1 });
         }
         
@@ -59,13 +62,15 @@ class ContentSlider extends Component {
             	
         		<BlockImage 
         			className='image-container'
-        			src={this.props.before}/>
+        			src={this.props.before}
+        			backgroundSize='contain'/>
             	<div className='image-after'
             		style={{ width: `${100 * this.state.progress}%` }}>
             		<BlockImage
             			className='image-container'
             			src={this.props.after}
-            			style={{ width: '60vw' }} />
+            			style={{ width: '60vw' }}
+            			backgroundSize='contain' />
             	</div>
             </div>
     	);
