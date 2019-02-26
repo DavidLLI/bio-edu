@@ -28,7 +28,7 @@ class PopupWindow extends Component {
     }
 
     render() {
-    	const images = this.props.data.images;
+    	const content = this.props.data.content;
     	return (
     		<div>
 	    		<div className='open-modal'
@@ -36,26 +36,30 @@ class PopupWindow extends Component {
 	                Click here to open pop-up
 	            </div>
 	    		<Modal
-	    			className='popup-window'
+	    			size='lg'
 	    			show={this.state.show}
-	    			onHide={this.handleClose}>
+	    			onHide={this.handleClose}
+	    			centered>
 
 	    			<Modal.Header closeButton>
             			<Modal.Title>{this.props.data.title}</Modal.Title>
          	 		</Modal.Header>
-         	 		<Modal.Body style={{'z-index': 3, 'max-height': 'calc(100vh - 210px)',  'overflow-y': 'scroll'}}>
+         	 		<Modal.Body style={{'z-index': 3, 
+         	 							'max-height': '90vh',  
+         	 							'overflow-y': 'scroll'}}>
          	 			{
-         	 				images.map((value, index) => {
+         	 				content.map((value, index) => {
          	 					return (
-         	 						<img src={value}
-			         	 				className='popup-image'>
-			         	 			</img>
+         	 						<div className='popup-content'>
+         	 							{value.description}
+         	 							<img src={value.image}
+				         	 				className='popup-image'>
+				         	 			</img>
+         	 						</div>
          	 					);
          	 				})
          	 			}	
-         	 			{this.props.data.description}
          	 		</Modal.Body>
-
 	    		</Modal>
     		</div>
     	);

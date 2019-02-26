@@ -3,6 +3,7 @@ import Image1 from '../../assets/Adenovirusicon.png';
 import Image2 from '../../assets/crispr.jpg';
 import Image3 from '../../assets/dna-structure.jpg';
 import Image4 from '../../assets/Screen_Shot.png';
+import Image5 from '../../assets/TM100-popup-1.jpg';
 
 
 const initialState = {
@@ -20,10 +21,16 @@ const initialState = {
       'image': Image2,
       'popup': {
         'title': 'popup',
-        'description': 'popup bodyfffffffff',
-        'images': [
-          Image1,
-          Image2
+        'content': [
+          {
+            'description': 'popup description1',
+            'image': Image5
+          },
+          {
+            'description': 'popup description2',
+            'image': Image5
+          }
+          
         ]
       }
     },

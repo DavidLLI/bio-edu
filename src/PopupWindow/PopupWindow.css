@@ -17,7 +17,17 @@
 }
 
 .popup-image {
-	width: 50%;
-	height: 50%;
+	width: 90%;
+	height: 90%;
+}
+
+.modal-content {
+	width: 90vw;
+	height: 90vh;
+}
+
+.popup-content {
+	display: flex;
+	flex-direction: column;
 }
 
