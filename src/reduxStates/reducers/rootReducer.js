@@ -1,4 +1,4 @@
-import { CHANGE_FOCUS, CHANGE_PAGE, SLIDING_END, CHANGE_PROGRESS } from "../constants/action-types";
+import { CHANGE_FOCUS, CHANGE_PAGE, SLIDING_END } from "../constants/action-types";
 import Image1 from '../../assets/Adenovirusicon.png';
 import Image2 from '../../assets/crispr.jpg';
 import Image3 from '../../assets/dna-structure.jpg';
@@ -40,8 +40,7 @@ const initialState = {
   ],
 	focus: 0,
 	currentPage: 0,
-  sliding: false,
-  progress: 0
+  sliding: false
 };
 
 function rootReducer(state = initialState, action) {
@@ -67,23 +66,7 @@ function rootReducer(state = initialState, action) {
         sliding: false
     });
   }
-  else if (action.type === CHANGE_PROGRESS) {
-    if (action.progress < 0) {
-      state = Object.assign({}, state, {
-        progress: 0
-      });
-    }
-    else if (action.progress > 1) {
-      state = Object.assign({}, state, {
-        progress: 1
-      });
-    }
-    else {
-      state = Object.assign({}, state, {
-        progress: action.progress
-      });
-    }
-  }
+  
   return state;
 }
 

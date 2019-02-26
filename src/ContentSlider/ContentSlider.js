@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import store from '../reduxStates/stores/rootStore';
-import { changeFocus, changePage, changeProgress } from '../reduxStates/actions/ScrollbarAction';
+import { changeFocus, changePage } from '../reduxStates/actions/ScrollbarAction';
 
 import ImageSlider from '../ImageSlider/ImageSlider';
 import PopupWindow from '../PopupWindow/PopupWindow';
@@ -120,8 +120,7 @@ class ContentSlider extends Component {
 const mapStateToProps = state => {
   return {
     currentPage: state.currentPage,
-    sliding: state.sliding,
-    progress: state.progress
+    sliding: state.sliding
   }
 }
 

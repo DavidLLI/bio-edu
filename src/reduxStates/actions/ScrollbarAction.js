@@ -1,4 +1,4 @@
-import { CHANGE_FOCUS, CHANGE_PAGE, SLIDING_END, CHANGE_PROGRESS } from "../constants/action-types";
+import { CHANGE_FOCUS, CHANGE_PAGE, SLIDING_END } from "../constants/action-types";
 import { SLIDING_SPEED } from "../constants/numbers";
 
 import store from "../stores/rootStore";
@@ -17,14 +17,9 @@ export function changePage(payload) {
 	      store.dispatch(slidingEnd(intervalID));
 	    }, SLIDING_SPEED + 100);
 	    store.dispatch(changeFocus(payload));
-	    store.dispatch(changeProgress(0));
 
 	    return { type: CHANGE_PAGE, currentPage: payload };
 	}
 	
   	return { type: CHANGE_PAGE, currentPage: store.getState().currentPage };
-}
-
-export function changeProgress(payload) {
-	return { type: CHANGE_PROGRESS, progress: payload };
 }
