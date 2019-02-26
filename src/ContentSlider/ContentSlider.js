@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import store from '../reduxStates/stores/rootStore';
-import { changeFocus, changePage } from '../reduxStates/actions/ScrollbarAction';
+import { changeFocus, changePage, changeProgress } from '../reduxStates/actions/ScrollbarAction';
+
+import ImageSlider from '../ImageSlider/ImageSlider';
+import PopupWindow from '../PopupWindow/PopupWindow';
 
 import Slider from "react-slick";
 import "../../node_modules/slick-carousel/slick/slick.css";
@@ -20,6 +23,8 @@ class ContentSlider extends Component {
 	      dots: false,
 	      vertical: true,
           infinite: false,
+          draggable: false,
+          swipe: false,
           slidesToShow: 1,
           slidesPerRow: 1,
           slidesToScroll: 1,
@@ -72,18 +77,29 @@ class ContentSlider extends Component {
 
     render() {
     	let content = store.getState().pageData;
-    	
+        let progress = store.getState().progress;
+        let currentPage = store.getState().currentPage;
     	return (
             <div className='content-slider'
                 onWheel={this.handleScroll}>
+
         		<Slider 
         			{...this.settings}
-        			ref={this.sliderRef}>
+        			ref={this.sliderRef}
+                    className='slider-list'>
     			  	{content.map((article, index) => 
                     <div key={index} className='list-item'>
-                        <img className='images' 
-                            src={article.image} />
+                        <div className='images'>
+                            <ImageSlider
+                                before={article.image}
+                                after={article.afterImage}
+                                progress={progress} />
+                        </div>
                         <div className='text-content'>
+                            {!article.popup || 
+                                <PopupWindow 
+                                    data={article.popup }/>
+                            }
                             <div className='theme'>
                                 {article.theme}
                             </div>
@@ -104,7 +120,8 @@ class ContentSlider extends Component {
 const mapStateToProps = state => {
   return {
     currentPage: state.currentPage,
-    sliding: state.sliding
+    sliding: state.sliding,
+    progress: state.progress
   }
 }
 

@@ -23,11 +23,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ContentSlider />
         <div className="scroll-nav">
           <ScrollNav />
         </div>
         <div className='content-right'>
+          <ContentSlider />
           <ButtonNav />
         </div>
       </div>

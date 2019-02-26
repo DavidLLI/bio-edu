@@ -1,0 +1,23 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css');
+
+.open-modal {
+	position: relative;
+	top: 10vh;
+	left: 10vw;
+	width: 24vh;
+	height: 3vh;
+	background-color: white;
+	z-index: 2;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.open-modal:hover {
+	background-color: grey;
+}
+
+.popup-image {
+	width: 50%;
+	height: 50%;
+}
+

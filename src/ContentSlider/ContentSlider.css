@@ -5,6 +5,15 @@
   overflow: hidden;
 }
 
+.slider-icon {
+	position: relative;
+	height: 50px;
+	width: 50px;
+	top: 10%;
+	left: -23px;
+	cursor: col-resize;
+}
+
 .title {
 	position: relative;
 	font-weight: 900;
@@ -26,15 +35,18 @@
 	font-family:Poppins;
 	letter-spacing: 10px;
 	margin: 3vmin 5vmin 3.5vmin 5vmin;
-	color:lightblue;
+	color: lightblue;
 }
 
 .images {
 	height: 100vh;
 	width: 60%;
+	overflow: hidden;
+	position: relative;
 }
 
 .text-content {
+	position: relative;
 	text-align: center;
 	background-color: black;
 	height: 100vh;
@@ -51,11 +63,29 @@
 	margin: 3vmin 5vmin 3.5vmin 5vmin;
 }
 
+.slider-list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+  	width: 100%;
+}
+
 .list-item {
+	position: relative;
 	height: 100%;
   	width: 100%;
   	overflow: hidden;
   	display: flex !important; 
   	flex-direction: row;
-  	z-index: -1;
+}
+
+.vertical-separator {
+	position: absolute;
+	top: 0;
+  	bottom: 0;
+	height: 100%;
+	width: 5px;
+	background: grey;
+	z-index: 1;
 }

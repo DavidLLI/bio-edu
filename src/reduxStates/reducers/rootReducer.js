@@ -1,4 +1,4 @@
-import { CHANGE_FOCUS, CHANGE_PAGE, SLIDING_END } from "../constants/action-types";
+import { CHANGE_FOCUS, CHANGE_PAGE, SLIDING_END, CHANGE_PROGRESS } from "../constants/action-types";
 import Image1 from '../../assets/Adenovirusicon.png';
 import Image2 from '../../assets/crispr.jpg';
 import Image3 from '../../assets/dna-structure.jpg';
@@ -17,13 +17,19 @@ const initialState = {
       'title': 'Urban umbrellas',
       'description': 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta porro, tempora consequuntur vel dolore assumenda aspernatur cum dignissimos unde reprehenderit sint? Neque, id consequuntur. Quibusdam sit officiis debitis corrupti. Quasi.',
       'theme': 'Urban',
-      'image': Image2
+      'image': Image2,
+      'popup': {
+        'title': 'popup',
+        'description': 'popup body',
+        'image': Image1
+      }
     },
     {
       'title': 'A lonely road',
       'description': 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta porro, tempora consequuntur vel dolore assumenda aspernatur cum dignissimos unde reprehenderit sint? Neque, id consequuntur. Quibusdam sit officiis debitis corrupti. Quasi.',
       'theme': 'Lifestyle',
-      'image': Image3
+      'image': Image3,
+      'afterImage': 'https://www.elastic.co/assets/bltada7771f270d08f6/enhanced-buzz-1492-1379411828-15.jpg'
     },
     {
       'title': 'A lonely road',
@@ -34,7 +40,8 @@ const initialState = {
   ],
 	focus: 0,
 	currentPage: 0,
-  sliding: false
+  sliding: false,
+  progress: 0
 };
 
 function rootReducer(state = initialState, action) {
@@ -59,6 +66,23 @@ function rootReducer(state = initialState, action) {
     state = Object.assign({}, state, {
         sliding: false
     });
+  }
+  else if (action.type === CHANGE_PROGRESS) {
+    if (action.progress < 0) {
+      state = Object.assign({}, state, {
+        progress: 0
+      });
+    }
+    else if (action.progress > 1) {
+      state = Object.assign({}, state, {
+        progress: 1
+      });
+    }
+    else {
+      state = Object.assign({}, state, {
+        progress: action.progress
+      });
+    }
   }
   return state;
 }

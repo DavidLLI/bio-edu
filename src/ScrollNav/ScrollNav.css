@@ -11,8 +11,10 @@
 }
 
 .ScrollNav {
-	position: absolute;
+	position: relative;
 	top: 200px;
+	height: 30vh;
+	width: 8vw;
 }
 
 .nav-selected {
@@ -34,6 +36,9 @@
 .pointer {
 	position: relative;
 	top: 85px;
+	height: 3px;
+	width: 8vw;
+	background-color: grey;
 }
 
 li {
@@ -43,13 +48,13 @@ li {
 
 ul {
 	list-style-type: none;
-	height: 500px;
+	height: 100%;
 }
 
 .page-number {
 	color: #808080;
 	position: absolute;
-	left: 60px;
+	left: -20px;
 }
 
 .page-title {

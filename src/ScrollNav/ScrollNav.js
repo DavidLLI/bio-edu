@@ -54,9 +54,8 @@ class ScrollNav extends Component {
     return (
       <div onWheel={this.handleWheel} 
       		className="ScrollNav">
-      	<label className='pointer'>
-      		-----------------------------------
-      	</label>
+      	<div className='pointer'>
+      	</div>
       	<ul>
 	        {this.state.pageArr.map((page, index) => {
 	        	let fontSize = this.calculateFontSize(index, store.getState().focus);
