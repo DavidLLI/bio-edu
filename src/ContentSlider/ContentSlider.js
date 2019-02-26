@@ -31,10 +31,16 @@ class ContentSlider extends Component {
 	      speed: SLIDING_SPEED
 	    };
 
+        this.state = {
+            modalShow: false
+        };
+
         this.sliding = false;
         this.timer = undefined;
 
         this.handleScroll = this.handleScroll.bind(this);
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -44,6 +50,9 @@ class ContentSlider extends Component {
     }
 
     handleScroll(e) {
+        if (this.state.modalShow) {
+            return;
+        }
         const wheelAmount = 15;
         if (this.timer) {
             clearTimeout(this.timer);
@@ -75,6 +84,14 @@ class ContentSlider extends Component {
         e.preventDefault();
     }
 
+    openModal() {
+        this.setState({modalShow: true});
+    }
+
+    closeModal() {
+        this.setState({modalShow: false});
+    }
+
     render() {
     	let content = store.getState().pageData;
         let progress = store.getState().progress;
@@ -91,14 +108,16 @@ class ContentSlider extends Component {
                     <div key={index} className='list-item'>
                         <div className='images'>
                             <ImageSlider
-                                before={article.image}
-                                after={article.afterImage}
-                                progress={progress} />
+                                before={ article.image }
+                                after={ article.afterImage }
+                                progress={ progress } />
                         </div>
                         <div className='text-content'>
                             {!article.popup || 
                                 <PopupWindow 
-                                    data={article.popup }/>
+                                    data={ article.popup }
+                                    modalOpen={ this.openModal }
+                                    modalClose={ this.closeModal } />
                             }
                             <div className='theme'>
                                 {article.theme}

@@ -20,8 +20,11 @@ const initialState = {
       'image': Image2,
       'popup': {
         'title': 'popup',
-        'description': 'popup body',
-        'image': Image1
+        'description': 'popup bodyfffffffff',
+        'images': [
+          Image1,
+          Image2
+        ]
       }
     },
     {
@@ -66,7 +69,7 @@ function rootReducer(state = initialState, action) {
         sliding: false
     });
   }
-  
+
   return state;
 }
 
