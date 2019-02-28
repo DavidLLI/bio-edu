@@ -66,14 +66,14 @@ const initialState = {
 
 {
       'title': 'What does a TM look like?',
-      'description': 'This figure is a typical TM example that summarized all the transcription information about a DNA virus called the adenovirus. You can see this TM contains many different graphical features and they are difficult to understand at the first time. I will not teach you the visual language by going through this graph. Instead, let’s start with a simple hypothetical example of TM.',
+      'description': 'This figure is a typical TM example that summarized all the transcription information about a DNA virus called the adenovirus. You can see this TM contains many different graphical features and they are difficult to understand at the first time. \n I will not teach you the visual language by going through this graph. Instead, let’s start with a simple hypothetical example of TM.',
       'image': Image2
     },
 
 
   {
       'title': 'Using a hypothetical TM to understanding the Basic Visual Language - the viral genome',
-      'description': 'When you first look at the TM, you should read from the fundamental element that every TM has: the viral genome. In this case, the two black lines represent the viral genome. By moving the slider, you can see the double-stranded helical viral DNA is simplified into two black lines in TM, which reduces the visual complexity of the DNA double helix as well as saves the design space.',
+      'description': 'When you first look at the TM, you should read from the fundamental element that every TM has: the viral genome. \n In this case, the two black lines represent the viral genome. By moving the slider, you can see the double-stranded helical viral DNA is simplified into two black lines in TM, which reduces the visual complexity of the DNA double helix as well as saves the design space.',
       
       'image': Image3,
       'afterImage': Image4
@@ -82,7 +82,7 @@ const initialState = {
 
 {
       
-      'description': 'other viruses may have linear genome, cyclized, or partially double-strand DNA genome, or RNA genome etc, and they can be presented by using lines in slightly different ways.',
+      'description': 'Other viruses may have linear genome, cyclized, or partially double-strand DNA genome, or RNA genome etc, and they can be presented by using lines in slightly different ways.',
       'image': Image5
     },
 
@@ -98,7 +98,7 @@ const initialState = {
 
 {
       
-      'description': 'Usually in viral genome, we can either have the inverted terminal repeats (ITR) or the long direct/flanking terminal repeat (LTRs). The schematic diagram illustrates the ITR in viral genome：the ITR sequences at two ends of the same strand are complementary to each other, and the ITR in one strand is bind to its reverse complementary repeats in other strand.',
+      'description': 'Usually in viral genome, we can either have the inverted terminal repeats (ITR) or the long direct/flanking terminal repeat (LTRs). \n The schematic diagram illustrates the ITR in viral genome：the ITR sequences at two ends of the same strand are complementary to each other, and the ITR in one strand is bind to its reverse complementary repeats in other strand.',
       'image': Image8
     },
 
@@ -137,7 +137,7 @@ const initialState = {
 
 {
       
-      'description': 'After separation, you may realize that they cannot form base pairs when you try to fold each strand like this. This is one way to distinguish LTR from ITR. Both of these two repeats have different biological functions. Click the external HTML link to explore more about these two repeats.',
+      'description': 'After separation, you may realize that they cannot form base pairs when you try to fold each strand like this. This is one way to distinguish LTR from ITR. \n Both of these two repeats have different biological functions. Click the external HTML link to explore more about these two repeats.',
       'image': Image14
     },
 
@@ -176,7 +176,7 @@ const initialState = {
 
 {
       'title': 'Using a hypothetical TM to understanding the Basic Visual Language - RNA transcript',
-      'description': 'Adjacent to double-stranded DNA genome, you will find an orange arrow represents the RNA transcript transcribed from this viral genome. As you know, a typical arrow contains an arrowhead, the body of the arrow, an arrow tail.',
+      'description': 'Adjacent to double-stranded DNA genome, you will find an orange arrow represents the RNA transcript transcribed from this viral genome. \n As you know, a typical arrow contains an arrowhead, the body of the arrow, an arrow tail.',
       'image': Image20
     },
 
@@ -204,7 +204,7 @@ const initialState = {
 
 {
     
-      'description': 'Remember this directionality of RNA and let’s start with the arrowhead of RNA.The Arrowhead usually has the dual graphical functions: 1.The direction of transcription: from 5’ to 3’. 2.3’ end of mRNA transcript, corresponding to the polyadenylation site, which is a type of transcriptional modification created by the host cell mechanism.',
+      'description': 'Remember this directionality of RNA and let’s start with the arrowhead of RNA.The Arrowhead usually has the dual graphical functions:\n  1.The direction of transcription: from 5’ to 3’. \n 2.3’ end of mRNA transcript, corresponding to the polyadenylation site, which is a type of transcriptional modification created by the host cell mechanism.',
     
       'image': Image23,
       'popup': {
@@ -263,7 +263,7 @@ const initialState = {
 
 {
     
-      'description': 'Typically, in TMs, the process of intron removal and transcriptional modifications are not explained. Thus, the detailed mechanism will be illustrated here (move the slider): Step 1. The 5’ cap is synthesized to protect RNA from exonucleolytic attack as well as to facilitate transcription and translation. Remaining part of the precursor RNA is transcribed from the viral genome in 5’ to 3’ direction.',
+      'description': 'Typically, in TMs, the process of intron removal and transcriptional modifications are not explained. Thus, the detailed mechanism will be illustrated here (move the slider): \n Step 1. The 5’ cap is synthesized to protect RNA from exonucleolytic attack as well as to facilitate transcription and translation. Remaining part of the precursor RNA is transcribed from the viral genome in 5’ to 3’ direction.',
       
       'image': Image31,
       'afterImage': Image32
@@ -327,7 +327,7 @@ const initialState = {
 
 {
     
-      'description': 'You can determine the directions of DNA double strands by following this two-step process. Steps: 1. Look at your RNA and find its 3’ end (arrow head) and 5’ end (arrow tail). 2. Find the DNA single strand that adjacent to this RNA strand and this DNA strand reads in the opposite direction. Its complementary DNA strand has the same direction as the RNA strand.',
+      'description': 'You can determine the directions of DNA double strands by following this two-step process. \n Steps: 1. Look at your RNA and find its 3’ end (arrow head) and 5’ end (arrow tail). \n 2. Find the DNA single strand that adjacent to this RNA strand and this DNA strand reads in the opposite direction. Its complementary DNA strand has the same direction as the RNA strand.',
     
       'image': Image43,
       'popup': {
