@@ -44,13 +44,14 @@ class PopupWindow extends Component {
 	    			<Modal.Header closeButton>
             			<Modal.Title>{this.props.data.title}</Modal.Title>
          	 		</Modal.Header>
-         	 		<Modal.Body style={{'z-index': 3, 
-         	 							'max-height': '90vh',  
-         	 							'overflow-y': 'scroll'}}>
+         	 		<Modal.Body style={{'zIndex': 3, 
+         	 							'maxHeight': '90vh',  
+         	 							'overflowY': 'scroll'}}>
          	 			{
          	 				content.map((value, index) => {
          	 					return (
-         	 						<div className='popup-content'>
+         	 						<div className='popup-content'
+         	 							key={index}>
          	 							{value.description}
          	 							<img src={value.image}
 				         	 				className='popup-image'>
