@@ -36,7 +36,7 @@ class PopupWindow extends Component {
 	                Click here to open pop-up
 	            </div>
 	    		<Modal
-	    			size='lg'
+	    			dialogClassName='popup-dialog'
 	    			show={this.state.show}
 	    			onHide={this.handleClose}
 	    			centered>
@@ -45,7 +45,7 @@ class PopupWindow extends Component {
             			<Modal.Title>{this.props.data.title}</Modal.Title>
          	 		</Modal.Header>
          	 		<Modal.Body style={{'zIndex': 3, 
-         	 							'maxHeight': '90vh',  
+         	 							'maxHeight': '70vh',  
          	 							'overflowY': 'scroll'}}>
          	 			{
          	 				content.map((value, index) => {
