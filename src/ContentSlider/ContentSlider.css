@@ -61,6 +61,7 @@
 	font-weight: 300;
 	color:#fff;
 	margin: 3vmin 5vmin 3.5vmin 5vmin;
+	white-space: pre-line;
 }
 
 .slider-list {

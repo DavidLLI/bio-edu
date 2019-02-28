@@ -16,7 +16,7 @@ const initialState = {
     },
     {
       'title': 'Urban umbrellas',
-      'description': 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta porro, tempora consequuntur vel dolore assumenda aspernatur cum dignissimos unde reprehenderit sint? Neque, id consequuntur. Quibusdam sit officiis debitis corrupti. Quasi.',
+      'description': 'Lorem, ipsum dolor \n sit amet consectetur adipisicing elit. Dicta porro, tempora consequuntur vel dolore assumenda aspernatur cum dignissimos unde reprehenderit sint? Neque, id consequuntur. Quibusdam sit officiis debitis corrupti. Quasi.',
       'theme': 'Urban',
       'image': Image2,
       'popup': {
