@@ -42,6 +42,8 @@ import Image40 from '../../assets/Viraliterate_Module 1_Thumbnails_V01/TM_intro_
 import Image41 from '../../assets/Viraliterate_Module 1_Thumbnails_V01/TM_intro_and_terminal_repeats/Main_interface/TM-26.jpg';
 import Image42 from '../../assets/Viraliterate_Module 1_Thumbnails_V01/TM_intro_and_terminal_repeats/Main_interface/TM-27.jpg';
 import Image43 from '../../assets/Viraliterate_Module 1_Thumbnails_V01/TM_intro_and_terminal_repeats/Main_interface/TM-28.jpg';
+import Image52 from '../../assets/Viraliterate_Module 1_Thumbnails_V01/TM_intro_and_terminal_repeats/Main_interface/TM-29-01-01.jpg';
+
 
 import Image44 from '../../assets/Viraliterate_Module 1_Thumbnails_V01/Pop-up_Strand_definition/DNAintro-01.jpg';
 import Image45 from '../../assets/Viraliterate_Module 1_Thumbnails_V01/Pop-up_Strand_definition/DNAintro-02-01.jpg';
@@ -59,7 +61,7 @@ const initialState = {
     
  {
       'title': 'Module 1 Sections Menu:',
-      'description': 'Understanding the Basic Visual Language of TM - using a hypothetical TM \n Viral genome \n Terminal repeats \n Visual scale \n RNA transcript \n RNA/DNA directionalities \n Color coding & Text labels \n \n Visual Summary \n Quiz- module 1',
+      'description': 'Understanding the Basic Visual Language of TM - using a hypothetical TM: \n \n Viral genome \n Terminal repeats \n Visual scale \n RNA transcript \n RNA/DNA directionalities \n Color coding & Text labels \n \n Visual Summary \n Quiz- module 1',
       
       'image': Image1
     },
@@ -82,82 +84,83 @@ const initialState = {
 
 {
       
-      'description': 'Other viruses may have linear genome, cyclized, or partially double-strand DNA genome, or RNA genome etc, and they can be presented by using lines in slightly different ways.',
-      'image': Image5
+      'description': 'Other viruses may have linear genome, cyclized, or partially double-strand DNA or RNA genome etc, and they can be presented by using lines in slightly different ways. \n \n Click the external links in the pop up window to explore more. ',
+      'image': Image5,
+     'popup': {
+        'title': 'Different types of viral genome',
+        'content': [
+          {
+            'description': 'We only provide three examples here and you can also find other viruses in ths website - ViralZone: \n \n Parvoviridae (single stranded viral genome):              https://viralzone.expasy.org/103?outline=all_by_species \n \n Polyomaviridae (cyclized double stranded viral genome):              https://viralzone.expasy.org/148 \n \nHepadnaviridae (partially double stranded viral genome):              https://viralzone.expasy.org/9 \n \n (still need web development here - hyperlink function)',
+            
+          }
+          
+        ]
+      }
+
     },
 
 
- {
-      'title': 'Using a hypothetical TM to understanding the Basic Visual Language - terminal repeats',
+
+
+{
+    'title': 'Using a hypothetical TM to understanding the Basic Visual Language - terminal repeats',
       'description': 'You may noticed that both ends of the viral genome can have these black boxes highlighted in purple (move the slider). These are usually represent the terminal repeats (TR).',
-      
+
+    
       'image': Image6,
-      'afterImage': Image7
-    },
-
-
-{
-      
-      'description': 'Usually in viral genome, we can either have the inverted terminal repeats (ITR) or the long direct/flanking terminal repeat (LTRs). \n The schematic diagram illustrates the ITR in viral genome：the ITR sequences at two ends of the same strand are complementary to each other, and the ITR in one strand is bind to its reverse complementary repeats in other strand.',
+      'afterImage': Image7,
+      'popup': {
+        'title': 'Terminal repeats',
+        'content': [
+          {
+            'description': 'Usually in viral genome, we can either have the inverted terminal repeats (ITR) or the long direct/flanking terminal repeat (LTRs). \n The schematic diagram illustrates the ITR in viral genome：the ITR sequences at two ends of the same strand are complementary to each other, and the ITR in one strand binds to its reverse complementary repeats in other strand.',
       'image': Image8
-    },
+          },
 
-{
-    
-      'description': 'To test this, I want you to separate this double stranded genome apart.',
+           {
+            'description': 'To test this, I want you to separate this double stranded genome apart.',
       'image': Image9
-    },
-
-
-{
-      
-      'description': 'After the separation, try to fold each DNA strand as the figure shown below and to observe the result.',
+          },
+           {
+            'description': 'After the separation, try to fold each DNA strand as the figure shown below and to observe the result.',
       'image': Image10
-    },
-
-
-{
-     
-      'description': 'As you can see, the terminal inverted repeats are capable of self-complementary base pairing. The biological function of this self base pairing is to reform a replication origin as we observed in double strand DNA. Viruses can either use single strand or double strand DNA genome to improve the genome replication efficiency.',
+          },
+           {
+            'description': 'As you can see, the terminal inverted repeats are capable of self-complementary base pairing. The biological function of this self base pairing is to reform a replication origin as we observed in double strand DNA. Viruses can either use single strand or double strand DNA genome to improve the genome replication efficiency.',
       'image': Image11
-    },
-
-{
-      
-      'description': 'But long direct terminal repeats (LTRs) have different repeat sequence.',
+          },
+           {
+            'description': 'But long direct terminal repeats (LTRs) have different repeat sequence.',
       'image': Image12
-    },
-
-
-{
-     
-      'description': 'Then, I want you to separate this double stranded genome as well.',
+          },
+           {
+            'description': 'Then, I want you to separate this double stranded genome as well.',
       'image': Image13
-    },
-
-{
-      
-      'description': 'After separation, you may realize that they cannot form base pairs when you try to fold each strand like this. This is one way to distinguish LTR from ITR. \n Both of these two repeats have different biological functions. Click the external HTML link to explore more about these two repeats.',
+          },
+           {
+            'description': 'After separation, you may realize that they cannot form base pairs when you try to fold each strand like this. This is one way to distinguish LTR from ITR. \n Both of these two repeats have different biological functions. Click the external HTML link to explore more about these two repeats (still need web development here).',
       'image': Image14
+          },
+
+        ]
+      }
     },
 
-
-    
 
 {
       'title': 'Using a hypothetical TM to understanding the Basic Visual Language - Visual scale',
-      'description': 'Then, a numerical visual scale is present beside to the viral genome, indicating the total length of the genome, and providing the accurate coordinates of all RNA transcripts relative to their corresponding viral genome parts. This visual scale is similar to a ruler that is usually marked off in specific units. There are different styles for the measurement of viral genome.',
+      'description': 'Then, a numerical visual scale is presented beside to the viral genome, indicating the total length of the genome. The scale provides the accurate coordinates of all RNA transcripts relative to their corresponding viral genome parts. This visual scale is similar to a ruler that is usually marked off in specific units. There are different styles for the measurement of viral genome.',
     
       'image': Image15,
       'popup': {
         'title': 'different visual styles',
         'content': [
           {
-            'description': 'The scale can be a ruler only or with labels (unit) adjacent to the genome. In some cases, a table depicting the regions of interest may be given to show the precise positions of RNA transcripts.',
+            'description': 'The scale can be a ruler only (1) or with labels (unit) adjacent to the genome (2). In some cases(3), a table depicting the regions of interest may be given to show the precise positions of RNA transcripts.',
             'image': Image16
           },
           {
-            'description': 'Sometimes the scale shows the nucleotide number (nt) to measure the single stranded or partially single stranded viral genome because there is no base pair in single stranded region.  ',
+            'description': '\n \n Sometimes the unit of the scale shows the nucleotide number (nt) to measure the single stranded or partially single stranded viral genome because there is no base pair in single stranded region.  ',
             'image': Image17
           },
           {
@@ -191,7 +194,7 @@ const initialState = {
         'title': 'DNA & RNA directionalities',
         'content': [
           {
-            'description': 'We name the directionality according to the sugar backbone of nucleotides either in RNA or DNA. Since they have exactly the same chemical structure at the third and fifth prime carbon of the ribose ring, the DNA molecule is used here to explain the directionality.The inset of this illustration explains the locations of 5’ and 3’ carbons in the deoxyribose. These two carbons of sugar molecules can connected to each other using phosphate to form DNA backbone in the middle of the strand. However, at both ends of the strands, the 5′-end contains a free phosphate group attached to the 5′ carbon of the ribose ring whereas the 3′-end has an free -OH group attached to the 3’ carbon.',
+            'description': 'We name the directionality according to the sugar backbone of nucleotides either in RNA or DNA. Since DNA and RNA have exactly the same chemical structure at the third and fifth prime carbon of the ribose ring, the DNA molecule is used here to explain the directionality.The inset of this illustration explains the locations of 5’ and 3’ carbons in the deoxyribose. These two carbons of sugar molecules can connected to each other using phosphate to form DNA backbone in the middle of the strand. However, at both ends of the strands, the 5′-end contains a free phosphate group attached to the 5′ carbon of the ribose ring whereas the 3′-end has an free -OH group attached to the 3’ carbon.',
             'image': Image22
           }
           
@@ -204,7 +207,7 @@ const initialState = {
 
 {
     
-      'description': 'Remember this directionality of RNA and let’s start with the arrowhead of RNA.The Arrowhead usually has the dual graphical functions:\n  1.The direction of transcription: from 5’ to 3’. \n 2.3’ end of mRNA transcript, corresponding to the polyadenylation site, which is a type of transcriptional modification created by the host cell mechanism.',
+      'description': 'Remember this directionality of RNA and let’s start with the arrowhead of RNA.The Arrowhead usually has the dual graphical functions:\n  1. The direction of transcription: from 5’ to 3’. \n 2. 3’ end of mRNA transcript, corresponding to the polyadenylation site, which is a type of transcriptional modification created by the host cell mechanism.',
     
       'image': Image23,
       'popup': {
@@ -244,7 +247,7 @@ const initialState = {
 
 {
       
-      'description': 'However, in a typical TM, you will only see the RNA transcripts in a discontinuous form: the line with interruptions/broken lines, which means the processed RNA transcripts. So what does these gaps mean?',
+      'description': 'However, in a typical TM, you will only see the processed RNA transcripts in broken lines. So what do these gaps/interruptions mean?',
       'image': Image28
     },
 
@@ -263,10 +266,16 @@ const initialState = {
 
 {
     
-      'description': 'Typically, in TMs, the process of intron removal and transcriptional modifications are not explained. Thus, the detailed mechanism will be illustrated here (move the slider): \n Step 1. The 5’ cap is synthesized to protect RNA from exonucleolytic attack as well as to facilitate transcription and translation. Remaining part of the precursor RNA is transcribed from the viral genome in 5’ to 3’ direction.',
+      'description': 'Typically, in TMs, the process of intron removal and transcriptional modifications are not explained. Thus, the detailed mechanism will be illustrated here (move the slider): \n \n Step 1. The 5’ cap is synthesized to protect RNA from exonucleolytic attack as well as to facilitate transcription and translation. Remaining part of the precursor RNA is transcribed from the viral genome in 5’ to 3’ direction.',
       
       'image': Image31,
       'afterImage': Image32
+    },
+
+{
+      
+      'description': 'The precursor RNA contains exons (orange) and introns (light blue).',
+      'image': Image52
     },
 
 {
@@ -289,7 +298,7 @@ const initialState = {
 
 {
     
-      'description': 'Step 3. It’s important to note that in vivo, the exons will be joined back together, and produce a shorter RNA transcript with a poly-A tail whereas this process is also not visually shown in most of the TMs.',
+      'description': 'Step 3. It’s important to note that in vivo, the exons will be joined back together, and produce a shorter RNA transcript with a poly-A tail. This process is also not visually shown in most of the TMs.',
       
       'image': Image36,
       'afterImage': Image37
@@ -303,7 +312,7 @@ const initialState = {
 
 {
       
-      'description': 'Why only showing the intermediate step of RNA processing in TM? The major advantage of this step is to help audiences to locate the exact positions of exons and removed introns to the viral genome. In this figure, you can use the guide lines to determine the length and position of every exons as well as introns.',
+      'description': 'Why only showing the intermediate step of RNA processing in TM? \n \n The major advantage of this step is to help audiences to locate the exact positions of exons and removed introns to the viral genome. In this figure, you can use the guide lines to determine the length and position of every exons as well as introns.',
       'image': Image39
     },
 
@@ -327,14 +336,14 @@ const initialState = {
 
 {
     
-      'description': 'You can determine the directions of DNA double strands by following this two-step process. \n Steps: 1. Look at your RNA and find its 3’ end (arrow head) and 5’ end (arrow tail). \n 2. Find the DNA single strand that adjacent to this RNA strand and this DNA strand reads in the opposite direction. Its complementary DNA strand has the same direction as the RNA strand.',
+      'description': 'You can determine the directions of DNA double strands by following these two steps processes. \n Steps: \n 1. Look at your RNA and find its 3’ end (arrow head) and 5’ end (arrow tail). \n 2. Find the DNA single strand that adjacent to this RNA strand and this DNA strand reads in the opposite direction. Its complementary DNA strand has the same direction as the RNA strand. \n click the pop-up window to explore the details of molecular mechanism',
     
       'image': Image43,
       'popup': {
         'title': 'Viral genome directionalities',
         'content': [
           {
-            'description': 'These two DNA strands have different names during the transcription. In this case shown in previous slide: the top strand is referred to the coding strand (anti-sense), which serves as a template during transcription. The bottom strand is called the complementary strand (sense), which sequence is same as the RNA sequence (although all the Ts in RNA are replaced by Us).',
+            'description': 'These two DNA strands have different names during the transcription. In this case, the top strand is referred to the coding strand (anti-sense), which serves as a template during transcription. The bottom strand is called the complementary strand (sense), which sequence is same as the RNA sequence (although all the Ts in RNA are replaced by Us).',
             'image': Image44
           },
            {
