@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import store from '../reduxStates/stores/rootStore';
 import { changeFocus, changePage } from '../reduxStates/actions/ScrollbarAction';
 
+import LottieController from './LottieController';
 import ImageSlider from '../ImageSlider/ImageSlider';
 import PopupWindow from '../PopupWindow/PopupWindow';
 
@@ -99,37 +100,49 @@ class ContentSlider extends Component {
     	return (
             <div className='content-slider'
                 onWheel={this.handleScroll}>
-
         		<Slider 
         			{...this.settings}
         			ref={this.sliderRef}
                     className='slider-list'>
-    			  	{content.map((article, index) => 
-                    <div key={index} className='list-item'>
-                        <div className='images'>
-                            <ImageSlider
-                                before={ article.image }
-                                after={ article.afterImage }
-                                progress={ progress } />
-                        </div>
-                        <div className='text-content'>
-                            {!article.popup || 
-                                <PopupWindow 
-                                    data={ article.popup }
-                                    modalOpen={ this.openModal }
-                                    modalClose={ this.closeModal } />
-                            }
-                            <div className='theme'>
-                                {article.theme}
+    			  	{content.map((article, index) => {
+                        return (
+                            <div key={index} className='list-item'>
+                                {article.image &&
+                                    <div className='old'>
+                                        <div className='images'>
+                                            <ImageSlider
+                                                before={ article.image }
+                                                after={ article.afterImage }
+                                                progress={ progress } />
+                                        </div>
+                                        <div className='text-content'>
+                                            {!article.popup || 
+                                                <PopupWindow 
+                                                    data={ article.popup }
+                                                    modalOpen={ this.openModal }
+                                                    modalClose={ this.closeModal } />
+                                            }
+                                            <div className='theme'>
+                                                {article.theme}
+                                            </div>
+                                            <div className='title'>
+                                                {article.title}
+                                            </div>
+                                            <div className='description'>
+                                                {article.description}
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                {article.animation &&
+                                    <div className='new'>
+                                        <LottieController
+                                            animation={article.animation} />
+                                    </div>
+                                }
                             </div>
-                            <div className='title'>
-                                {article.title}
-                            </div>
-                            <div className='description'>
-                                {article.description}
-                            </div>
-                        </div>
-    				</div>)}
+                        );
+                    })}
     			</Slider>
             </div>
     	);

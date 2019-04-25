@@ -117,9 +117,16 @@ import Image101 from '../../assets/Module2_V01/images/Module2-30-01.jpg';
 import Image102 from '../../assets/Module2_V01/images/Module2-29-01.jpg';
 import Image103 from '../../assets/Module2_V01/images/Module2-31-01.jpg';
 
+import animationData1 from '../../assets/Animation/animation1.json';
 
 const initialState = {
   pageData:[
+    {
+      animation: animationData1
+    },
+    {
+      animation: animationData1
+    },
 //module0 
  {
      

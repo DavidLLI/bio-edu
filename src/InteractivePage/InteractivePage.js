@@ -4,7 +4,7 @@ import store from '../reduxStates/stores/rootStore';
 
 import './InteractivePage.css';
 
-import {ReactComponent as Circle} from '../assets/circle.svg';
+import {ReactComponent as Circle} from '../assets/assets-svg/circle.svg';
 
 class InteractivePage extends Component {
   constructor(props) {

@@ -3,9 +3,10 @@
   flex-direction: column;
   height: 30%;
   position: relative;
-  top: 85vh;
+  top: 90vh;
   z-index: 1;
-  left: 85vw;
+  left: 95vw;
+  cursor: pointer;
 }
 
 .back-button {
@@ -14,11 +15,11 @@
 }
 
 .back-button-svg {
-  fill: white;
+  fill: #2343F5;
 }
 
 .back-button-svg:hover {
-  fill: grey;
+  fill: #566EF7;
 }
 
 .next-button {
@@ -29,15 +30,16 @@
 }
 
 .next-button-svg {
-  fill: white;
+  fill: #2343F5;
 }
 
 .next-button-svg:hover {
-  fill: grey;
+  fill: #566EF7;
 }
 
 .disabled {
   fill: #C0C0C0;
+  cursor: default;
 }
 
 .disabled:hover {

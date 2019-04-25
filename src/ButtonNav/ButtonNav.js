@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import store from '../reduxStates/stores/rootStore';
 import { changeFocus, changePage } from '../reduxStates/actions/ScrollbarAction';
 
-import {ReactComponent as BackButton} from '../assets/back-button.svg';
-import {ReactComponent as NextButton} from '../assets/next-button.svg';
+import {ReactComponent as BackButton} from '../assets/assets-svg/back-button.svg';
+import {ReactComponent as NextButton} from '../assets/assets-svg/next-button.svg';
 
 import './ButtonNav.css';
 

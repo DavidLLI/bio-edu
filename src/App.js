@@ -11,9 +11,6 @@ import ContentSlider from './ContentSlider/ContentSlider';
 
 import './App.css';
 
-import {ReactComponent as BackButton} from './assets/back-button.svg';
-import {ReactComponent as NextButton} from './assets/next-button.svg';
-
 class App extends Component {
   constructor(props) {
     super(props);
