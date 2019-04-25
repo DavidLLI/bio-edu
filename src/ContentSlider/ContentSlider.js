@@ -20,6 +20,8 @@ class ContentSlider extends Component {
 	constructor(props) {
     	super(props);
     	this.sliderRef = React.createRef();
+        this.animationRef = [];
+
     	this.settings = {
 	      dots: false,
           lazyLoad: 'progressive',
@@ -50,6 +52,12 @@ class ContentSlider extends Component {
     	let currentPage = store.getState().currentPage;
 
     	this.sliderRef.current.slickGoTo(currentPage);
+        if (prevProps.currentPage === currentPage) {
+            this.animationRef[currentPage].current.handleRestart();
+        }
+        else {
+            this.animationRef[currentPage].current.handleStop();
+        }
     }
 
     handleScroll(e) {
@@ -99,6 +107,9 @@ class ContentSlider extends Component {
     	let content = store.getState().pageData;
         let progress = store.getState().progress;
         let currentPage = store.getState().currentPage;
+
+        this.animationRef = [];
+
     	return (
             <div className='content-slider'
                 onWheel={this.handleScroll}>
@@ -107,6 +118,7 @@ class ContentSlider extends Component {
         			ref={this.sliderRef}
                     className='slider-list'>
     			  	{content.map((article, index) => {
+                        this.animationRef.push(React.createRef());
                         return (
                             <div key={index} className='list-item'>
                                 {article.image &&
@@ -139,6 +151,7 @@ class ContentSlider extends Component {
                                 {article.animation &&
                                     <div className='new'>
                                         <LottieController
+                                            ref={this.animationRef[index]}
                                             animation={article.animation}/>
                                     </div>
                                 }
