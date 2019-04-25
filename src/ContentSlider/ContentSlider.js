@@ -46,6 +46,7 @@ class ContentSlider extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
+        let content = store.getState().pageData;
     	let currentPage = store.getState().currentPage;
 
     	this.sliderRef.current.slickGoTo(currentPage);
@@ -138,7 +139,7 @@ class ContentSlider extends Component {
                                 {article.animation &&
                                     <div className='new'>
                                         <LottieController
-                                            animation={article.animation} />
+                                            animation={article.animation}/>
                                     </div>
                                 }
                             </div>

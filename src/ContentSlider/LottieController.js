@@ -29,15 +29,41 @@ class LottieController extends Component {
 
         this.state = {
             isStopped: false,
-            isPaused: false
+            isPaused: false,
+            isComplete: false
         };
 
         this.handleComplete = this.handleComplete.bind(this);
+        this.handleRestart = this.handleRestart.bind(this);
+        this.handlePause = this.handlePause.bind(this);
+        this.handlePauseClick = this.handlePauseClick.bind(this);
     }
 
     handleComplete() {
-        console.log('here');
         this.setState({isPaused: true});
+        this.setState({isComplete: true});
+    }
+
+    handlePauseClick() {
+        if (this.state.isComplete) {
+            this.handleRestart();
+        }
+        else {
+            this.handlePause();
+        }
+    }
+
+    handlePause() {
+        this.setState({isPaused: !this.state.isPaused});
+    }
+
+    handleRestart() {
+        this.setState({isStopped: true});
+        this.setState({isPaused: false});
+        setTimeout(() => {
+            this.setState({isStopped: false});
+        }, 100);
+        this.setState({isComplete: false});
     }
 
     render() {
@@ -57,24 +83,18 @@ class LottieController extends Component {
                 <div className='controlButton'>
                     <ReplayButton
                         className='replayButton'
-                        onClick={() => {
-                            this.setState({isStopped: true});
-                            this.setState({isPaused: false});
-                            setTimeout(() => {
-                                this.setState({isStopped: false});
-                            }, 100);
-                    }}/>
+                        onClick={this.handleRestart}/>
                     {
                         this.state.isPaused ||
                         <PauseButton 
                             className='pauseButton'
-                            onClick={() => this.setState({isPaused: !this.state.isPaused})}/>
+                            onClick={this.handlePauseClick}/>
                     }
                     {
                         this.state.isPaused &&
                         <PlayButton 
                             className='pauseButton'
-                            onClick={() => this.setState({isPaused: !this.state.isPaused})}/>
+                            onClick={this.handlePauseClick}/>
                     }
                 </div>
             </div>
@@ -82,4 +102,4 @@ class LottieController extends Component {
     }
 }
 
-export default (LottieController);
+export default LottieController;
