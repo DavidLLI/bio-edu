@@ -22,6 +22,7 @@ class ContentSlider extends Component {
     	this.sliderRef = React.createRef();
     	this.settings = {
 	      dots: false,
+          lazyLoad: 'progressive',
 	      vertical: true,
           infinite: false,
           draggable: false,

@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 import Lottie from 'react-lottie';
 import * as animationData1 from '../assets/Animation/animation1.json';
 
-import {ReactComponent as NextButton} from '../assets/assets-svg/next-button.svg';
+import {ReactComponent as PlayButton} from '../assets/assets-svg/play.svg';
+import {ReactComponent as PauseButton} from '../assets/assets-svg/pause.svg';
+import {ReactComponent as ReplayButton} from '../assets/assets-svg/replay-arrow.svg';
 
 import './LottieController.css';
 
@@ -29,20 +31,52 @@ class LottieController extends Component {
             isStopped: false,
             isPaused: false
         };
+
+        this.handleComplete = this.handleComplete.bind(this);
+    }
+
+    handleComplete() {
+        console.log('here');
+        this.setState({isPaused: true});
     }
 
     render() {
-        console.log(this.defaultOptions.animationData)
     	return (
             <div className='animationBox'>
                 <Lottie options={this.defaultOptions}
                     height={'70vh'}
                     width={'70vw'}
                     isStopped={this.state.isStopped}
-                    isPaused={this.state.isPaused}/>
-                <button style={this.buttonStyle} onClick={() => this.setState({isStopped: true})}>stop</button>
-                <button style={this.buttonStyle} onClick={() => this.setState({isStopped: false})}>play</button>
-                <button style={this.buttonStyle} onClick={() => this.setState({isPaused: !this.state.isPaused})}>pause</button>
+                    isPaused={this.state.isPaused}
+                    eventListeners={[
+                        {
+                            eventName: 'complete',
+                            callback: this.handleComplete
+                        }
+                    ]}/>
+                <div className='controlButton'>
+                    <ReplayButton
+                        className='replayButton'
+                        onClick={() => {
+                            this.setState({isStopped: true});
+                            this.setState({isPaused: false});
+                            setTimeout(() => {
+                                this.setState({isStopped: false});
+                            }, 100);
+                    }}/>
+                    {
+                        this.state.isPaused ||
+                        <PauseButton 
+                            className='pauseButton'
+                            onClick={() => this.setState({isPaused: !this.state.isPaused})}/>
+                    }
+                    {
+                        this.state.isPaused &&
+                        <PlayButton 
+                            className='pauseButton'
+                            onClick={() => this.setState({isPaused: !this.state.isPaused})}/>
+                    }
+                </div>
             </div>
         );
     }
