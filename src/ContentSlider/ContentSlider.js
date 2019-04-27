@@ -51,13 +51,15 @@ class ContentSlider extends Component {
         let content = store.getState().pageData;
     	let currentPage = store.getState().currentPage;
 
-    	this.sliderRef.current.slickGoTo(currentPage);
-        if (prevProps.currentPage === currentPage) {
-            this.animationRef[currentPage].current.handleRestart();
-        }
-        else {
-            this.animationRef[currentPage].current.handleStop();
-        }
+    	this.sliderRef.current.slickGoTo(currentPage, true);
+        if (this.animationRef[currentPage].current) {
+            if (prevProps.currentPage === currentPage) {
+                this.animationRef[currentPage].current.handleRestart();
+            }
+            else {
+                this.animationRef[currentPage].current.handleStop();
+            }
+        }  
     }
 
     handleScroll(e) {
