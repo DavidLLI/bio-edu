@@ -74,8 +74,8 @@ class LottieController extends Component {
     	return (
             <div className='animationBox'>
                 <Lottie options={this.defaultOptions}
-                    height={'70vh'}
-                    width={'70vw'}
+                    height={'50.6vh'}
+                    width={'51.8vw'}
                     isStopped={this.state.isStopped}
                     isPaused={this.state.isPaused}
                     eventListeners={[

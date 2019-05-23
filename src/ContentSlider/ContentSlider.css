@@ -1,8 +1,8 @@
 .content-slider {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
 }
 
 .slider-icon {
@@ -72,19 +72,22 @@
 	left: 0;
 	height: 100%;
   	width: 100%;
+  	overflow: visible;
 }
 
 .list-item {
 	position: relative;
-	height: 100%;
+	height: 100vh;
   	width: 100%;
-  	overflow: hidden;
+  	top: 24.7vh;
+    left: 6.6vw;
+    overflow: visible;
 }
 
 .old {
 	position: relative;
-	height: 100vh;
-  	width: 100vw;
+	height: 100%;
+  	width: 100%;
   	overflow: hidden;
   	display: flex !important; 
   	flex-direction: row;
@@ -92,11 +95,12 @@
 
 .new {
 	position: relative;
-	height: 100vh;
-  	width: 100vw;
+	height: 100%;
+  	width: 100%;
   	overflow: hidden;
   	display: flex !important; 
   	flex-direction: row;
+  	overflow: visible;
 }
 
 .vertical-separator {

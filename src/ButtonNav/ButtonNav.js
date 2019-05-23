@@ -35,11 +35,22 @@ class ButtonNav extends Component {
 	      	nextButtonDisable = ' disabled';
 	    }
 
+	    let currentPageStr = '';
+	    if (currentPage < 10) {
+	    	currentPageStr = '' + '0' + (currentPage + 1);
+	    }
+	    else {
+	    	currentPageStr = '' + (currentPage + 1);
+	    }
+
 	    return (
 	    	<div className='navigation-buttons'>
 	            <div className='back-button'>
 	              <BackButton className={'back-button-svg' + backButtonDisable} 
 	                          onClick={() => this.changePage(currentPage - 1)}/>
+	            </div>
+	            <div className='current-page'>
+	            	{currentPageStr + '/' + pageData.length}
 	            </div>
 	            <div className='next-button'>
 	              <NextButton className={'next-button-svg' + nextButtonDisable}

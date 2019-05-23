@@ -3,45 +3,55 @@
   flex-direction: column;
   height: 30%;
   position: relative;
-  top: 88vh;
   z-index: 1;
-  left: 95vw;
-  cursor: pointer;
 }
 
 .back-button {
   z-index: 1;
-  width: 50px;
+  width: 43px;
+  height: 25.5px;
+  cursor: pointer;
 }
 
 .back-button-svg {
-  fill: #2343F5;
+  fill: #EFEFEF;
 }
 
 .back-button-svg:hover {
-  fill: #566EF7;
+  fill: #0071BC;
 }
 
 .next-button {
   z-index: 1;
-  width: 50px;
+  width: 43px;
+  height: 25.5px;
   position: relative;
-  left: 10px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 .next-button-svg {
-  fill: #2343F5;
+  fill: #EFEFEF;
 }
 
 .next-button-svg:hover {
-  fill: #566EF7;
+  fill: #0071BC;
 }
 
 .disabled {
-  fill: #C0C0C0;
+  fill: #666666;
   cursor: default;
 }
 
 .disabled:hover {
-  fill: #C0C0C0 !important; 
+  fill: #666666 !important; 
+}
+
+.current-page {
+  margin-top: 20px;
+  color: #FFFFFF;
+  font-size: 22.5px;
+  position: relative;
+  left: -5px;
+  cursor: default;
 }

@@ -23,6 +23,7 @@ class ContentSlider extends Component {
         this.animationRef = [];
 
     	this.settings = {
+            arrows: false,
 	      dots: false,
           lazyLoad: 'progressive',
 	      vertical: true,

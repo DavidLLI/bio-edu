@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
-import store from './reduxStates/stores/rootStore';
-import { changeFocus, changePage } from './reduxStates/actions/ScrollbarAction';
-
-import ScrollNav from './ScrollNav/ScrollNav';
-import ButtonNav from './ButtonNav/ButtonNav';
-import InteractivePage from './InteractivePage/InteractivePage';
-import ContentSlider from './ContentSlider/ContentSlider';
+import LeftSection from './MainSections/LeftSection';
+import RightSection from './MainSections/RightSection';
 
 import './App.css';
 
@@ -20,12 +14,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="scroll-nav">
-          <ScrollNav />
+        <div className='left-side'>
+          <LeftSection />
         </div>
-        <div className='content-right'>
-          <ContentSlider />
-          <ButtonNav />
+        <div className='right-side'>
+          <RightSection />
         </div>
       </div>
     );

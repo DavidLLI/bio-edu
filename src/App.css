@@ -1,3 +1,13 @@
+.left-side {
+  width: 35vw;
+  height: 100vh;
+}
+
+.right-side {
+  width: 65vw;
+  height: 100vh;
+}
+
 .scroll-nav {
   position: absolute;
   height: 0px;
@@ -9,7 +19,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 .App {
@@ -17,7 +26,7 @@
   flex-direction: horizontal;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .App-logo {
