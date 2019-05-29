@@ -47,6 +47,7 @@ class ScrollNav extends Component {
     		fontSize = 85 - 20 * Math.abs(focus - index);
     	}
     	fontSize = Math.max(fontSize, 0);
+    	fontSize = fontSize / 3
     	return fontSize;
 	}
 
@@ -59,10 +60,10 @@ class ScrollNav extends Component {
       	<ul>
 	        {this.state.pageArr.map((page, index) => {
 	        	let fontSize = this.calculateFontSize(index, store.getState().focus);
-	        	let opacity = Math.max(0, (fontSize - 40)) / 60;
-	        	let ulPosition = -100 * (store.getState().focus - index);
+	        	let opacity = Math.max(0, (fontSize - 4)) / 6;
+	        	let ulPosition = -100 * (store.getState().focus - index) + 0.5 * window.innerHeight;
 	        	if (index < store.getState().focus) {
-	        		ulPosition = -65 * (store.getState().focus - index);
+	        		ulPosition = -65 * (store.getState().focus - index) + 0.5 * window.innerHeight;
 	        	}
 	        	let selected = '';
 

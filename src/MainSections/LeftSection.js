@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import ButtonNav from '../ButtonNav/ButtonNav'
+import TextDescription from '../TextDescription/TextDescription';
 
 import './LeftSection.css';
 
@@ -17,7 +18,7 @@ class LeftSection extends Component {
       			<ButtonNav />
       		</div>
       		<div className='left-text'>
-      			
+      			<TextDescription />
       		</div> 
       	</div>
     );

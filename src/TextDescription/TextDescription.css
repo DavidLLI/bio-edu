@@ -1,0 +1,29 @@
+.text-description {
+    color: #FFFFFF;
+    font-size: 22px;
+    font-family: 'lato';
+    position: absolute;
+    top: 16.3vh;
+    left: 7.1vw;
+    width: 23.4vw;
+}
+
+.text-module {
+    font-size: 42.1pt;
+}
+
+.text-section {
+    font-size: 28.1pt;
+}
+
+.text-section-subtitle {
+    font-size: 28.1pt;
+}
+
+.text-description-body {
+    font-size: 22.5pt;
+    overflow-y: scroll;  
+    max-height: 50vh;
+    overflow-wrap: break-word;
+    max-width: 23.4vw;
+}

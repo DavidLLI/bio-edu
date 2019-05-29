@@ -125,15 +125,31 @@ import animationData4 from '../../assets/Animation/data-04.json';
 const initialState = {
   pageData:[
     {
+      module: 1,
+      section: 1,
+      subtitle: 'sub1',
+      text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
       animation: animationData1
     },
     {
+      module: 1,
+      section: 2,
+      subtitle: 'sub2',
+      text: 'text2',
       animation: animationData2
     },
     {
+      module: 1,
+      section: 3,
+      subtitle: 'sub3',
+      text: 'text3',
       animation: animationData3
     },
     {
+      module: 1,
+      section: 4,
+      subtitle: 'sub4',
+      text: 'text4',
       animation: animationData4
     },
 

@@ -11,50 +11,54 @@
 }
 
 .ScrollNav {
-	position: relative;
-	top: 30vh;
-	height: 30vh;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100vh;
 	width: 8vw;
+	background-color: #005F93;
+	opacity: 0.93;
+
 }
 
+.ScrollArea {
+	overflow-y: scroll;
+	height: 100%;
+}
+
+.ScrollArea::-webkit-scrollbar { width: 0 !important }
+
 .nav-selected {
-	text-shadow: 1px  1px     #32CD32, 
-    			-1px  1px     #32CD32, 
-    			 1px -1px     #32CD32, 
-    			-1px -1px     #32CD32,
-     			 1px  1px 5px #555;
+
 }
 
 .nav-selected:hover {
-	text-shadow: 1px  1px     #32CD32, 
-    			-1px  1px     #32CD32, 
-    			 1px -1px     #32CD32, 
-    			-1px -1px     #32CD32,
-     			 1px  1px 5px #555 !important;
+
 }
 
 .pointer {
-	position: relative;
-	top: 85px;
+	position: absolute;
 	height: 3px;
 	width: 8vw;
+	top: 50vh;
 	background-color: grey;
 }
 
 li {
-	position: absolute;
 	text-align: center;
 }
 
 ul {
 	list-style-type: none;
 	height: 100%;
+	
 }
 
 .page-number {
 	color: #808080;
-	position: absolute;
-	left: -20px;
+	position: relative;
+	margin-bottom: 14.1vh;
+	top: 49vh;
 }
 
 .page-title {
