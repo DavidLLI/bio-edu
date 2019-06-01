@@ -19,25 +19,58 @@ class NewScrollNav extends React.Component {
   constructor(props) {
     super(props);
 
-    let pageArr = _.range(1, store.getState().pageData.length + 1);
-	this.state = {
-		'pageArr': pageArr
-	};
+    this.timerUniqueID = false;
 
+    let pageArr = _.range(1, store.getState().pageData.length + 1);
+  	this.state = {
+  		'pageArr': pageArr
+  	};
+
+    this.scrollDivRef = React.createRef();
     this.scrollToTop = this.scrollToTop.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
+    this.handleChangePage = this.handleChangePage.bind(this);
   }
 
   componentDidMount() {
 
-    Events.scrollEvent.register('begin', function () {
-      console.log("begin", arguments);
+    Events.scrollEvent.register('begin', (to, element) => {
+      console.log("begin", to, element);
     });
 
-    Events.scrollEvent.register('end', function () {
-      console.log("end", arguments);
+    Events.scrollEvent.register('end', (to, element) => {
+      console.log("end", to, element);
     });
 
   }
+
+  componentDidUpdate(prevProps) {
+    let currentPage = store.getState().currentPage;
+    this.scrollToWithContainer('' + (currentPage + 1));
+  }
+
+  handleScroll() {
+    if (this.scrollDivRef.current) {
+      let pageNumberOffset = this.scrollDivRef.current.childBindings.domNode.childNodes[0].clientHeight;
+      let currentScroll = this.scrollDivRef.current.childBindings.domNode.scrollTop;
+      let currentPageNumberRound = Math.round(currentScroll / (0.141 * window.innerHeight + pageNumberOffset));
+
+      if (this.timerUniqueID) {
+        clearTimeout(this.timerUniqueID);
+        this.timerUniqueID = false;
+      }
+
+      this.timerUniqueID = setTimeout(() => {
+          this.scrollToWithContainer('' + (currentPageNumberRound + 1));
+          this.timerUniqueID = false;
+      }, 500);
+    }
+  }
+
+  handleChangePage(page) {
+    store.dispatch(changePage(page - 1));
+  }
+
   scrollToTop() {
     scroll.scrollToTop();
   }
@@ -49,13 +82,14 @@ class NewScrollNav extends React.Component {
     })
   }
   scrollToWithContainer(name) {
-
-	scroller.scrollTo(name, {
-	    duration: 300,
-	    delay: 0,
-	    smooth: 'easeInOutQuart',
-	    containerId: 'ScrollArea'
-	});
+    let pageNumberOffset = this.scrollDivRef.current.childBindings.domNode.childNodes[0].clientHeight / 2;
+  	scroller.scrollTo(name, {
+  	    duration: 300,
+  	    delay: 0,
+        offset: -0.5 * window.innerHeight + pageNumberOffset,
+  	    smooth: 'easeInOutQuart',
+  	    containerId: 'ScrollArea'
+  	});
 
   }
   componentWillUnmount() {
@@ -63,18 +97,28 @@ class NewScrollNav extends React.Component {
     Events.scrollEvent.remove('end');
   }
   render() {
+    
+    let currentPage = store.getState().currentPage;
+
     return (
+
       <div className="ScrollNav">
-      	<div className='pointer'>
-      	</div>
-      	<Element id='ScrollArea' className='ScrollArea'>
+
+      	<Element id='ScrollArea' 
+            className='ScrollArea' 
+            ref={this.scrollDivRef} 
+            onScroll={this.handleScroll}>
 	        {this.state.pageArr.map((page, index) => {
+            let selected = ' ';
+            if (currentPage === index) {
+              selected += 'page-selected';
+            }
 	        	return (
         			<Element 
-        				key={index}
-    					className='page-number' 
-    					name={'' + page}
-    					onClick={() => this.scrollToWithContainer('' + page)}>
+        			 key={index}
+    					 className={'page-number' + selected} 
+    					 name={'' + page}
+    					 onClick={() => this.handleChangePage(page)}>
         				{page}
         			</Element>
 	        	);
