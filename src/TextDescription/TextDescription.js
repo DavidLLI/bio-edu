@@ -24,7 +24,7 @@ class TextDescription extends Component {
                     {'Section ' + content[currentPage].section}
                 </div>
                 <div className='text-section-subtitle'>
-                    {content[currentPage].subtitle}
+                    {content[currentPage].title}
                 </div>
                 <div className='text-description-body'>
                     {content[currentPage].text}

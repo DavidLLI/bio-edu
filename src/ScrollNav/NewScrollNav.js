@@ -21,9 +21,10 @@ class NewScrollNav extends React.Component {
 
     this.timerUniqueID = false;
 
-    let pageArr = _.range(1, store.getState().pageData.length + 1);
+    let pageArr = store.getState().pageData;
   	this.state = {
-  		'pageArr': pageArr
+  		'pageArr': pageArr,
+      'active': false
   	};
 
     this.scrollDivRef = React.createRef();
@@ -46,14 +47,17 @@ class NewScrollNav extends React.Component {
 
   componentDidUpdate(prevProps) {
     let currentPage = store.getState().currentPage;
+    this.currentScrollPos = currentPage;
     this.scrollToWithContainer('' + (currentPage + 1));
   }
 
   handleScroll() {
     if (this.scrollDivRef.current) {
-      let pageNumberOffset = this.scrollDivRef.current.childBindings.domNode.childNodes[0].clientHeight;
+      console.log(this.scrollDivRef.current.childBindings.domNode.childNodes[0].offsetHeight);
+      let pageNumberOffset = this.scrollDivRef.current.childBindings.domNode.childNodes[0].offsetHeight;
       let currentScroll = this.scrollDivRef.current.childBindings.domNode.scrollTop;
-      let currentPageNumberRound = Math.round(currentScroll / (0.141 * window.innerHeight + pageNumberOffset));
+      let currentPageNumberRound = Math.round(currentScroll / (pageNumberOffset));
+      console.log(currentScroll / (pageNumberOffset));
 
       if (this.timerUniqueID) {
         clearTimeout(this.timerUniqueID);
@@ -63,7 +67,7 @@ class NewScrollNav extends React.Component {
       this.timerUniqueID = setTimeout(() => {
           this.scrollToWithContainer('' + (currentPageNumberRound + 1));
           this.timerUniqueID = false;
-      }, 500);
+      }, 200);
     }
   }
 
@@ -82,11 +86,11 @@ class NewScrollNav extends React.Component {
     })
   }
   scrollToWithContainer(name) {
-    let pageNumberOffset = this.scrollDivRef.current.childBindings.domNode.childNodes[0].clientHeight / 2;
+    let pageNumberOffset = this.scrollDivRef.current.childBindings.domNode.childNodes[0].offsetHeight;
   	scroller.scrollTo(name, {
   	    duration: 300,
   	    delay: 0,
-        offset: -0.5 * window.innerHeight + pageNumberOffset,
+        offset: -0.49 * window.innerHeight,
   	    smooth: 'easeInOutQuart',
   	    containerId: 'ScrollArea'
   	});
@@ -99,30 +103,48 @@ class NewScrollNav extends React.Component {
   render() {
     
     let currentPage = store.getState().currentPage;
-
+    console.log(this.state.active);
     return (
 
-      <div className="ScrollNav">
+      <div className={this.state.active ? 'ScrollNav  active' : 'ScrollNav'}
+            onMouseEnter={() => {this.setState({active: true})}}
+            onMouseLeave={() => {this.setState({active: false})}}>
 
       	<Element id='ScrollArea' 
-            className='ScrollArea' 
+            className={'ScrollArea'}
             ref={this.scrollDivRef} 
-            onScroll={this.handleScroll}>
+            onScroll={this.handleScroll}
+
+            >
+            
 	        {this.state.pageArr.map((page, index) => {
             let selected = ' ';
+
             if (currentPage === index) {
               selected += 'page-selected';
             }
+
+            let paddedIndex = index + 1;
+            if (paddedIndex < 10) {
+              paddedIndex = '0' + paddedIndex;
+            }
+
 	        	return (
-        			<Element 
-        			 key={index}
-    					 className={'page-number' + selected} 
-    					 name={'' + page}
-    					 onClick={() => this.handleChangePage(page)}>
-        				{page}
+        			<Element
+        			  key={index}
+    					  className={'page-row' + selected}
+    					  name={'' + (index + 1)}
+    					  onClick={() => this.handleChangePage(index + 1)}>
+                <div className={'page-number' + selected}>
+                  {paddedIndex}
+                </div>
+                <div className={'page-title' + selected}>
+                  {page.title}
+                </div>
         			</Element>
 	        	);
 	        })}
+          <div className={this.state.active ? 'background-nav  active' : 'background-nav'} />
 	    </Element>
       </div>
     );

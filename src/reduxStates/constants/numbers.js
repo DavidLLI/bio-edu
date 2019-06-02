@@ -1,1 +1,1 @@
-export const SLIDING_SPEED = 900;
+export const SLIDING_SPEED = 0;

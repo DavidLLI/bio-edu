@@ -127,28 +127,28 @@ const initialState = {
     {
       module: 1,
       section: 1,
-      subtitle: 'sub1',
+      title: 'sub1',
       text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
       animation: animationData1
     },
     {
       module: 1,
       section: 2,
-      subtitle: 'sub2',
+      title: 'sub2',
       text: 'text2',
       animation: animationData2
     },
     {
       module: 1,
       section: 3,
-      subtitle: 'sub3',
+      title: 'sub3',
       text: 'text3',
       animation: animationData3
     },
     {
       module: 1,
       section: 4,
-      subtitle: 'sub4',
+      title: 'sub4',
       text: 'text4',
       animation: animationData4
     },

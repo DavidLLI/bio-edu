@@ -114,8 +114,7 @@ class ContentSlider extends Component {
         this.animationRef = [];
 
     	return (
-            <div className='content-slider'
-                onWheel={this.handleScroll}>
+            <div className='content-slider'>
         		<Slider 
         			{...this.settings}
         			ref={this.sliderRef}
