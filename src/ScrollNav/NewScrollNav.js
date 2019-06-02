@@ -49,6 +49,14 @@ class NewScrollNav extends React.Component {
     let currentPage = store.getState().currentPage;
     this.currentScrollPos = currentPage;
     this.scrollToWithContainer('' + (currentPage + 1));
+
+    if (this.state.active) {
+      document.getElementById('backdrop-modal').style.opacity = 0.5;
+    }
+    else {
+      document.getElementById('backdrop-modal').style.opacity = 0;
+    }
+
   }
 
   handleScroll() {
@@ -106,7 +114,7 @@ class NewScrollNav extends React.Component {
     console.log(this.state.active);
     return (
 
-      <div className={this.state.active ? 'ScrollNav  active' : 'ScrollNav'}
+      <div className={this.state.active ? 'ScrollNav active' : 'ScrollNav'}
             onMouseEnter={() => {this.setState({active: true})}}
             onMouseLeave={() => {this.setState({active: false})}}>
 
