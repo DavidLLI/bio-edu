@@ -440,16 +440,16 @@ self.__precacheManifest = [
     "url": "/bio-edu/static/media/slick.ced611da.eot"
   },
   {
-    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
-    "url": "/bio-edu/static/media/slick.b7c9e1e4.woff"
-  },
-  {
     "revision": "d41f55a78e6f49a5512878df1737e58a",
     "url": "/bio-edu/static/media/slick.d41f55a7.ttf"
   },
   {
     "revision": "f97e3bbf73254b0112091d0192f17aec",
     "url": "/bio-edu/static/media/slick.f97e3bbf.svg"
+  },
+  {
+    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
+    "url": "/bio-edu/static/media/slick.b7c9e1e4.woff"
   },
   {
     "revision": "6d7da00a78ae031f3d5737d396b49d0a",
