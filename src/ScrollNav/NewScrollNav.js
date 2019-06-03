@@ -51,9 +51,11 @@ class NewScrollNav extends React.Component {
     this.scrollToWithContainer('' + (currentPage + 1));
 
     if (this.state.active) {
+      //document.getElementById('backdrop-modal').style.display = 'block';
       document.getElementById('backdrop-modal').style.opacity = 0.5;
     }
     else {
+      //document.getElementById('backdrop-modal').style.display = 'none';
       document.getElementById('backdrop-modal').style.opacity = 0;
     }
 

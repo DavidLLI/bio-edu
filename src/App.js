@@ -16,13 +16,15 @@ class App extends Component {
     return (
       <div className="App">
         <div className='modal-backdrop' id='backdrop-modal'/>
-        <div className='left-side' id='left-section'>
+        <div className='left-side'>
           <LeftSection />
         </div>
-        <div className='right-side' id='right-section'>
+        <div className='right-side'>
           <RightSection />
         </div>
-        <NewScrollNav />
+        <div className='scroll-app'>
+          <NewScrollNav />
+        </div>
       </div>
     );
   }

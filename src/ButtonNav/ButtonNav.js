@@ -36,7 +36,7 @@ class ButtonNav extends Component {
 	    }
 
 	    let currentPageStr = '';
-	    if (currentPage < 10) {
+	    if (currentPage < 9) {
 	    	currentPageStr = '' + '0' + (currentPage + 1);
 	    }
 	    else {
