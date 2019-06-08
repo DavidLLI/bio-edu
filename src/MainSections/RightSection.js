@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 
 import ContentSlider from '../ContentSlider/ContentSlider';
+import HamMenu from '../HamMenu';
 
 import './RightSection.css';
 
@@ -15,7 +16,7 @@ class RightSection extends Component {
     return (
       	<div className='right-section'>
       		<ContentSlider />
-          
+          <HamMenu />
       	</div>
     );
   }

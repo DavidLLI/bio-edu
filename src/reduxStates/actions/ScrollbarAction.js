@@ -1,4 +1,4 @@
-import { CHANGE_FOCUS, CHANGE_PAGE, SLIDING_END } from "../constants/action-types";
+import { CHANGE_FOCUS, CHANGE_PAGE, CHANGE_MODULE, CHANGE_SECTION, SLIDING_END } from "../constants/action-types";
 import { SLIDING_SPEED } from "../constants/numbers";
 
 import store from "../stores/rootStore";
@@ -22,4 +22,15 @@ export function changePage(payload) {
 	}
 	
   	return { type: CHANGE_PAGE, currentPage: store.getState().currentPage };
+}
+
+export function changeSection(payload) {
+	store.dispatch(changePage(0));
+	return { type: CHANGE_SECTION, currentSection: payload };
+}
+
+export function changeModule(payload) {
+	store.dispatch(changeSection(0));
+	store.dispatch(changePage(0));
+	return { type: CHANGE_MODULE, currentModule: payload };
 }

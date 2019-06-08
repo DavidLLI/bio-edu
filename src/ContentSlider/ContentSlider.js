@@ -107,9 +107,11 @@ class ContentSlider extends Component {
     }
 
     render() {
-    	let content = store.getState().pageData;
         let progress = store.getState().progress;
-        let currentPage = store.getState().currentPage;
+        let { pageData, 
+        currentPage, 
+        currentModule, 
+        currentSection } = store.getState();
 
         this.animationRef = [];
 
@@ -119,7 +121,7 @@ class ContentSlider extends Component {
         			{...this.settings}
         			ref={this.sliderRef}
                     className='slider-list'>
-    			  	{content.map((article, index) => {
+    			  	{pageData[currentModule][currentSection].pages.map((article, index) => {
                         this.animationRef.push(React.createRef());
                         return (
                             <div key={index} className='list-item'>

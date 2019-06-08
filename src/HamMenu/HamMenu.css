@@ -1,0 +1,72 @@
+.HamMenu {
+	position: absolute;
+	right: 8vw;
+	top: 5vh;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	vertical-align: top;
+	text-align: center;
+	cursor: pointer;
+}
+
+.modal-content {
+	background-color: rgba(0, 113, 188, 0.7);
+}
+
+.modal-header {
+	border-bottom: none;
+}
+
+.modal-title {
+	opacity: 1 !important;
+	color: white;
+}
+
+.modal-body {
+	opacity: 1 !important;
+	color: white;
+}
+
+button {
+	color: white !important;
+}
+
+.module-expand-button {
+	display: flex;
+	flex-direction: row;
+}
+
+.module-itself {
+	margin-left: 10px;
+	cursor: pointer;
+	margin-bottom: 15px;
+	transition: 1s;
+}
+
+.module-section {
+	margin-left: 40px;
+	margin-bottom: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.module-section.collapsed {
+	transform-origin: top;
+	transform: scaleY(0);
+}
+
+.module-menu-item.collapsed {
+	height: 40px;
+}
+
+.module-menu-item {
+	transition: 1s;
+}
+
+.expand-button-svg {
+	height: 30px;
+	width: 30px;
+	fill: white;
+	cursor: pointer;
+}

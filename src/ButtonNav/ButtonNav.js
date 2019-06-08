@@ -17,21 +17,22 @@ class ButtonNav extends Component {
 	}
 
 	changePage(page) {
-    	if (store.getState().sliding === false) {
-      		store.dispatch(changePage(page));
-    	}
+		console.log(store.getState().currentPage);
+      	store.dispatch(changePage(page));
   	}
 
   	render() {
-  		let pageData = store.getState().pageData;
-	    let currentPage = store.getState().currentPage;
+  		let { pageData, 
+  			currentPage, 
+  			currentModule, 
+  			currentSection } = store.getState();
 
 	    let backButtonDisable = '';
 	    let nextButtonDisable = '';
 	    if (currentPage === 0) {
 	      	backButtonDisable = ' disabled';
 	    }
-	    if (currentPage === pageData.length - 1) {
+	    if (currentPage === pageData[currentModule][currentSection].pages.length - 1) {
 	      	nextButtonDisable = ' disabled';
 	    }
 
@@ -43,6 +44,14 @@ class ButtonNav extends Component {
 	    	currentPageStr = '' + (currentPage + 1);
 	    }
 
+	    let pageLengthStr = '';
+	    if (pageData[currentModule][currentSection].pages.length < 9) {
+	    	pageLengthStr = '' + '0' + pageData[currentModule][currentSection].pages.length;
+	    }
+	    else {
+	    	pageLengthStr = '' + pageData[currentModule][currentSection].pages.length;
+	    }
+
 	    return (
 	    	<div className='navigation-buttons'>
 	            <div className='back-button'>
@@ -50,7 +59,7 @@ class ButtonNav extends Component {
 	                          onClick={() => this.changePage(currentPage - 1)}/>
 	            </div>
 	            <div className='current-page'>
-	            	{currentPageStr + '/' + pageData.length}
+	            	{currentPageStr + '/' + pageLengthStr}
 	            </div>
 	            <div className='next-button'>
 	              <NextButton className={'next-button-svg' + nextButtonDisable}

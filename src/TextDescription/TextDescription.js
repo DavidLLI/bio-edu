@@ -12,22 +12,24 @@ class TextDescription extends Component {
     }
 
     render() {
-    	let content = store.getState().pageData;
-        let currentPage = store.getState().currentPage;
+    	let { pageData, 
+        currentPage, 
+        currentModule, 
+        currentSection } = store.getState();
 
     	return (
             <div className='text-description'>
                 <div className='text-module'>
-                    {'Module ' + content[currentPage].module}
+                    {'Module ' + (currentModule + 1)}
                 </div>
                 <div className='text-section'>
-                    {'Section ' + content[currentPage].section}
+                    {'Section ' + (currentSection + 1)}
                 </div>
                 <div className='text-section-subtitle'>
-                    {content[currentPage].title}
+                    {pageData[currentModule][currentSection].pages[currentPage].title}
                 </div>
                 <div className='text-description-body'>
-                    {content[currentPage].text}
+                    {pageData[currentModule][currentSection].pages[currentPage].text}
                 </div>
             </div>
     	);
@@ -36,7 +38,9 @@ class TextDescription extends Component {
 
 const mapStateToProps = state => {
   return {
-    currentPage: state.currentPage
+    currentPage: state.currentPage,
+    currentModule: state.currentModule,
+    currentSection: state.currentSection
   }
 }
 

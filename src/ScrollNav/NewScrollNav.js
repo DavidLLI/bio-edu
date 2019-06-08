@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
-import { changeFocus, changePage } from '../reduxStates/actions/ScrollbarAction';
+import { changeFocus, changePage, changeSection } from '../reduxStates/actions/ScrollbarAction';
 import store from "../reduxStates/stores/rootStore";
+
+import {ReactComponent as BackButton} from '../assets/assets-svg/back-button.svg';
+import {ReactComponent as NextButton} from '../assets/assets-svg/next-button.svg';
 
 import './ScrollNav.css';
 
@@ -21,9 +24,7 @@ class NewScrollNav extends React.Component {
 
     this.timerUniqueID = false;
 
-    let pageArr = store.getState().pageData;
   	this.state = {
-  		'pageArr': pageArr,
       'active': false
   	};
 
@@ -35,13 +36,11 @@ class NewScrollNav extends React.Component {
 
   componentDidMount() {
 
-    Events.scrollEvent.register('begin', (to, element) => {
-      console.log("begin", to, element);
-    });
 
-    Events.scrollEvent.register('end', (to, element) => {
-      console.log("end", to, element);
-    });
+
+    let currentPage = store.getState().currentPage;
+    this.currentScrollPos = currentPage;
+    this.scrollToWithContainer('' + (currentPage + 1));
 
   }
 
@@ -61,13 +60,17 @@ class NewScrollNav extends React.Component {
 
   }
 
+  handleChangeSection(section) {
+      store.dispatch(changeSection(section));
+  }
+
   handleScroll() {
     if (this.scrollDivRef.current) {
-      console.log(this.scrollDivRef.current.childBindings.domNode.childNodes[0].offsetHeight);
+      //console.log(this.scrollDivRef.current.childBindings);
       let pageNumberOffset = this.scrollDivRef.current.childBindings.domNode.childNodes[0].offsetHeight;
       let currentScroll = this.scrollDivRef.current.childBindings.domNode.scrollTop;
       let currentPageNumberRound = Math.round(currentScroll / (pageNumberOffset));
-      console.log(currentScroll / (pageNumberOffset));
+      //console.log(currentScroll / (pageNumberOffset));
 
       if (this.timerUniqueID) {
         clearTimeout(this.timerUniqueID);
@@ -112,13 +115,65 @@ class NewScrollNav extends React.Component {
   }
   render() {
     
-    let currentPage = store.getState().currentPage;
-    console.log(this.state.active);
+    let { pageData, 
+        currentPage, 
+        currentModule, 
+        currentSection } = store.getState();
+
+    let backButtonDisable = '';
+    let nextButtonDisable = '';
+    if (currentSection === 0) {
+        backButtonDisable = ' disabled';
+    }
+    if (currentSection === pageData[currentModule].length - 1) {
+        nextButtonDisable = ' disabled';
+    }
+
+    let previousSection = currentSection;
+    if (currentSection == 0) {
+      previousSection = pageData[currentModule].length - 1;
+    }
+
+    let nextSection = currentSection + 2;
+    if (currentSection == pageData[currentModule].length - 1) {
+      nextSection = 1;
+    }
+
     return (
 
       <div className={this.state.active ? 'ScrollNav active' : 'ScrollNav'}
             onMouseEnter={() => {this.setState({active: true})}}
             onMouseLeave={() => {this.setState({active: false})}}>
+
+        <div className='change-section'>
+          <div className='change-section-title'>
+            Current Section
+          </div>
+          <div className='section-change-buttons'>
+            <div className='section-back-button'>
+              <BackButton className={'section-back-button-svg' + backButtonDisable} 
+                          onClick={() => this.handleChangeSection(currentSection - 1)}/>
+              <div className='current-section'>
+                {'Section ' + (previousSection)}
+              </div>
+            </div>
+            <div className='current-section actual-section'>
+              <div>
+                |
+              </div>
+              <div>
+                {'Section ' + (currentSection + 1)}
+              </div>
+            </div>
+            <div className='section-next-button'>
+              <NextButton className={'section-next-button-svg' + nextButtonDisable}
+                          onClick={() => this.handleChangeSection(currentSection + 1)}/>
+              <div className='current-section'>
+                {'Section ' + (nextSection)}
+              </div>
+            </div>
+          </div>
+        </div>
 
       	<Element id='ScrollArea' 
             className={'ScrollArea'}
@@ -127,7 +182,7 @@ class NewScrollNav extends React.Component {
 
             >
             
-	        {this.state.pageArr.map((page, index) => {
+	        {pageData[currentModule][currentSection].pages.map((page, index) => {
             let selected = ' ';
 
             if (currentPage === index) {
@@ -172,6 +227,8 @@ const mapStateToProps = state => {
   return {
     focus: state.focus,
     currentPage: state.currentPage,
+    currentModule: state.currentModule,
+    currentSection: state.currentSection,
     sliding: state.sliding
   }
 }
