@@ -13,15 +13,15 @@
 .ScrollNav {
 	position: absolute;
 	top: 0;
-	right: -15.5vw;
+	right: -18.5vw;
 	height: 100vh;
-	width: 20vw;
+	width: 21.3vw;
 	z-index: 1050;
 	transition: all 500ms;
 }
 
 .ScrollNav.active {
-	transform: translateX(-15vw);
+	transform: translateX(-18.5vw);
 }
 
 .change-section {
@@ -72,7 +72,7 @@ ul {
 .background-nav {
 	background-color: #005F93;
 	height: 100vh;
-	width: 16.5vw;
+	width: 19vw;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -97,16 +97,17 @@ ul {
 
 .page-number {
 	position: relative !important;
-	width: 3.5vw;
-	padding-left: 0.5vw;
+	width: 2.28vw;
+	padding-left: 0.3vw;
 	margin-bottom: 14.1vh;
+
 }
 
 .page-title {
 	position: relative !important;
 	padding-left: 1vw;
 	transition: 0.5s;
-	font-size: 1.2vw;
+	font-size: 16pt;
 	max-width: 15vw;
 }
 
@@ -117,7 +118,7 @@ ul {
 	cursor: pointer;
 	display: flex;
 	flex-direction: row;
-	font-size: 2vw;
+	font-size: 16pt;
 	z-index: 2;
 	transition: 0.5s;
 }

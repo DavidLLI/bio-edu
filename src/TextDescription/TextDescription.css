@@ -1,6 +1,5 @@
 .text-description {
     color: #FFFFFF;
-    font-size: 22px;
     font-family: 'lato';
     position: absolute;
     top: 16.3vh;
@@ -9,19 +8,21 @@
 }
 
 .text-module {
-    font-size: 42.1pt;
+    font-size: 32pt;
 }
 
 .text-section {
-    font-size: 28.1pt;
+    font-size: 20pt;
+    margin-top: 10px;
 }
 
 .text-section-subtitle {
-    font-size: 28.1pt;
+    font-size: 20pt;
 }
 
 .text-description-body {
-    font-size: 22.5pt;
+    margin-top: 15px;
+    font-size: 16pt;
     overflow-y: scroll;  
     max-height: 50vh;
     overflow-wrap: break-word;
