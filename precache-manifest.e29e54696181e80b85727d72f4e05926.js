@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "1f54278b73ba541271f3",
+    "revision": "0d00203fee9f8ae9589c",
     "url": "/bio-edu/static/css/main.7284ee2b.chunk.css"
   },
   {
-    "revision": "1f54278b73ba541271f3",
-    "url": "/bio-edu/static/js/main.1f54278b.chunk.js"
+    "revision": "0d00203fee9f8ae9589c",
+    "url": "/bio-edu/static/js/main.0d00203f.chunk.js"
   },
   {
-    "revision": "25b46a9016a9ad3cb4e1",
+    "revision": "3f3c51b7663fc87151fe",
     "url": "/bio-edu/static/css/1.b4a5d729.chunk.css"
   },
   {
-    "revision": "25b46a9016a9ad3cb4e1",
-    "url": "/bio-edu/static/js/1.25b46a90.chunk.js"
+    "revision": "3f3c51b7663fc87151fe",
+    "url": "/bio-edu/static/js/1.3f3c51b7.chunk.js"
   },
   {
     "revision": "17ed231d7f641da9279c",
@@ -436,10 +436,6 @@ self.__precacheManifest = [
     "url": "/bio-edu/static/media/Module2-31-01.cffd5e92.jpg"
   },
   {
-    "revision": "f97e3bbf73254b0112091d0192f17aec",
-    "url": "/bio-edu/static/media/slick.f97e3bbf.svg"
-  },
-  {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
     "url": "/bio-edu/static/media/slick.b7c9e1e4.woff"
   },
@@ -450,6 +446,10 @@ self.__precacheManifest = [
   {
     "revision": "d41f55a78e6f49a5512878df1737e58a",
     "url": "/bio-edu/static/media/slick.d41f55a7.ttf"
+  },
+  {
+    "revision": "f97e3bbf73254b0112091d0192f17aec",
+    "url": "/bio-edu/static/media/slick.f97e3bbf.svg"
   },
   {
     "revision": "6d7da00a78ae031f3d5737d396b49d0a",
@@ -484,7 +484,7 @@ self.__precacheManifest = [
     "url": "/bio-edu/static/media/collapse.c62e1b2f.svg"
   },
   {
-    "revision": "b62d699142482c7a41149a1da755cae9",
+    "revision": "10c66473e6f81c62982e165b1ddf1188",
     "url": "/bio-edu/index.html"
   }
 ];
