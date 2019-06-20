@@ -51,8 +51,6 @@ class ContentSlider extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log(prevProps);
-        console.log(this.animationRef);
         let content = store.getState().pageData;
     	let currentPage = store.getState().currentPage;
 
@@ -170,8 +168,8 @@ class ContentSlider extends Component {
 const mapStateToProps = state => {
   return {
     currentPage: state.currentPage,
-    currentSection: state.currentSection,
     currentModule: state.currentModule,
+    currentSection: state.currentSection,
     sliding: state.sliding
   }
 }

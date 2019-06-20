@@ -12,7 +12,6 @@ import './LottieController.css';
 class LottieController extends Component {
 	constructor(props) {
     	super(props);
-
         this.defaultOptions = {
             loop: false,
             autoplay: true,
@@ -37,6 +36,10 @@ class LottieController extends Component {
         this.handleRestart = this.handleRestart.bind(this);
         this.handlePause = this.handlePause.bind(this);
         this.handlePauseClick = this.handlePauseClick.bind(this);
+    }
+
+    componentWillUpdate(prevProps, prevState) {
+        this.defaultOptions.animationData = prevProps.animation;
     }
 
     handleComplete() {

@@ -244,7 +244,7 @@ const initialState = {
          {
             title: 'Terminal repeats- Part01',
             text: 'You may notice that both ends of the viral genome can have these white boxes highlighted in blue. These usually represent the terminal repeats (TR).',
-            animation: animationData11
+            animation: animationData12
           },
           {
             title: 'Terminal repeats- Part02',
