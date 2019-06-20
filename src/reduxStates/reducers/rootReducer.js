@@ -152,7 +152,7 @@ const initialState = {
         name: 'Module 1 section 1 title',
         pages: [
           {
-            title: 'What does a transcription map look like?',
+            title: 'Basic features of viral transcription map',
             text: 'This figure is a typical TM example that summarized all the transcription information about a DNA virus called the adenovirus, and it is adapted and modified from the Fundamentals of Molecular Virology, 2nd Edition (Acheson, 2011). You can see this TM contains many different graphical features, and they are difficult to understand at first. I will not teach you the visual language by going through this graph. Instead, let’s start with a simple hypothetical example of TM. Please click the play button of the media controls listed below the animation on your right-hand side to play this animation.',
             animation: animationData1
           },
@@ -229,9 +229,60 @@ const initialState = {
 
           {
             title: 'Viral RNA transcript- Part08',
-            text: 'The gaps are highlighted in light blue, and they are the removed introns. Click plus icon to open up pop-up window. Typically, in TMs, the process of intron removal and transcriptional modifications are not explained. Thus, the general steps of intron removal will be illustrated on the next page and its detailed biological mechanism will be discussed later in module 2.',
+            text: 'The gaps are highlighted in light blue, and they are the removed introns. Click plus icon to open up pop-up window. Typically, in TMs, the process of transcription, transcriptional modifications, and intron removal are not explained. Thus, the general steps of the whole RNA transcriptional processes will be illustrated on the next page and the detailed biological mechanism of intron removal will be discussed later in module 2.',
             animation: animationData14
           },
+          
+          //Scroll video for part09
+
+           {
+            title: 'Viral RNA transcript- Part10',
+            text: 'The significant advantage of illustrating the RNA in broken lines is to help audiences to locate the exact positions of exons and removed introns to the viral genome. In this animation, you can follow the dotted guidelines to determine the length and position of every exon as well as every removed intron.',
+            animation: animationData16
+          },
+           
+           {
+            title: 'Viral RNA transcript- Part11',
+            text: 'Now, let’s refresh your memory and improve your understanding: please check all the transcription initiation sites in this animation by clicking the little boxes.',
+            animation: animationData17
+          },
+
+            {
+            title: 'Viral RNA transcript- Part12',
+            text: 'A common misconception would be defining the transcription initiation site of RNA transcripts in TM. If you see any five prime ends of the RNA without a vertical bar or any visual cue, do not be confused, this is not the actual transcription initiation site; instead, these five prime ends without vertical bars located in between the discontinuous RNA transcript correspond to the splice acceptor sites (note: this will be discussed in module 2).',
+            animation: animationData18
+          },
+
+          {
+            title: 'RNA directionalities- Part01',
+            text: 'We already know the directionality of an RNA transcript, but what about the directionality of the double-stranded viral genome?',
+            animation: animationData19
+          },
+
+          {
+            title: 'RNA directionalities- Part02',
+            text: 'You can determine the directions of the DNA double strands by following these two steps processes. Steps 1: Look at your RNA and find its 3’ end (arrow head) and 5’ end (arrow tail). Step 2 : Find the DNA single strand that adjacent to this RNA strand and this DNA strand reads in the opposite direction. Its complementary DNA strand has the same direction as the RNA strand. Click here to open up a pop-up window to explore the details.',
+            animation: animationData20
+          },
+
+          {
+            title: 'RNA directionalities- Part03',
+            text: 'The directionality and the name of the two DNA strands are relative to the directionality of the RNA transcript since the transcription can occur at both DNA strands but in the opposite direction.',
+            animation: animationData22
+          },
+
+          {
+            title: 'RNA directionalities- Part04',
+            text: 'As the animation shown, the top DNA strand is the template strand for the viral RNA 1.',
+            animation: animationData23
+          },
+
+          {
+            title: 'RNA directionalities- Part05',
+            text: 'In the second scenario, the top DNA strand is no longer the template strand as the transcriptional direction of the viral RNA 2 is going on the opposite way. Therefore, the bottom DNA strand is the template strand.',
+            animation: animationData24
+          },
+
 
         ],
       },
