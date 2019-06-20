@@ -20,10 +20,12 @@ class ContentSlider extends Component {
 	constructor(props) {
     	super(props);
     	this.sliderRef = React.createRef();
-        this.animationRef = [];
+        this.animationRef = [[[]]];
+
+
 
     	this.settings = {
-            arrows: false,
+          arrows: false,
 	      dots: false,
           lazyLoad: 'progressive',
 	      vertical: true,
@@ -49,17 +51,14 @@ class ContentSlider extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
+        console.log(prevProps);
+        console.log(this.animationRef);
         let content = store.getState().pageData;
     	let currentPage = store.getState().currentPage;
 
     	this.sliderRef.current.slickGoTo(currentPage, true);
         if (this.animationRef[currentPage].current) {
-            if (prevProps.currentPage === currentPage) {
-                this.animationRef[currentPage].current.handleRestart();
-            }
-            else {
-                this.animationRef[currentPage].current.handleStop();
-            }
+            this.animationRef[currentPage].current.handleRestart();
         }  
     }
 
@@ -171,6 +170,8 @@ class ContentSlider extends Component {
 const mapStateToProps = state => {
   return {
     currentPage: state.currentPage,
+    currentSection: state.currentSection,
+    currentModule: state.currentModule,
     sliding: state.sliding
   }
 }

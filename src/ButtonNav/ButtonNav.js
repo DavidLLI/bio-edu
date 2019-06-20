@@ -17,7 +17,6 @@ class ButtonNav extends Component {
 	}
 
 	changePage(page) {
-		console.log(store.getState().currentPage);
       	store.dispatch(changePage(page));
   	}
 
@@ -73,7 +72,9 @@ class ButtonNav extends Component {
 const mapStateToProps = state => {
 	return {
 		sliding: state.sliding,
-	    currentPage: state.currentPage
+	    currentPage: state.currentPage,
+	    currentSection: state.currentSection,
+	    currentModule: state.currentModule
 	}
 }
 

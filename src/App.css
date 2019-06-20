@@ -1,7 +1,8 @@
 .modal-backdrop {
   transition: 0.5s;
   opacity: 0;
-  pointer-events: none
+  pointer-events: none;
+  z-index: 98;
 }
 
 .scroll-app {

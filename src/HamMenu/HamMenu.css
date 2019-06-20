@@ -1,6 +1,6 @@
 .HamMenu {
 	position: absolute;
-	right: 8vw;
+	right: 7vw;
 	top: 5vh;
 	color: white;
 	display: flex;
@@ -8,6 +8,7 @@
 	vertical-align: top;
 	text-align: center;
 	cursor: pointer;
+	font-size: 22.5px;
 }
 
 .modal-content {
@@ -26,10 +27,6 @@
 .modal-body {
 	opacity: 1 !important;
 	color: white;
-}
-
-button {
-	color: white !important;
 }
 
 .module-expand-button {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
-import { changeFocus, changePage, changeSection } from '../reduxStates/actions/ScrollbarAction';
+import { changeFocus, changePage, changeSection, navActive } from '../reduxStates/actions/ScrollbarAction';
 import store from "../reduxStates/stores/rootStore";
 
 import {ReactComponent as BackButton} from '../assets/assets-svg/back-button.svg';
@@ -35,13 +35,9 @@ class NewScrollNav extends React.Component {
   }
 
   componentDidMount() {
-
-
-
     let currentPage = store.getState().currentPage;
     this.currentScrollPos = currentPage;
     this.scrollToWithContainer('' + (currentPage + 1));
-
   }
 
   componentDidUpdate(prevProps) {
@@ -49,7 +45,9 @@ class NewScrollNav extends React.Component {
     this.currentScrollPos = currentPage;
     this.scrollToWithContainer('' + (currentPage + 1));
 
-    if (this.state.active) {
+    let navActive = store.getState().navActive;
+
+    if (navActive) {
       //document.getElementById('backdrop-modal').style.display = 'block';
       document.getElementById('backdrop-modal').style.opacity = 0.5;
     }
@@ -109,16 +107,32 @@ class NewScrollNav extends React.Component {
   	});
 
   }
+
   componentWillUnmount() {
     Events.scrollEvent.remove('begin');
     Events.scrollEvent.remove('end');
   }
+
+  handleActive() {
+    let tutorialActive = store.getState().tutorialActive;
+    if (!tutorialActive) {
+      store.dispatch(navActive(true));
+    }
+  }
+
+  handleInActive() {
+    let tutorialActive = store.getState().tutorialActive;
+    if (!tutorialActive) {
+      store.dispatch(navActive(false));
+    }
+  }
+
   render() {
-    
     let { pageData, 
         currentPage, 
         currentModule, 
-        currentSection } = store.getState();
+        currentSection,
+        navActive } = store.getState();
 
     let backButtonDisable = '';
     let nextButtonDisable = '';
@@ -141,9 +155,9 @@ class NewScrollNav extends React.Component {
 
     return (
 
-      <div className={this.state.active ? 'ScrollNav active' : 'ScrollNav'}
-            onMouseEnter={() => {this.setState({active: true})}}
-            onMouseLeave={() => {this.setState({active: false})}}>
+      <div className={navActive ? 'ScrollNav active' : 'ScrollNav'}
+            onMouseEnter={this.handleActive}
+            onMouseLeave={this.handleInActive}>
 
         <div className='change-section'>
           <div className='change-section-title'>
@@ -209,7 +223,7 @@ class NewScrollNav extends React.Component {
         			</Element>
 	        	);
 	        })}
-          <div className={this.state.active ? 'background-nav  active' : 'background-nav'} />
+          <div className={navActive ? 'background-nav  active' : 'background-nav'} />
 	    </Element>
       </div>
     );
@@ -225,6 +239,7 @@ class NewScrollNav extends React.Component {
 
 const mapStateToProps = state => {
   return {
+    navActive: state.navActive,
     focus: state.focus,
     currentPage: state.currentPage,
     currentModule: state.currentModule,
