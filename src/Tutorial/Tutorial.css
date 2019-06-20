@@ -1,0 +1,12 @@
+.tutorial-button {
+	position: absolute;
+	right: 11vw;
+	top: 4.5vh;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	vertical-align: top;
+	text-align: center;
+	cursor: pointer;
+	margin-right: 20px;
+}

@@ -1,4 +1,4 @@
- import { CHANGE_FOCUS, CHANGE_PAGE, SLIDING_END, CHANGE_MODULE, CHANGE_SECTION } from "../constants/action-types";
+ import { CHANGE_FOCUS, CHANGE_PAGE, SLIDING_END, CHANGE_MODULE, CHANGE_SECTION, NAV_ACTIVE, CHANGE_TUTORIAL } from "../constants/action-types";
 
  //module1
 import Image1 from '../../assets/Viraliterate_Module 1_Thumbnails_V01/Title/titled.jpg';
@@ -295,7 +295,7 @@ const initialState = {
          {
             title: 'Terminal repeats- Part01',
             text: 'You may notice that both ends of the viral genome can have these white boxes highlighted in blue. These usually represent the terminal repeats (TR).',
-            animation: animationData11
+            animation: animationData12
           },
           {
             title: 'Terminal repeats- Part02',
@@ -522,7 +522,9 @@ const initialState = {
   currentModule: 0,
   currentSection: 0,
   currentPage: 0,
-  sliding: false
+  sliding: false,
+  navActive: false,
+  tutorialActive: false
 };
 
 function rootReducer(state = initialState, action) {
@@ -556,6 +558,16 @@ function rootReducer(state = initialState, action) {
           currentSection: action.currentSection
       });
     }
+  }
+  else if (action.type === NAV_ACTIVE) {
+    state = Object.assign({}, state, {
+      navActive: action.navActive
+    });
+  }
+  else if (action.type === CHANGE_TUTORIAL) {
+    state = Object.assign({}, state, {
+      tutorialActive: action.tutorialActive
+    });
   }
   else if (action.type === SLIDING_END) {
     clearInterval(action.intervalID);
