@@ -16,9 +16,9 @@ class Tutorial extends Component {
 			run: false,
 			steps: [
 		        {
-		          target: '.home-logo-svg',
-		          content: 'Click on the icon at any time to go back to the Home screen',
-		          disableBeacon: true
+			        target: '.home-logo-svg',
+			        content: 'Click on the icon at any time to go back to the Home screen',
+			        disableBeacon: true
 		        },
 		        {
 		        	target: '.share-logo',
@@ -106,10 +106,10 @@ class Tutorial extends Component {
 					onMouseEnter={() => {this.setState({hover: true})}}
               		onMouseLeave={() => {this.setState({hover: false})}}
               		onClick={() => {store.dispatch(changeTutorial(true));}}>
-					<div style={{fontSize: '41.7px', lineHeight: '39.2px'}}>
+					<div style={{fontSize: '39.8px', lineHeight: '38.8px'}}>
 						?
 					</div>
-					<div style={{fontSize: '22.5px', lineHeight: '22.5px'}}>
+					<div style={{fontSize: '18px', lineHeight: '18px'}}>
 						Tutorial
 					</div>
 				</div>
@@ -120,6 +120,10 @@ class Tutorial extends Component {
 		          stepIndex={stepIndex}
 		          continuous={true}
 		          showSkipButton={true}
+		          showProgress={true}
+		          styles={{options: {
+		          	primaryColor: '#0071BC'
+		          }}}
 		        />
 			</div>
 		);

@@ -9,6 +9,7 @@
 
 .text-module {
     font-size: 32px;
+    font-weight: bold;
 }
 
 .text-section {
@@ -24,7 +25,7 @@
     margin-top: 15px;
     font-size: 16px;
     overflow-y: scroll;  
-    max-height: 50vh;
+    max-height: 45vh;
     overflow-wrap: break-word;
     max-width: 23.4vw;
 }

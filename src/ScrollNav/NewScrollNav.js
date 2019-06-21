@@ -223,6 +223,8 @@ class NewScrollNav extends React.Component {
         			</Element>
 	        	);
 	        })}
+          
+          <div className='bottom-blur' />
           <div className={navActive ? 'background-nav  active' : 'background-nav'} />
 	    </Element>
       </div>
