@@ -21,6 +21,12 @@ class Tutorial extends Component {
 		          disableBeacon: true
 		        },
 		        {
+		        	target: '.share-logo',
+		        	content: 'Like this learning resource? Share it to your social account!',
+		        	disableBeacon: true,
+		        	placement: 'right'
+		        },
+		        {
 		        	target: '.ScrollNav',
 		        	content: 'Click the curret page number highlighted in the blue area to view index.',
 		        	placement: 'left',
@@ -72,7 +78,7 @@ class Tutorial extends Component {
 	handleJoyrideCallback(data) {
 		const { action, index, status, type } = data;
 
-		if (index >= 0 && index <= 3) {
+		if (index >= 1 && index <= 4) {
 	    	store.dispatch(navActive(true));
 	    }
 	    else {

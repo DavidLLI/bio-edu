@@ -87,7 +87,7 @@ ul {
 }
 
 .page-selected {
-	color: #FFFFFF !important;
+	color: #7AC943 !important;
 }
 
 .page-selected.page-number {
@@ -107,8 +107,8 @@ ul {
 	position: relative !important;
 	padding-left: 1vw;
 	transition: 0.5s;
-	font-size: 16pt;
-	max-width: 15vw;
+	font-size: 22.3px;
+	max-width: 18vw;
 }
 
 .page-row {
@@ -118,7 +118,7 @@ ul {
 	cursor: pointer;
 	display: flex;
 	flex-direction: row;
-	font-size: 16pt;
+	font-size: 22.3px;
 	z-index: 2;
 	transition: 0.5s;
 }
