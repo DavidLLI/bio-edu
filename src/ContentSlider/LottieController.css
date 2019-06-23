@@ -41,7 +41,7 @@
 	margin-right: 20px;
 }
 
-.media-prev-button.disable {
+.media-prev-button.disabled {
 	fill: #666666 !important;
 	cursor: default;
 }
@@ -58,7 +58,7 @@
 	margin-left: 20px;
 }
 
-.media-next-button.disable {
+.media-next-button.disabled {
 	fill: #666666 !important;
 	cursor: default;
 }

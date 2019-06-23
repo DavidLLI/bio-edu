@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Lottie from 'react-lottie';
 
 import store from '../reduxStates/stores/rootStore';
-import { changePage } from '../reduxStates/actions/ScrollbarAction';
+import { changePage, changeSection } from '../reduxStates/actions/ScrollbarAction';
 
 import {ReactComponent as PlayButton} from '../assets/assets-svg/play.svg';
 import {ReactComponent as PauseButton} from '../assets/assets-svg/pause.svg';
@@ -49,13 +49,30 @@ class LottieController extends Component {
     }
 
     handlePrev() {
-        let { currentPage } = store.getState();
-        store.dispatch(changePage(currentPage - 1));
+        let { pageData, currentModule, currentSection, currentPage } = store.getState();
+        let currentSectionLength = pageData[currentModule][currentSection].pages.length;
+        if (currentPage === 0) {
+            store.dispatch(changeSection(currentSection - 1));
+            let newCurrentSection = store.getState().currentSection;
+            if (newCurrentSection !== currentSection) {
+                currentSectionLength = pageData[currentModule][newCurrentSection].pages.length;
+                store.dispatch(changePage(currentSectionLength - 1));
+            }
+        }
+        else {
+            store.dispatch(changePage(currentPage - 1));
+        }
     }
 
     handleNext() {
-        let { currentPage } = store.getState();
-        store.dispatch(changePage(currentPage + 1));
+        let { pageData, currentModule, currentSection, currentPage } = store.getState();
+        let currentSectionLength = pageData[currentModule][currentSection].pages.length;
+        if (currentPage === currentSectionLength - 1) {
+            store.dispatch(changeSection(currentSection + 1));
+        }
+        else {
+            store.dispatch(changePage(currentPage + 1));
+        }
     }
 
     handleComplete() {
@@ -93,12 +110,13 @@ class LottieController extends Component {
         let { pageData, currentPage, currentSection, currentModule } = store.getState();
 
         let prevClass = '';
-        if (currentPage === 0) {
-            prevClass = ' disable';
+        if (currentPage === 0 && currentSection === 0) {
+            prevClass = ' disabled';
         }
 
         let nextClass = '';
-        if (currentPage === pageData[currentModule][currentSection].pages.length - 1) {
+        if (currentPage === pageData[currentModule][currentSection].pages.length - 1 &&
+            currentSection === pageData[currentModule].length - 1) {
             nextClass = ' disabled';
         }
 
