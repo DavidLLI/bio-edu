@@ -1,4 +1,5 @@
 import React from 'react';
+import ModalImage from 'react-modal-image'
 
 import './Popup1.css';
 
@@ -11,6 +12,13 @@ export default function (props) {
 				Hello this is popup 1 small font
 			</div>
 			<img className='popup-image' src={Image1} />
+			<ModalImage
+			  className='popup-image'
+			  small={Image1}
+			  large={Image1}
+			  hideDownload={true}
+			/>
+		      />
 			<div className='popup-font-big'>
 				Hello this is popup 1 big font
 			</div>
