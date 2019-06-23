@@ -22,8 +22,6 @@ class ContentSlider extends Component {
     	this.sliderRef = React.createRef();
         this.animationRef = [[[]]];
 
-
-
     	this.settings = {
           arrows: false,
 	      dots: false,
