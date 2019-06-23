@@ -5,3 +5,8 @@
 .popup-font-big {
 	font-size: 30px;
 }
+
+.popup-image {
+	height: 200px;
+	width: 200px;
+}
