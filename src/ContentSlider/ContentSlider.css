@@ -79,9 +79,8 @@
 	position: relative;
 	height: 100vh;
   	width: 100%;
-  	top: 24.7vh;
-    left: 6.6vw;
-    overflow: visible;
+  	top: 0;
+    left: 0;
 }
 
 .old {
@@ -94,7 +93,9 @@
 }
 
 .new {
-	position: relative;
+	top: 24.7vh;
+    left: 6.6vw;
+	position: absolute;
 	height: 100%;
   	width: 100%;
   	overflow: hidden;

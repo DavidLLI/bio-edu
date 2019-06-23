@@ -17,7 +17,6 @@ class PopupWindow extends Component {
     }
 
     openModal() {
-    	console.log('here');
     	this.setState({ show: true });
     	this.props.modalOpen();
     }
@@ -29,11 +28,12 @@ class PopupWindow extends Component {
 
     render() {
     	const content = this.props.data.content;
+        const { position } = this.props.data;
     	return (
-    		<div>
+    		<div className='popup-box' style={{left: position.left, top: position.top}}>
 	    		<div className='open-modal'
 	                onClick={this.openModal}>
-	                Click here to open pop-up
+	                
 	            </div>
 	    		<Modal
 	    			dialogClassName='popup-dialog'
@@ -47,19 +47,7 @@ class PopupWindow extends Component {
          	 		<Modal.Body style={{'zIndex': 3, 
          	 							'maxHeight': '70vh',  
          	 							'overflowY': 'scroll'}}>
-         	 			{
-         	 				content.map((value, index) => {
-         	 					return (
-         	 						<div className='popup-content'
-         	 							key={index}>
-         	 							{value.description}
-         	 							<img src={value.image}
-				         	 				className='popup-image'>
-				         	 			</img>
-         	 						</div>
-         	 					);
-         	 				})
-         	 			}	
+         	 			<this.props.data.html />
          	 		</Modal.Body>
 	    		</Modal>
     		</div>

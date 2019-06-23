@@ -22,8 +22,6 @@ class ContentSlider extends Component {
     	this.sliderRef = React.createRef();
         this.animationRef = [[[]]];
 
-
-
     	this.settings = {
           arrows: false,
 	      dots: false,
@@ -52,10 +50,14 @@ class ContentSlider extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         let content = store.getState().pageData;
-    	let currentPage = store.getState().currentPage;
+    	let { currentModule, currentSection, currentPage} = store.getState();
+        console.log(prevProps);
 
     	this.sliderRef.current.slickGoTo(currentPage, true);
-        if (this.animationRef[currentPage].current) {
+        if (this.animationRef[currentPage].current &&
+            (currentModule !== prevProps.currentModule ||
+            currentSection !== prevProps.currentSection ||
+            currentPage !== prevProps.currentPage)) {
             this.animationRef[currentPage].current.handleRestart();
         }  
     }
@@ -153,7 +155,15 @@ class ContentSlider extends Component {
                                     <div className='new'>
                                         <LottieController
                                             ref={this.animationRef[index]}
-                                            animation={article.animation}/>
+                                            animation={article.animation}
+                                        >
+                                        </LottieController>
+                                        {article.popup && 
+                                            <PopupWindow 
+                                                data={ article.popup }
+                                                modalOpen={ this.openModal }
+                                                modalClose={ this.closeModal }/>
+                                        }
                                     </div>
                                 }
                             </div>

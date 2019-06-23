@@ -12,21 +12,17 @@ export function changeFocus(payload) {
 }
 
 export function changePage(payload) {
-	if (store.getState().sliding === false) {
-		let intervalID = setInterval(() => {
-	      store.dispatch(slidingEnd(intervalID));
-	    }, SLIDING_SPEED + 100);
-	    store.dispatch(changeFocus(payload));
-
-	    return { type: CHANGE_PAGE, currentPage: payload };
-	}
-	
-  	return { type: CHANGE_PAGE, currentPage: store.getState().currentPage };
+	return { type: CHANGE_PAGE, currentPage: payload };
 }
 
 export function changeSection(payload) {
-	store.dispatch(changePage(0));
-	return { type: CHANGE_SECTION, currentSection: payload };
+	let { pageData, currentModule, currentSection, currentPage } = store.getState();
+	let currentModuleLength = pageData[currentModule].length;
+	if (payload >= 0 && payload < currentModuleLength) {
+		store.dispatch(changePage(0));
+		return { type: CHANGE_SECTION, currentSection: payload };
+	}
+	return { type: CHANGE_SECTION, currentSection: currentSection };
 }
 
 export function changeModule(payload) {

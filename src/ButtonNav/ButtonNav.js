@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import store from '../reduxStates/stores/rootStore';
-import { changeFocus, changePage } from '../reduxStates/actions/ScrollbarAction';
+import { changeFocus, changePage, changeSection } from '../reduxStates/actions/ScrollbarAction';
 
 import {ReactComponent as BackButton} from '../assets/assets-svg/back-button.svg';
 import {ReactComponent as NextButton} from '../assets/assets-svg/next-button.svg';
@@ -13,12 +13,36 @@ class ButtonNav extends Component {
 	constructor(props) {
 	    super(props);
 
-	    this.changePage = this.changePage.bind(this);
+	    this.handlePrev = this.handlePrev.bind(this);
+	    this.handleNext = this.handleNext.bind(this);
 	}
 
-	changePage(page) {
-      	store.dispatch(changePage(page));
-  	}
+	handlePrev() {
+        let { pageData, currentModule, currentSection, currentPage } = store.getState();
+        let currentSectionLength = pageData[currentModule][currentSection].pages.length;
+        if (currentPage === 0) {
+            store.dispatch(changeSection(currentSection - 1));
+            let newCurrentSection = store.getState().currentSection;
+            if (newCurrentSection !== currentSection) {
+                currentSectionLength = pageData[currentModule][newCurrentSection].pages.length;
+                store.dispatch(changePage(currentSectionLength - 1));
+            }
+        }
+        else {
+            store.dispatch(changePage(currentPage - 1));
+        }
+    }
+
+    handleNext() {
+        let { pageData, currentModule, currentSection, currentPage } = store.getState();
+        let currentSectionLength = pageData[currentModule][currentSection].pages.length;
+        if (currentPage === currentSectionLength - 1) {
+            store.dispatch(changeSection(currentSection + 1));
+        }
+        else {
+            store.dispatch(changePage(currentPage + 1));
+        }
+    }
 
   	render() {
   		let { pageData, 
@@ -26,14 +50,18 @@ class ButtonNav extends Component {
   			currentModule, 
   			currentSection } = store.getState();
 
-	    let backButtonDisable = '';
-	    let nextButtonDisable = '';
-	    if (currentPage === 0) {
-	      	backButtonDisable = ' disabled';
-	    }
-	    if (currentPage === pageData[currentModule][currentSection].pages.length - 1) {
-	      	nextButtonDisable = ' disabled';
-	    }
+  		let currentSectionLength = pageData[currentModule][currentSection].pages.length;
+
+	    let prevClass = '';
+        if (currentPage === 0 && currentSection === 0) {
+            prevClass = ' disabled';
+        }
+
+        let nextClass = '';
+        if (currentPage === pageData[currentModule][currentSection].pages.length - 1 &&
+            currentSection === pageData[currentModule].length - 1) {
+            nextClass = ' disabled';
+        }
 
 	    let currentPageStr = '';
 	    if (currentPage < 9) {
@@ -44,25 +72,25 @@ class ButtonNav extends Component {
 	    }
 
 	    let pageLengthStr = '';
-	    if (pageData[currentModule][currentSection].pages.length < 9) {
-	    	pageLengthStr = '' + '0' + pageData[currentModule][currentSection].pages.length;
+	    if (currentSectionLength < 9) {
+	    	pageLengthStr = '' + '0' + currentSectionLength;
 	    }
 	    else {
-	    	pageLengthStr = '' + pageData[currentModule][currentSection].pages.length;
+	    	pageLengthStr = '' + currentSectionLength;
 	    }
 
 	    return (
 	    	<div className='navigation-buttons'>
 	            <div className='back-button'>
-	              <BackButton className={'back-button-svg' + backButtonDisable} 
-	                          onClick={() => this.changePage(currentPage - 1)}/>
+	              <BackButton className={'back-button-svg' + prevClass} 
+	                          onClick={this.handlePrev}/>
 	            </div>
 	            <div className='current-page'>
 	            	{currentPageStr + '/' + pageLengthStr}
 	            </div>
 	            <div className='next-button'>
-	              <NextButton className={'next-button-svg' + nextButtonDisable}
-	                          onClick={() => this.changePage(currentPage + 1)}/>
+	              <NextButton className={'next-button-svg' + nextClass}
+	                          onClick={this.handleNext}/>
 	            </div>
 	        </div>
 	    );

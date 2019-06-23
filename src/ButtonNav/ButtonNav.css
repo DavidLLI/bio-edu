@@ -40,13 +40,14 @@
   fill: #0071BC;
 }
 
-.disabled {
-  fill: #666666;
+.back-button-svg.disabled {
+  fill: #666666 !important;
   cursor: default;
 }
 
-.disabled:hover {
-  fill: #666666 !important; 
+.next-button-svg.disabled {
+  fill: #666666 !important;
+  cursor: default;
 }
 
 .current-page {

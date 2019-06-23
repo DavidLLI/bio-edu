@@ -143,6 +143,9 @@ import animationData22 from '../../assets/Animation/data-22.json';
 import animationData23 from '../../assets/Animation/data-23.json';
 import animationData24 from '../../assets/Animation/data-24.json';
 
+//Popup
+import PopupHTML1 from '../../assets/Popup/Popup1.js';
+
 const initialState = {
   pageData:[
     // Module 1
@@ -154,7 +157,15 @@ const initialState = {
           {
             title: 'Basic features of viral transcription map',
             text: 'This figure is a typical TM example that summarized all the transcription information about a DNA virus called the adenovirus, and it is adapted and modified from the Fundamentals of Molecular Virology, 2nd Edition (Acheson, 2011). You can see this TM contains many different graphical features, and they are difficult to understand at first. I will not teach you the visual language by going through this graph. Instead, let’s start with a simple hypothetical example of TM. Please click the play button of the media controls listed below the animation on your right-hand side to play this animation.',
-            animation: animationData1
+            animation: animationData1,
+            popup: {
+              position: {
+                left: 50,
+                top: 100
+              },
+              title: 'popup1',
+              html: PopupHTML1
+            }
           },
           {
             title: 'Viral genome',

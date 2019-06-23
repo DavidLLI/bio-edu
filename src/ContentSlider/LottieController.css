@@ -1,5 +1,7 @@
 .animationBox {
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .controlButton {
@@ -12,23 +14,57 @@
 .replayButton {
 	height: 50px;
 	width: 50px;
-	fill: #2343F5;
+	fill: #EFEFEF;
 	cursor: pointer;
 	margin-right: 10px;
 }
 
 .replayButton:hover {
-	fill: #566EF7;
+	fill: #0071BC;
 }
 
 .pauseButton {
 	height: 50px;
 	width: 50px;
-	fill: #2343F5;
+	fill: #EFEFEF;
 	cursor: pointer;
 	margin-left: 10px;
 }
 
 .pauseButton:hover {
-	fill: #566EF7;
+	fill: #0071BC;
+}
+
+.media-prev-button {
+	height: 50px;
+	width: 50px;
+	fill: #EFEFEF;
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.media-prev-button.disabled {
+	fill: #666666 !important;
+	cursor: default;
+}
+
+.media-prev-button:hover {
+	fill: #0071BC;
+}
+
+.media-next-button {
+	height: 50px;
+	width: 50px;
+	fill: #EFEFEF;
+	cursor: pointer;
+	margin-left: 20px;
+}
+
+.media-next-button.disabled {
+	fill: #666666 !important;
+	cursor: default;
+}
+
+.media-next-button:hover {
+	fill: #0071BC;
 }
