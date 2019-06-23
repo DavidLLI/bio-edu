@@ -143,8 +143,10 @@ import animationData22 from '../../assets/Animation/data-22.json';
 import animationData23 from '../../assets/Animation/data-23.json';
 import animationData24 from '../../assets/Animation/data-24.json';
 
-//Popup
+//Popupwindow-numbers
 import PopupHTML1 from '../../assets/Popup/Popup1.js';
+//Popupinside-images
+
 
 const initialState = {
   pageData:[
