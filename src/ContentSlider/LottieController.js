@@ -32,7 +32,7 @@ class LottieController extends Component {
 
         this.state = {
             isStopped: false,
-            isPaused: false,
+            isPaused: true,
             isComplete: false
         };
 
@@ -45,7 +45,7 @@ class LottieController extends Component {
     }
 
     componentWillUpdate(prevProps, prevState) {
-        this.defaultOptions.animationData = prevProps.animation;
+        
     }
 
     handlePrev() {
@@ -107,6 +107,8 @@ class LottieController extends Component {
     }
 
     render() {
+        this.defaultOptions.animationData = this.props.animation;
+        this.defaultOptions.autoplay = !this.props.noAutoplay;
         let { pageData, currentPage, currentSection, currentModule } = store.getState();
 
         let prevClass = '';
