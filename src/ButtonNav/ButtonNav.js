@@ -63,20 +63,30 @@ class ButtonNav extends Component {
             nextClass = ' disabled';
         }
 
+        let aggreCurrentPage = currentPage;
+        let totalPage = 0;
+
+        pageData[currentModule].forEach((section, index) => {
+        	if (index < currentSection) {
+        		aggreCurrentPage += section.pages.length;
+        	}
+        	totalPage += section.pages.length;
+        });
+
 	    let currentPageStr = '';
-	    if (currentPage < 9) {
-	    	currentPageStr = '' + '0' + (currentPage + 1);
+	    if (aggreCurrentPage < 9) {
+	    	currentPageStr = '' + '0' + (aggreCurrentPage + 1);
 	    }
 	    else {
-	    	currentPageStr = '' + (currentPage + 1);
+	    	currentPageStr = '' + (aggreCurrentPage + 1);
 	    }
 
 	    let pageLengthStr = '';
-	    if (currentSectionLength < 9) {
-	    	pageLengthStr = '' + '0' + currentSectionLength;
+	    if (totalPage < 9) {
+	    	pageLengthStr = '' + '0' + totalPage;
 	    }
 	    else {
-	    	pageLengthStr = '' + currentSectionLength;
+	    	pageLengthStr = '' + totalPage;
 	    }
 
 	    return (

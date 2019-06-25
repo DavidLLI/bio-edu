@@ -35,15 +35,33 @@ class NewScrollNav extends React.Component {
   }
 
   componentDidMount() {
-    let currentPage = store.getState().currentPage;
-    this.currentScrollPos = currentPage;
-    this.scrollToWithContainer('' + (currentPage + 1));
+    let { currentPage, currentModule, currentSection, pageData } = store.getState();
+
+    let aggreCurrentPage = currentPage;
+
+    pageData[currentModule].forEach((section, index) => {
+      if (index < currentSection) {
+        aggreCurrentPage += section.pages.length;
+      }
+    });
+
+    this.currentScrollPos = aggreCurrentPage;
+    this.scrollToWithContainer('' + (aggreCurrentPage + 1));
   }
 
   componentDidUpdate(prevProps) {
-    let currentPage = store.getState().currentPage;
-    this.currentScrollPos = currentPage;
-    this.scrollToWithContainer('' + (currentPage + 1));
+    let { currentPage, currentModule, currentSection, pageData } = store.getState();
+
+    let aggreCurrentPage = currentPage;
+
+    pageData[currentModule].forEach((section, index) => {
+      if (index < currentSection) {
+        aggreCurrentPage += section.pages.length;
+      }
+    });
+
+    this.currentScrollPos = aggreCurrentPage;
+    this.scrollToWithContainer('' + (aggreCurrentPage + 1));
 
     let navActive = store.getState().navActive;
 
@@ -82,8 +100,30 @@ class NewScrollNav extends React.Component {
     }
   }
 
-  handleChangePage(page) {
-    store.dispatch(changePage(page - 1));
+  handleChangePage(index) {
+    let actualIndex = index - 1;
+
+    let { pageData, currentModule, currentSection, currentPage } = store.getState(); 
+
+    let changeToSection = 0;
+    let changeToPage = 0;
+
+    let currentModuleData = pageData[currentModule];
+
+    let aggreCurrentPage = currentPage;
+
+    while ( actualIndex !== 0 ) {
+      actualIndex -= 1;
+      changeToPage += 1;
+
+      if (changeToPage === currentModuleData[changeToSection].pages.length) {
+        changeToPage = 0;
+        changeToSection += 1;
+      }
+    }
+
+    store.dispatch(changeSection(changeToSection));
+    store.dispatch(changePage(changeToPage));
   }
 
   scrollToTop() {
@@ -153,6 +193,13 @@ class NewScrollNav extends React.Component {
       nextSection = 1;
     }
 
+    let displayData = [];
+    pageData[currentModule].forEach((section, index) => {
+      section.pages.forEach((page, index) => {
+        displayData.push(page);
+      });
+    });
+
     return (
 
       <div className={navActive ? 'ScrollNav active' : 'ScrollNav'}
@@ -195,11 +242,20 @@ class NewScrollNav extends React.Component {
             onScroll={this.handleScroll}
 
             >
-            
-	        {pageData[currentModule][currentSection].pages.map((page, index) => {
+
+	        {displayData.map((page, index) => {
+
             let selected = ' ';
 
-            if (currentPage === index) {
+            let aggreCurrentPage = currentPage;
+
+            pageData[currentModule].forEach((section, index) => {
+              if (index < currentSection) {
+                aggreCurrentPage += section.pages.length;
+              }
+            });
+
+            if (aggreCurrentPage === index) {
               selected += 'page-selected';
             }
 

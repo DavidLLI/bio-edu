@@ -50,14 +50,18 @@ class ContentSlider extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         let content = store.getState().pageData;
-    	let { currentModule, currentSection, currentPage} = store.getState();
-        console.log(prevProps);
+    	let { pageData, currentModule, currentSection, currentPage} = store.getState();
+        let noAutoplay = false;
+        if (pageData[currentModule][currentSection].pages[currentPage].animationNoAutoplay === true) {
+            noAutoplay = true;
+        }
 
     	this.sliderRef.current.slickGoTo(currentPage, true);
         if (this.animationRef[currentPage].current &&
             (currentModule !== prevProps.currentModule ||
             currentSection !== prevProps.currentSection ||
-            currentPage !== prevProps.currentPage)) {
+            currentPage !== prevProps.currentPage) &&
+            noAutoplay === false) {
             this.animationRef[currentPage].current.handleRestart();
         }  
     }
@@ -156,6 +160,7 @@ class ContentSlider extends Component {
                                         <LottieController
                                             ref={this.animationRef[index]}
                                             animation={article.animation}
+                                            noAutoplay={article.animationNoAutoplay}
                                         >
                                         </LottieController>
                                         {article.popup && 
