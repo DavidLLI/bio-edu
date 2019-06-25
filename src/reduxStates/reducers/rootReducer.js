@@ -157,7 +157,7 @@ const initialState = {
         pages: [
           {
             title: 'Basic features of viral transcription map',
-            text: 'This figure on your right-hand side is a typical example of viral transcription map (TM) that summarizes all the transcriptional information of a DNA virus called the adenovirus, and this figure is adapted and modified from the Fundamentals of Molecular Virology, 2nd Edition (Acheson, 2011). Viral transcription maps usually contain many different graphical features, and they are difficult to understand at first. Viraliterate will not teach you the visual language by going through this graph. Instead, let’s start with a simple hypothetical example of TM, and all the essential features of this hypothetical TM will be introduced step-by-step. Please click the play button of the media controls to play this animation.',
+            text: 'The figure on your right-hand side is a typical example of viral transcription map (TM) that summarizes all the transcriptional information of a DNA virus called the adenovirus, and this figure is adapted and modified from the Fundamentals of Molecular Virology, 2nd Edition (Acheson, 2011). Viral transcription maps usually contain many different graphical features, and they are difficult to understand at first. Viraliterate will not teach you the visual language by going through this graph. Instead, let’s start with a simple hypothetical example of TM, and all the essential features of this hypothetical TM will be introduced step-by-step. Please click the play button of the media controls to play this animation.',
             animation: animationData1,
 
           },
