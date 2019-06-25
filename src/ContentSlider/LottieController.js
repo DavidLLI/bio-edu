@@ -95,6 +95,7 @@ class LottieController extends Component {
 
     handleStop() {
         this.setState({isStopped: true});
+        this.setState({isPaused: true});
     }
 
     handleRestart() {
