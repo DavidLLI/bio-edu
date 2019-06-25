@@ -20,7 +20,7 @@ class ContentSlider extends Component {
 	constructor(props) {
     	super(props);
     	this.sliderRef = React.createRef();
-        this.animationRef = [[[]]];
+        this.animationRef = React.createRef();
 
     	this.settings = {
           arrows: false,
@@ -56,14 +56,17 @@ class ContentSlider extends Component {
             noAutoplay = true;
         }
 
-    	this.sliderRef.current.slickGoTo(currentPage, true);
-        if (this.animationRef[currentPage].current &&
+    	//this.sliderRef.current.slickGoTo(currentPage, true);
+        if (this.animationRef.current &&
             (currentModule !== prevProps.currentModule ||
             currentSection !== prevProps.currentSection ||
             currentPage !== prevProps.currentPage) &&
             noAutoplay === false) {
-            this.animationRef[currentPage].current.handleRestart();
+            this.animationRef.current.handleRestart();
         }  
+        else if (this.animationRef.current && noAutoplay === true) {
+            this.animationRef.current.handleStop();
+        }
     }
 
     handleScroll(e) {
@@ -116,11 +119,27 @@ class ContentSlider extends Component {
         currentModule, 
         currentSection } = store.getState();
 
-        this.animationRef = [];
+        let article = pageData[currentModule][currentSection].pages[currentPage];
 
     	return (
             <div className='content-slider'>
-        		<Slider 
+                {article.animation &&
+                    <div className='new'>
+                        <LottieController
+                            ref={this.animationRef}
+                            animation={article.animation}
+                            noAutoplay={article.animationNoAutoplay}
+                        >
+                        </LottieController>
+                        {article.popup && 
+                            <PopupWindow 
+                                data={ article.popup }
+                                modalOpen={ this.openModal }
+                                modalClose={ this.closeModal }/>
+                        }
+                    </div>
+                }
+        		{/* <Slider 
         			{...this.settings}
         			ref={this.sliderRef}
                     className='slider-list'>
@@ -174,7 +193,7 @@ class ContentSlider extends Component {
                             </div>
                         );
                     })}
-    			</Slider>
+    			</Slider> */}
             </div>
     	);
     }
