@@ -145,7 +145,6 @@ import animationData24 from '../../assets/Animation/data-24.json';
 
 //Popupwindow-numbers
 import PopupHTML1 from '../../assets/Popup/Popup1.js';
-//Popupinside-images
 
 
 const initialState = {
@@ -154,72 +153,144 @@ const initialState = {
     [
       // Section 1
       {
-        name: 'Module 1 section 1 title',
+        name: 'Viral Genome of TM',
         pages: [
           {
             title: 'Basic features of viral transcription map',
-            text: 'This figure is a typical TM example that summarized all the transcription information about a DNA virus called the adenovirus, and it is adapted and modified from the Fundamentals of Molecular Virology, 2nd Edition (Acheson, 2011). You can see this TM contains many different graphical features, and they are difficult to understand at first. I will not teach you the visual language by going through this graph. Instead, let’s start with a simple hypothetical example of TM. Please click the play button of the media controls listed below the animation on your right-hand side to play this animation.',
+            text: 'This figure on your right-hand side is a typical example of viral transcription map (TM) that summarizes all the transcriptional information of a DNA virus called the adenovirus, and this figure is adapted and modified from the Fundamentals of Molecular Virology, 2nd Edition (Acheson, 2011). Viral transcription maps usually contain many different graphical features, and they are difficult to understand at first. Viraliterate will not teach you the visual language by going through this graph. Instead, let’s start with a simple hypothetical example of TM, and all the essential features of this hypothetical TM will be introduced step-by-step. Please click the play button of the media controls to play this animation.',
             animation: animationData1,
+
+          },
+
+          {
+            title: 'Viral genome',
+            text: 'When you first look at the TM, you should read from the fundamental element that every TM has: the viral genome. In this case, the two white lines represent the viral genome. After you watch this animation, there will be a slider appears on the left.  By moving this slider, you should notice that the two white lines in TM are the schematical representation of the double-stranded helical viral DNA, and this line representation reduces the visual complexity of the realistic DNA double helix as well as it saves the design space. Please click the plus icon within the blue dialogue box to open up a pop-up window discussing the different types of the viral genome.',
+            animation: animationData2,
+
             popup: {
               position: {
-                left: 50,
-                top: 100
+                left: 330,
+                top: 170
               },
               title: 'popup1',
               html: PopupHTML1
             }
+
           },
-          {
-            title: 'Viral genome',
-            text: 'When you first look at the TM, you should read from the fundamental element that every TM has: the viral genome. In this case, the two white lines represent the viral genome. After you watch this animation, there will be a slider that appears on the left.  By moving this slider, you should notice that the two white lines in TM are the schematical representation of the double-stranded helical viral DNA, and the line representation reduces the visual complexity of the realistic DNA double helix as well as saves the design space. Please click the plus icon within the blue dialogue box to open up a pop-up window discussing different types of the viral genome.',
-            animation: animationData2
-          },
+
+        ],
+      },
+      
+      // Section 2
+    
+      {
+        name: 'Terminal Repeats',
+        pages: [
 
           {
             title: 'Terminal repeats- Part01',
-            text: 'You may notice that both ends of the viral genome can have these white boxes highlighted in blue. These usually represent the terminal repeats (TR).',
+            text: 'You may notice that both two ends of the viral genome can have these white boxes highlighted in blue. These usually represent the terminal repeats (TR).',
             animation: animationData3
           },
           {
             title: 'Terminal repeats- Part02',
-            text: 'Check the realistic visual representation by moving the slider or click the plus icon to open up a pop-up window for additional information.',
-            animation: animationData4
+            text: 'Check the realistic visual representation of TR by moving the slider, or click the plus icon to open up a pop-up window for additional information about the TR.',
+            animation: animationData4,
+
+            popup: {
+              position: {
+                left: 330,
+                top: 170
+              },
+              title: 'popup1',
+              html: PopupHTML1
+            }
+
           },
 
-           {
+        ],
+      },
+      // Section 3
+      {
+        name: 'Visual Scale',
+        pages: [
+         
+          {
             title: 'Visual scale- Part01',
-            text: 'A numerical visual scale is presented beside to the viral genome, indicating the total length of the genome. The scale provides the accurate coordinates of all RNA transcripts relative to their corresponding viral genome parts. This visual scale is similar to a ruler that is usually marked off in specific units.',
+            text: 'A numerical visual scale is always presented beside to the viral genome, indicating the total length of the genome. The scale provides the accurate coordinates of all RNA transcripts relative to their corresponding viral genome parts. This visual scale is similar to a ruler that is usually marked off in specific units.',
             animation: animationData5
           },
          
             {
             title: 'Visual scale- Part02',
             text: 'Click the plus icon to open up a pop-up window to explore more.',
-            animation: animationData6
+            animation: animationData6,
+
+            popup: {
+              position: {
+                left: 330,
+                top: 170
+              },
+              title: 'popup1',
+              html: PopupHTML1
+            }
           },
 
-          {
+        ],
+      },
+      // Section 4
+      {
+        name: 'RNA Transcript',
+        pages: [
+           {
             title: 'Viral RNA transcript- Part01',
-            text: 'Adjacent to the double-stranded DNA genome, you will find an orange arrow represents the viral RNA transcribed from the viral genome. Keep in your mind from now that RNA has a specific directionality: 5’ and 3’ ends. The directionalities are essential for the understanding of the visual elements of viral RNA. Click the plus icon to open up a pop-up window to explore more.',
-            animation: animationData7
+            text: 'Adjacent to the double-stranded DNA genome, you will find an orange arrow represents the viral RNA transcribed from the viral genome. Keep in your mind from now that the RNA has a specific directionality: 5’ and 3’ ends. This directionality is essential for understanding of this visual element - viral RNA. Click the plus icon to open up a pop-up window to explore more.',
+            animation: animationData7,
+
+            popup: {
+              position: {
+                left: 330,
+                top: 170
+              },
+              title: 'popup1',
+              html: PopupHTML1
+            }
           },
           
           {
             title: 'Viral RNA transcript- Part02',
-            text: 'The arrow comprises a vertical bar, a body and an arrowhead.',
+            text: 'The viral RNA comprises a vertical bar, a body and an arrowhead.',
             animation: animationData8
           },
           
           {
             title: 'Viral RNA transcript- Part03',
-            text: 'Remember the directionalities of RNA and let’s start with the arrowhead. The arrowhead usually has the dual graphical functions: 1: The direction of transcription: from 5 prime to 3 prime direction. 2. 3 prime end of mRNA transcript, corresponding to the polyadenylation site, which is a type of transcriptional modification created by the host cell mechanism. Click the blue box to open up a pop-up window.',
-            animation: animationData9
+            text: 'Remember the directionality of RNA and let’s first start with the arrowhead. The arrowhead usually has the dual graphical functions: 1: The direction of transcription: from 5 prime to 3 prime direction. 2. 3 prime end of mRNA transcript, corresponding to the polyadenylation site, which is a type of transcriptional modification created by the host cell mechanism. Click the blue box to open up a pop-up window.',
+            animation: animationData9,
+
+            popup: {
+              position: {
+                left: 330,
+                top: 170
+              },
+              title: 'popup1',
+              html: PopupHTML1
+            }
           },
 
            {
             title: 'Viral RNA transcript- Part04',
             text: 'Since RNA transcript synthesizes from 5’ to 3’,  we can deduce that the vertical bar on the left part of the RNA represents the 5’ end of mRNA, corresponding to the transcriptional promoter/initiation site of transcription as well as another type of transcriptional modification: 5’ capping. Click the blue box to open up a pop-up window.',
-            animation: animationData10
+            animation: animationData10,
+
+            popup: {
+              position: {
+                left: 330,
+                top: 170
+              },
+              title: 'popup1',
+              html: PopupHTML1
+            }
           },
 
           {
@@ -243,7 +314,16 @@ const initialState = {
           {
             title: 'Viral RNA transcript- Part08',
             text: 'The gaps are highlighted in light blue, and they are the removed introns. Click plus icon to open up pop-up window. Typically, in TMs, the process of transcription, transcriptional modifications, and intron removal are not explained. Thus, the general steps of the whole RNA transcriptional processes will be illustrated on the next page and the detailed biological mechanism of intron removal will be discussed later in module 2.',
-            animation: animationData14
+            animation: animationData14,
+
+            popup: {
+              position: {
+                left: 330,
+                top: 170
+              },
+              title: 'popup1',
+              html: PopupHTML1
+            }
           },
           
           //Scroll video for part09
@@ -265,8 +345,15 @@ const initialState = {
             text: 'A common misconception would be defining the transcription initiation site of RNA transcripts in TM. If you see any five prime ends of the RNA without a vertical bar or any visual cue, do not be confused, this is not the actual transcription initiation site; instead, these five prime ends without vertical bars located in between the discontinuous RNA transcript correspond to the splice acceptor sites (note: this will be discussed in module 2).',
             animation: animationData18
           },
+        ],
+      },
 
-          {
+ // Section 5
+      {
+        name: 'RNA & DNA Directionalities',
+        pages: [
+
+         {
             title: 'RNA directionalities- Part01',
             text: 'We already know the directionality of an RNA transcript, but what about the directionality of the double-stranded viral genome?',
             animation: animationData19
@@ -275,7 +362,16 @@ const initialState = {
           {
             title: 'RNA directionalities- Part02',
             text: 'You can determine the directions of the DNA double strands by following these two steps processes. Steps 1: Look at your RNA and find its 3’ end (arrow head) and 5’ end (arrow tail). Step 2 : Find the DNA single strand that adjacent to this RNA strand and this DNA strand reads in the opposite direction. Its complementary DNA strand has the same direction as the RNA strand. Click here to open up a pop-up window to explore the details.',
-            animation: animationData20
+            animation: animationData20,
+
+            popup: {
+              position: {
+                left: 330,
+                top: 170
+              },
+              title: 'popup1',
+              html: PopupHTML1
+            }
           },
 
           {
@@ -296,115 +392,6 @@ const initialState = {
             animation: animationData24
           },
 
-
-        ],
-      },
-      
-      // Section 2
-      {
-        name: 'Module 1 section 2 title',
-        pages: [
-
-         {
-            title: 'Terminal repeats- Part01',
-            text: 'You may notice that both ends of the viral genome can have these white boxes highlighted in blue. These usually represent the terminal repeats (TR).',
-            animation: animationData12
-          },
-          {
-            title: 'Terminal repeats- Part02',
-            text: 'Check the realistic visual representation by moving the slider or click the plus icon to open up a pop-up window for additional information.',
-            animation: animationData12
-          }
-        ],
-      },
-      // Section 3
-      {
-        name: 'Module 1section 3 title',
-        pages: [
-          {
-            title: 'Visual scale- Part01',
-            text: 'A numerical visual scale is presented beside to the viral genome, indicating the total length of the genome. The scale provides the accurate coordinates of all RNA transcripts relative to their corresponding viral genome parts. This visual scale is similar to a ruler that is usually marked off in specific units.',
-            animation: animationData13
-          },
-          {
-            title: 'sub2',
-            text: 'text2',
-            animation: animationData2
-          },
-          {
-            title: 'sub3',
-            text: 'text3',
-            animation: animationData3
-          },
-          {
-            title: 'sub4',
-            text: 'text4',
-            animation: animationData4
-          },
-          {
-            title: 'sub1',
-            text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
-            animation: animationData1
-          },
-        ],
-      },
-      // Section 4
-      {
-        name: 'Module 1 section 4 title',
-        pages: [
-          {
-            title: 'sub1',
-            text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
-            animation: animationData1
-          },
-          {
-            title: 'sub2',
-            text: 'text2',
-            animation: animationData2
-          },
-          {
-            title: 'sub3',
-            text: 'text3',
-            animation: animationData3
-          },
-          {
-            title: 'sub4',
-            text: 'text4',
-            animation: animationData4
-          },
-          {
-            title: 'sub1',
-            text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
-            animation: animationData1
-          },
-          {
-            title: 'sub2',
-            text: 'text2',
-            animation: animationData2
-          },
-          {
-            title: 'sub3',
-            text: 'text3',
-            animation: animationData3
-          }
-        ],
-      },
-
- // Section 5
-      {
-        name: 'Module 1 section 5 title',
-        pages: [
-
-         {
-            title: 'Terminal repeats',
-            text: 'You may notice that both ends of the viral genome can have these white boxes highlighted in blue. These usually represent the terminal repeats (TR).',
-            animation: animationData3
-          },
-          {
-            title: 'Terminal repeats',
-            text: 'Check the realistic visual representation by moving the slider or click the plus icon to open up a pop-up window for additional information.',
-            animation: animationData4
-          }
         ],
       },
 

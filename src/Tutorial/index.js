@@ -15,9 +15,10 @@ class Tutorial extends Component {
 		this.state = {
 			run: false,
 			steps: [
+			//1. home --> 2. text section --> animation and media control--> 3.index menu folded --> 4. index menu expanded introduce upper section then lower section --> 5. ham menu --> 6. share
 		        {
 			        target: '.home-logo-svg',
-			        content: 'Click on the icon at any time to go back to the Home screen',
+			        content: 'Welcome to Viraliterate module 1! This eight-step guide will show you how to use the essential functions in this main interface. Please stay at this interface while you are studying the module 1 or 2. Otherwise, click the ViraLiterate icon at the upper-left corner to go back to the Home screen.',
 			        disableBeacon: true
 		        },
 		        {
@@ -28,7 +29,7 @@ class Tutorial extends Component {
 		        },
 		        {
 		        	target: '.ScrollNav',
-		        	content: 'Click the curret page number highlighted in the blue area to view index.',
+		        	content: 'Hover the curret page number to view a slide-in index menu.',
 		        	placement: 'left',
 		        	disableBeacon: true
 		        },
@@ -40,25 +41,25 @@ class Tutorial extends Component {
 		        },
 		        {
 		        	target: '.ScrollArea',
-		        	content: 'Scroll up or down to switch between different pages.',
+		        	content: 'Scroll up or down to view different pages of the same module. Click the title of any page to jump to that page. ',
 		        	placement: 'left',
 		        	disableBeacon: true
 		        },
 		        {
 		        	target: '.animationBox',
-		        	content: 'Use these four media controls to play/pause/replay animations as well as to go to previous or next page.',
+		        	content: 'Use these four media controls to play/pause/replay the animation at the top as well as to go to the previous or the next page.',
 		        	placement: 'left',
 		        	disableBeacon: true
 		        },
 		        {
 		        	target: '.HamMenu',
-		        	content: 'Click this hamburger menu to open the ViraLiterate menu. You can use this menu to navigate between different sections or modules.',
+		        	content: 'Click this hamburger menu to open up the ViraLiterate menu. You can use this menu to navigate between different sections or modules.',
 		        	placement: 'left',
 		        	disableBeacon: true
 		        },
 		        {
 		        	target: '.text-description',
-		        	content: 'Please read the explainatory text before you watch the animation. Once you finish reading all the contents of this page, click the forward or back buttons below the text to review the previous page or go to the next page.',
+		        	content: 'Please read the explanatory text before you start to watch the animation on your right-hand side. Once you finish reading all the contents of this page, click the forward or back buttons below the text to review the previous page or go to the next page.',
 		        	placement: 'right',
 		        	disableBeacon: true
 		        }
