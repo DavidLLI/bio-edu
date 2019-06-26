@@ -517,6 +517,28 @@ const initialState = {
         ],
       },
     ],
+    // Module for Test
+    [
+      // Section for Test
+      {
+        name: 'section test',
+        pages: [
+          {
+            before: {
+              animation: animationData1
+            },
+            after: Image1,
+            title: 'test1',
+            text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te'
+          },
+          {
+            title: 'test2',
+            text: 'text2',
+            animation: animationData2
+          }
+        ],
+      },
+    ],
   ],
   focus: 0,
   currentModule: 0,

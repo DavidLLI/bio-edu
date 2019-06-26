@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import BlockImage from 'react-block-image';
 
-import SliderIcon from '../assets/slider.png';
+import LottieController from '../ContentSlider/LottieController';
+
+import { ReactComponent as SliderIcon } from '../assets/assets-svg/move.svg';
 
 import './ImageSlider.css';
 
@@ -33,44 +35,45 @@ class ContentSlider extends Component {
 
     handleMouseMove(e) {
         let windowWidth = window.innerWidth;
-        if (e.pageX / windowWidth / 0.6 <= 1) {
-        	this.setState({ progress: e.pageX / windowWidth / 0.6 });
+        if ((e.pageX - windowWidth * 0.385) / windowWidth / 0.65 <= 0.9 &&
+            (e.pageX - windowWidth * 0.385) / windowWidth / 0.65 >= 0) {
+        	this.setState({ progress: (e.pageX - windowWidth * 0.385)/ windowWidth / 0.65 });
         }
-        else if (e.pageX / windowWidth / 0.6 < 0) {
+        else if ((e.pageX - windowWidth * 0.385) / windowWidth / 0.65 < 0) {
         	this.setState({ progress: 0 });
         }
-        else if (e.pageX / windowWidth / 0.6 > 1) {
-        	this.setState({ progress: 1 });
+        else if ((e.pageX - windowWidth * 0.385) / windowWidth / 0.65 > 0.9) {
+        	this.setState({ progress: 0.9 });
         }
         
     }
 
     render() {
+        console.log(this.state.progress);
     	return (
             <div className='image-slider'
-            	style={{ width: '60vw' }}>
+            	style={{ width: '58vw' }}>
             	{ !this.props.after || 
             		<div  
                     	className='vertical-separator'
                     	style={{ left: `${100 * this.state.progress}%` }}>
-	                    <img 
-	                        onMouseDown={this.handleMouseDown}
-	                        src={SliderIcon} 
+	                    <SliderIcon 
+	                        onMouseDown={this.handleMouseDown} 
 	                        className='slider-icon' />
 	                </div>
             	}
             	
-        		<BlockImage 
-        			className='image-container'
-        			src={this.props.before}
-        			backgroundSize='contain'/>
+        		<LottieController 
+                    ref={this.props.before.animationRef}
+                    animation={this.props.before.animation}
+                    noAutoplay={this.props.before.animationNoAutoplay}/>
             	<div className='image-after'
             		style={{ width: `${100 * this.state.progress}%` }}>
-            		<BlockImage
-            			className='image-container'
-            			src={this.props.after}
-            			style={{ width: '60vw' }}
-            			backgroundSize='contain' />
+            		<BlockImage 
+                        className='image-container'
+                        backgroundSize='contain'
+                        src={this.props.after}
+                        style={{width: '58vw'}} />
             	</div>
             </div>
     	);

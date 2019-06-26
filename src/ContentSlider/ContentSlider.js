@@ -113,7 +113,6 @@ class ContentSlider extends Component {
     }
 
     render() {
-        let progress = store.getState().progress;
         let { pageData, 
         currentPage, 
         currentModule, 
@@ -123,6 +122,15 @@ class ContentSlider extends Component {
 
     	return (
             <div className='content-slider'>
+                {
+                    article.before && article.after &&
+                    <div className='new'>
+                        <ImageSlider
+                            before={{animationRef: this.animationRef, animation: article.before.animation, noAutoplay: article.before.animationNoAutoplay}}
+                            after={article.after}
+                        />
+                    </div>
+                }
                 {article.animation &&
                     <div className='new'>
                         <LottieController
