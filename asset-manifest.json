@@ -1,7 +1,7 @@
 {
-  "main.css": "/bio-edu/static/css/main.b6867d37.chunk.css",
-  "main.js": "/bio-edu/static/js/main.979540bd.chunk.js",
-  "main.js.map": "/bio-edu/static/js/main.979540bd.chunk.js.map",
+  "main.css": "/bio-edu/static/css/main.e4495080.chunk.css",
+  "main.js": "/bio-edu/static/js/main.e09d7361.chunk.js",
+  "main.js.map": "/bio-edu/static/js/main.e09d7361.chunk.js.map",
   "static/css/1.ef5bc2b1.chunk.css": "/bio-edu/static/css/1.ef5bc2b1.chunk.css",
   "static/js/1.079886a9.chunk.js": "/bio-edu/static/js/1.079886a9.chunk.js",
   "static/js/1.079886a9.chunk.js.map": "/bio-edu/static/js/1.079886a9.chunk.js.map",
@@ -123,9 +123,9 @@
   "static/media/menu.82654597.svg": "/bio-edu/static/media/menu.82654597.svg",
   "static/media/expand.ed718a5f.svg": "/bio-edu/static/media/expand.ed718a5f.svg",
   "static/media/collapse.c62e1b2f.svg": "/bio-edu/static/media/collapse.c62e1b2f.svg",
-  "static/css/main.b6867d37.chunk.css.map": "/bio-edu/static/css/main.b6867d37.chunk.css.map",
   "static/css/1.ef5bc2b1.chunk.css.map": "/bio-edu/static/css/1.ef5bc2b1.chunk.css.map",
+  "static/css/main.e4495080.chunk.css.map": "/bio-edu/static/css/main.e4495080.chunk.css.map",
   "index.html": "/bio-edu/index.html",
-  "precache-manifest.457cb34077d2a67553e7774b5ae5c40f.js": "/bio-edu/precache-manifest.457cb34077d2a67553e7774b5ae5c40f.js",
+  "precache-manifest.822999563a89d05d1f704a1d241c56f2.js": "/bio-edu/precache-manifest.822999563a89d05d1f704a1d241c56f2.js",
   "service-worker.js": "/bio-edu/service-worker.js"
 }
