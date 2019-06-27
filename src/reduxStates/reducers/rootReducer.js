@@ -170,7 +170,7 @@ const initialState = {
             popup: {
               position: {
                 left: 370,
-                top: 190
+                top: 197
               },
               title: 'popup1',
               html: PopupHTML1
