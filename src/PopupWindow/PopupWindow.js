@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Modal } from 'react-bootstrap';
 
+import {ReactComponent as PlusIcon} from '../assets/assets-svg/add.svg';
 import './PopupWindow.css';
 
 class PopupWindow extends Component {
@@ -33,7 +34,7 @@ class PopupWindow extends Component {
     		<div className='popup-box' style={{left: position.left, top: position.top}}>
 	    		<div className='open-modal'
 	                onClick={this.openModal}>
-	                
+                    <PlusIcon className='plus-icon-svg'/>
 	            </div>
 	    		<Modal
 	    			dialogClassName='popup-dialog'

@@ -146,6 +146,9 @@ import animationData24 from '../../assets/Animation/data-24.json';
 //Popupwindow-numbers
 import PopupHTML1 from '../../assets/Popup/Popup1.js';
 
+//Video
+import TestVideo from '../../assets/video/test.mp4';
+
 
 const initialState = {
   pageData:[
@@ -523,6 +526,11 @@ const initialState = {
       {
         name: 'section test',
         pages: [
+          {
+            video: TestVideo,
+            title: 'test video',
+            text: 'video description'
+          },
           {
             before: {
               animation: animationData1

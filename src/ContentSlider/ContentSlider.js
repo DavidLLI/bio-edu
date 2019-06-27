@@ -5,6 +5,7 @@ import store from '../reduxStates/stores/rootStore';
 import { changeFocus, changePage } from '../reduxStates/actions/ScrollbarAction';
 
 import LottieController from './LottieController';
+import VideoPlayer from '../VideoPlayer';
 import ImageSlider from '../ImageSlider/ImageSlider';
 import PopupWindow from '../PopupWindow/PopupWindow';
 
@@ -145,6 +146,11 @@ class ContentSlider extends Component {
                                 modalOpen={ this.openModal }
                                 modalClose={ this.closeModal }/>
                         }
+                    </div>
+                }
+                {article.video && 
+                    <div className='new'>
+                        <VideoPlayer data={article.video} />
                     </div>
                 }
         		{/* <Slider 
