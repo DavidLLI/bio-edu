@@ -44,8 +44,10 @@ class LottieController extends Component {
         this.handleNext = this.handleNext.bind(this);
     }
 
-    componentWillUpdate(prevProps, prevState) {
-        
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.isComplete !== this.state.isComplete) {
+            this.props.animationStatusChange(this.state.isComplete);
+        }
     }
 
     handlePrev() {
@@ -84,13 +86,21 @@ class LottieController extends Component {
         if (this.state.isComplete) {
             this.handleRestart();
         }
-        else {
+        else if (!this.state.isPaused) {
             this.handlePause();
+        }
+        else if (this.state.isPaused) {
+            this.handlePlay();
         }
     }
 
     handlePause() {
-        this.setState({isPaused: !this.state.isPaused});
+        this.setState({isPaused: true});
+    }
+
+    handlePlay() {
+        this.setState({isStopped: false});
+        this.setState({isPaused: false});
     }
 
     handleStop() {

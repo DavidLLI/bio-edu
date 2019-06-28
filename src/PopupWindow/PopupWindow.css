@@ -10,7 +10,14 @@
 	z-index: 10;
 	cursor: pointer;
 	border-radius: 20%;
+	pointer-events: none;
+	opacity: 0;
+}
 
+.open-modal.show {
+	transition: 0.3s;
+	pointer-events: auto;
+	opacity: 1;
 }
 
 .open-modal:hover {

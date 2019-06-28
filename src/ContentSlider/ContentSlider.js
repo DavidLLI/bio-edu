@@ -38,7 +38,8 @@ class ContentSlider extends Component {
 	    };
 
         this.state = {
-            modalShow: false
+            modalShow: false,
+            isAnimationComplete: false
         };
 
         this.sliding = false;
@@ -47,6 +48,7 @@ class ContentSlider extends Component {
         this.handleScroll = this.handleScroll.bind(this);
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
+        this.animationStatusChange = this.animationStatusChange.bind(this);
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -61,13 +63,15 @@ class ContentSlider extends Component {
         if (this.animationRef.current &&
             (currentModule !== prevProps.currentModule ||
             currentSection !== prevProps.currentSection ||
-            currentPage !== prevProps.currentPage) &&
-            noAutoplay === false) {
-            this.animationRef.current.handleRestart();
-        }  
-        else if (this.animationRef.current && noAutoplay === true) {
-            this.animationRef.current.handleStop();
-        }
+            currentPage !== prevProps.currentPage)) {
+
+            if (noAutoplay === true) {
+                this.animationRef.current.handleStop();
+            }
+            else {
+                this.animationRef.current.handleRestart();
+            }
+        }   
     }
 
     handleScroll(e) {
@@ -113,6 +117,10 @@ class ContentSlider extends Component {
         this.setState({modalShow: false});
     }
 
+    animationStatusChange(status) {
+        this.setState({isAnimationComplete: status});
+    }
+
     render() {
         let { pageData, 
         currentPage, 
@@ -138,13 +146,15 @@ class ContentSlider extends Component {
                             ref={this.animationRef}
                             animation={article.animation}
                             noAutoplay={article.animationNoAutoplay}
+                            animationStatusChange={this.animationStatusChange}
                         >
                         </LottieController>
-                        {article.popup && 
+                        {article.popup &&
                             <PopupWindow 
                                 data={ article.popup }
                                 modalOpen={ this.openModal }
-                                modalClose={ this.closeModal }/>
+                                modalClose={ this.closeModal }
+                                show={ this.state.isAnimationComplete }/>
                         }
                     </div>
                 }

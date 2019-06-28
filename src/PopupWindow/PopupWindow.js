@@ -30,9 +30,15 @@ class PopupWindow extends Component {
     render() {
     	const content = this.props.data.content;
         const { position } = this.props.data;
+
+        let showClass = '';
+        if (this.props.show === true) {
+            showClass = ' show';
+        }
+
     	return (
     		<div className='popup-box' style={{left: position.left, top: position.top}}>
-	    		<div className='open-modal'
+	    		<div className={'open-modal' + showClass}
 	                onClick={this.openModal}>
                     <PlusIcon className='plus-icon-svg'/>
 	            </div>
