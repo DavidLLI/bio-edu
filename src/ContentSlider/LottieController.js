@@ -45,7 +45,8 @@ class LottieController extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        if (prevState.isComplete !== this.state.isComplete) {
+        if (this.props.animationStatusChange && 
+            prevState.isComplete !== this.state.isComplete) {
             this.props.animationStatusChange(this.state.isComplete);
         }
     }

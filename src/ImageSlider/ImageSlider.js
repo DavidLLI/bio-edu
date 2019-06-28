@@ -49,7 +49,6 @@ class ContentSlider extends Component {
     }
 
     render() {
-        console.log(this.state.progress);
     	return (
             <div className='image-slider'
             	style={{ width: '58vw' }}>

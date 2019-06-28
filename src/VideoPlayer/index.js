@@ -15,7 +15,7 @@ class VideoPlayer extends Component {
   	};
 
   	this.onProgress = this.onProgress.bind(this);
-  	this.onScroll = this.onScroll.bind(this);
+  	this.onWheel = this.onWheel.bind(this);
   }
 
   onProgress(p) {
@@ -23,17 +23,16 @@ class VideoPlayer extends Component {
   	this.setState({progress: p});
   }
 
-  onScroll(e) {
-  	console.log(e);
+  onWheel(e) {
+    e.preventDefault();
   }
 
   render() {
     return (
-      <div className='video-player'
-      	onScroll={this.onScroll}>
-	      <ReactPlayer 
+      <div className='video-player'>
+	      <ReactPlayer
 	      	url={this.props.data}
-	      	onProgress={this.onProgress}/>
+	      	onProgress={this.onProgress} />
       </div>
     )
   }
