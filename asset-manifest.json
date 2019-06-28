@@ -1,7 +1,7 @@
 {
-  "main.css": "/bio-edu/static/css/main.8bfb7406.chunk.css",
-  "main.js": "/bio-edu/static/js/main.9bfb08eb.chunk.js",
-  "main.js.map": "/bio-edu/static/js/main.9bfb08eb.chunk.js.map",
+  "main.css": "/bio-edu/static/css/main.1308a176.chunk.css",
+  "main.js": "/bio-edu/static/js/main.aae8d06f.chunk.js",
+  "main.js.map": "/bio-edu/static/js/main.aae8d06f.chunk.js.map",
   "static/css/1.124e77d7.chunk.css": "/bio-edu/static/css/1.124e77d7.chunk.css",
   "static/js/1.0f03849c.chunk.js": "/bio-edu/static/js/1.0f03849c.chunk.js",
   "static/js/1.0f03849c.chunk.js.map": "/bio-edu/static/js/1.0f03849c.chunk.js.map",
@@ -111,7 +111,7 @@
   "static/media/Module2-30-01.jpg": "/bio-edu/static/media/Module2-30-01.4a017ab9.jpg",
   "static/media/Module2-29-01.jpg": "/bio-edu/static/media/Module2-29-01.5437e49f.jpg",
   "static/media/Module2-31-01.jpg": "/bio-edu/static/media/Module2-31-01.cffd5e92.jpg",
-  "static/media/slick-theme.css": "/bio-edu/static/media/slick.f97e3bbf.svg",
+  "static/media/slick-theme.css": "/bio-edu/static/media/slick.d41f55a7.ttf",
   "static/media/back-button.6d7da00a.svg": "/bio-edu/static/media/back-button.6d7da00a.svg",
   "static/media/next-button.12f92cbd.svg": "/bio-edu/static/media/next-button.12f92cbd.svg",
   "static/media/share.c0adf7cd.svg": "/bio-edu/static/media/share.c0adf7cd.svg",
@@ -125,9 +125,9 @@
   "static/media/menu.82654597.svg": "/bio-edu/static/media/menu.82654597.svg",
   "static/media/expand.ed718a5f.svg": "/bio-edu/static/media/expand.ed718a5f.svg",
   "static/media/collapse.c62e1b2f.svg": "/bio-edu/static/media/collapse.c62e1b2f.svg",
-  "static/css/main.8bfb7406.chunk.css.map": "/bio-edu/static/css/main.8bfb7406.chunk.css.map",
+  "static/css/main.1308a176.chunk.css.map": "/bio-edu/static/css/main.1308a176.chunk.css.map",
   "static/css/1.124e77d7.chunk.css.map": "/bio-edu/static/css/1.124e77d7.chunk.css.map",
   "index.html": "/bio-edu/index.html",
-  "precache-manifest.18c780f383bd24d00ec8a1a2160632c4.js": "/bio-edu/precache-manifest.18c780f383bd24d00ec8a1a2160632c4.js",
+  "precache-manifest.3f51994680770a4b3e2fdc1346171ebd.js": "/bio-edu/precache-manifest.3f51994680770a4b3e2fdc1346171ebd.js",
   "service-worker.js": "/bio-edu/service-worker.js"
 }
