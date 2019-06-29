@@ -147,9 +147,8 @@ import animationData24 from '../../assets/Animation/data-24.json';
 import PopupHTML1 from '../../assets/Popup/Popup1.js';
 
 //Video
-import TestVideo1 from '../../assets/video/test.mp4';
-import TestVideo2 from '../../assets/video/test1.mp4';
-
+import TestVideo1 from '../../assets/video/720x480_2min.webm';
+import TestVideo2 from '../../assets/video/720x480_2min.mp4';
 
 const initialState = {
   pageData:[
@@ -528,12 +527,17 @@ const initialState = {
         name: 'section test',
         pages: [
           {
+            video: TestVideo1,
+            title: 'test video',
+            text: 'video description'
+          },
+          {
             video: TestVideo2,
             title: 'test video',
             text: 'video description'
           },
           {
-            video: TestVideo1,
+            video: 'https://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.webm',
             title: 'test video',
             text: 'video description'
           },
