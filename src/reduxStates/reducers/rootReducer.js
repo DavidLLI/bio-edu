@@ -147,7 +147,8 @@ import animationData24 from '../../assets/Animation/data-24.json';
 import PopupHTML1 from '../../assets/Popup/Popup1.js';
 
 //Video
-import TestVideo from '../../assets/video/test.mp4';
+import TestVideo1 from '../../assets/video/test.mp4';
+import TestVideo2 from '../../assets/video/test1.mp4';
 
 
 const initialState = {
@@ -527,7 +528,12 @@ const initialState = {
         name: 'section test',
         pages: [
           {
-            video: TestVideo,
+            video: TestVideo2,
+            title: 'test video',
+            text: 'video description'
+          },
+          {
+            video: TestVideo1,
             title: 'test video',
             text: 'video description'
           },
