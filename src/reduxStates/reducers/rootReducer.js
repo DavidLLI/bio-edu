@@ -548,7 +548,15 @@ const initialState = {
           {
             title: 'test2',
             text: 'text2',
-            animation: animationData2
+            animation: animationData2,
+            popup: {
+              position: {
+                left: 360,
+                top: 200
+              },
+              title: 'popup1',
+              html: PopupHTML1
+            }
           }
         ],
       },
