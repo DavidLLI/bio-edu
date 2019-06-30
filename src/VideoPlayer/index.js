@@ -54,11 +54,12 @@ class VideoPlayer extends Component {
 
   onWheel() {
     //e.preventDefault();
-    let currentTime = this.reactPlayerRef.current.currentTime;
-    const frameNumber = this.scrollArea.current.scrollTop/this.playbackConst;
-    this.reactPlayerRef.current.currentTime = frameNumber;
-    window.requestAnimationFrame(this.onWheel);
-    //console.log(frameNumber);
+    if (this.reactPlayerRef.current && this.scrollArea.current) {
+      let currentTime = this.reactPlayerRef.current.currentTime;
+      const frameNumber = this.scrollArea.current.scrollTop/this.playbackConst;
+      this.reactPlayerRef.current.currentTime = frameNumber;
+      window.requestAnimationFrame(this.onWheel);
+    }
   }
 
   render() {

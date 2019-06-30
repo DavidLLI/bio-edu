@@ -160,8 +160,8 @@ const initialState = {
         name: 'Viral Genome of TM',
         pages: [
           {
-            title: 'Basic features of viral transcription map',
-            text: 'The figure on your right-hand side is a typical example of viral transcription map (TM) that summarizes all the transcriptional information of a DNA virus called the adenovirus, and this figure is adapted and modified from the Fundamentals of Molecular Virology, 2nd Edition (Acheson, 2011). Viral transcription maps usually contain many different graphical features, and they are difficult to understand at first. Viraliterate will not teach you the visual language by going through this graph. Instead, let’s start with a simple hypothetical example of TM, and all the essential features of this hypothetical TM will be introduced step-by-step. Please click the play button of the media controls to play this animation.',
+            title: '<b>Basic features of viral transcription map</b>',
+            text: 'The figure on your <b>right-hand side</b> is a typical example of <strong>viral transcription map (TM)</strong> that summarizes all <span style="color: #339966;">aaa</span>the transcriptional information of a DNA virus called the adenovirus, and this figure is adapted and modified from the Fundamentals of Molecular Virology, 2nd Edition (Acheson, 2011). Viral transcription maps usually contain many different graphical features, and they are difficult to understand at first. Viraliterate will not teach you the visual language by going through this graph. Instead, let’s start with a simple hypothetical example of TM, and all the essential features of this hypothetical TM will be introduced step-by-step. Please click the play button of the media controls to play this animation.',
             animation: animationData1,
             animationNoAutoplay: true
           },
@@ -548,7 +548,15 @@ const initialState = {
           {
             title: 'test2',
             text: 'text2',
-            animation: animationData2
+            animation: animationData2,
+            popup: {
+              position: {
+                left: 360,
+                top: 200
+              },
+              title: 'popup1',
+              html: PopupHTML1
+            }
           }
         ],
       },

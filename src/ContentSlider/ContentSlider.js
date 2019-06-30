@@ -59,6 +59,12 @@ class ContentSlider extends Component {
             noAutoplay = true;
         }
 
+        if (currentModule !== prevProps.currentModule ||
+            currentSection !== prevProps.currentSection ||
+            currentPage !== prevProps.currentPage) {
+            this.setState({isAnimationComplete: false});
+        }
+
     	//this.sliderRef.current.slickGoTo(currentPage, true);
         if (this.animationRef.current &&
             (currentModule !== prevProps.currentModule ||

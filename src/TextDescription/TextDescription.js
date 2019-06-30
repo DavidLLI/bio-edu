@@ -25,11 +25,11 @@ class TextDescription extends Component {
                 <div className='text-section'>
                     {'Section ' + (currentSection + 1)}
                 </div>
-                <div className='text-section-subtitle'>
-                    {pageData[currentModule][currentSection].pages[currentPage].title}
+                <div className='text-section-subtitle'
+                    dangerouslySetInnerHTML={{__html: pageData[currentModule][currentSection].pages[currentPage].title}}>
                 </div>
-                <div className='text-description-body'>
-                    {pageData[currentModule][currentSection].pages[currentPage].text}
+                <div className='text-description-body'
+                    dangerouslySetInnerHTML={{__html: pageData[currentModule][currentSection].pages[currentPage].text}}>
                 </div>
             </div>
     	);
