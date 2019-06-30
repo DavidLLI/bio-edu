@@ -15,3 +15,58 @@
 	display: block;
 	width: 100%;
 }
+
+.image-controlButton {
+	position: absolute;
+	top: 480px;
+	left: 255px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	opacity: 0.8;
+}
+
+.image-replayButton {
+	height: 50px;
+	width: 50px;
+	fill: #EFEFEF;
+	cursor: pointer;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+
+.image-replayButton:hover {
+	fill: #0071BC;
+}
+
+.image-media-prev-button {
+	height: 50px;
+	width: 50px;
+	fill: #EFEFEF;
+	cursor: pointer;
+}
+
+.image-media-prev-button.disabled {
+	fill: #666666 !important;
+	cursor: default;
+}
+
+.image-media-prev-button:hover {
+	fill: #0071BC;
+}
+
+.image-media-next-button {
+	height: 50px;
+	width: 50px;
+	fill: #EFEFEF;
+	cursor: pointer;
+}
+
+.image-media-next-button.disabled {
+	fill: #666666 !important;
+	cursor: default;
+}
+
+.image-media-next-button:hover {
+	fill: #0071BC;
+}
