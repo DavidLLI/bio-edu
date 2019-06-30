@@ -82,7 +82,7 @@ class ButtonNav extends Component {
 	    }
 
 	    let pageLengthStr = '';
-	    if (totalPage < 9) {
+	    if (totalPage < 10) {
 	    	pageLengthStr = '' + '0' + totalPage;
 	    }
 	    else {

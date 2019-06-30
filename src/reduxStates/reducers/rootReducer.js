@@ -149,6 +149,12 @@ import PopupHTML1 from '../../assets/Popup/Popup1.js';
 //Video
 import TestVideo1 from '../../assets/video/720x480_2min.webm';
 import TestVideo2 from '../../assets/video/720x480_2min.mp4';
+import TestVideo3 from '../../assets/video/finalrender.mp4';
+import TestVideo4 from '../../assets/video/finalrendershrink.mp4';
+import TestVideo5 from '../../assets/video/finalrendershrink.webm';
+
+//Image Sequence
+import { imageSequence as ImageSequence1 } from '../../assets/imageSequences/test_mp4';
 
 const initialState = {
   pageData:[
@@ -527,6 +533,11 @@ const initialState = {
         name: 'section test',
         pages: [
           {
+            imageSequence: ImageSequence1,
+            title: 'test image sequence',
+            text: 'test image sequence'
+          },
+          {
             video: TestVideo1,
             title: 'test video',
             text: 'video description'
@@ -538,6 +549,21 @@ const initialState = {
           },
           {
             video: 'https://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.webm',
+            title: 'test video',
+            text: 'video description'
+          },
+          {
+            video: TestVideo3,
+            title: 'test video',
+            text: 'video description'
+          },
+          {
+            video: TestVideo4,
+            title: 'test video',
+            text: 'video description'
+          },
+          {
+            video: TestVideo5,
             title: 'test video',
             text: 'video description'
           },

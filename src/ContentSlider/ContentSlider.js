@@ -6,6 +6,7 @@ import { changeFocus, changePage } from '../reduxStates/actions/ScrollbarAction'
 
 import LottieController from './LottieController';
 import VideoPlayer from '../VideoPlayer';
+import ScrollImages from '../ScrollImages';
 import ImageSlider from '../ImageSlider/ImageSlider';
 import PopupWindow from '../PopupWindow/PopupWindow';
 
@@ -167,6 +168,11 @@ class ContentSlider extends Component {
                 {article.video && 
                     <div className='new'>
                         <VideoPlayer data={article.video} />
+                    </div>
+                }
+                {article.imageSequence &&
+                    <div className='new'>
+                        <ScrollImages data={article.imageSequence} />
                     </div>
                 }
         		{/* <Slider 

@@ -1,0 +1,17 @@
+.scroll-images {
+
+}
+
+.single-image-in-seq {
+  height: 440px;
+  width: 730px;
+  position: absolute;
+  top: 0; 
+  left: 0;
+  pointer-events: none;
+}
+
+.image-player {
+	display: block;
+	width: 100%;
+}
