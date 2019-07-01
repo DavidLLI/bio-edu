@@ -533,6 +533,26 @@ const initialState = {
         name: 'section test',
         pages: [
           {
+            quiz: {
+              image: Image1,
+              question: 'hi',
+              choices: ['first', 'second', 'third', 'fourth'],
+              answer: 0
+            },
+            title: 'test quiz',
+            text: 'test quiz'
+          },
+          {
+            quiz: {
+              image: Image1,
+              question: 'hi',
+              choices: ['first', 'second', 'third', 'fourth'],
+              answer: [0, 1]
+            },
+            title: 'test quiz',
+            text: 'test quiz'
+          },
+          {
             imageSequence: ImageSequence1,
             title: 'test image sequence',
             text: 'test image sequence'
