@@ -15,7 +15,7 @@ class ScrollImages extends Component {
     this.ScrollImages = React.createRef();
     this.reactScrollRef = React.createRef();
 
-    this.playbackConst = 200;
+    this.playbackConst = 20;
 
     this.state = {
       index: 0
