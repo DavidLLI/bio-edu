@@ -147,7 +147,7 @@ import animationData24 from '../../assets/Animation/data-24.json';
 import PopupHTML1 from '../../assets/Popup/Popup1.js';
 
 //Video
-import TestVideo1 from '../../assets/video/finalllllllllllllllllllllllrender_00000.mp4';
+import TestVideo1 from '../../assets/video/finalllllllllllllllllllllllrender.mp4';
 import TestVideo2 from '../../assets/video/720x480_2min.mp4';
 import TestVideo3 from '../../assets/video/finalrender.mp4';
 import TestVideo4 from '../../assets/video/finalrendershrink.mp4';
