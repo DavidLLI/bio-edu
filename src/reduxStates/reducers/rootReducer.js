@@ -338,8 +338,8 @@ const initialState = {
 
            {
             imageSequence: ImageSequence1,
-            title: 'test image sequence',
-            text: 'test image sequence'
+            title: 'Viral RNA transcript- Part09',
+            text: '(scroll-based animation)'
           },
           
           //Scroll video for part09
