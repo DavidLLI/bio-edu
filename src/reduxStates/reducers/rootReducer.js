@@ -182,7 +182,7 @@ const initialState = {
                 left: 360,
                 top: 200
               },
-              title: 'popup1',
+              title: 'Variations in the viral genome',
               html: PopupHTML1
             }
 
@@ -339,14 +339,14 @@ const initialState = {
            {
             imageSequence: ImageSequence1,
             title: 'Viral RNA transcript- Part09',
-            text: '(scroll-based animation)'
+            text: 'In this hypothetical scroll-based 3D animation shown on your right-hand side (Use the wheel button of your mouse or trackpad to scroll this animation), the viral pre-processed mRNAs in infected cell nuclei are synthesized by host <b>RNA polymerase II</b>. <br><br>Similar to the host transcriptional mechanism, the entire  transcriptional processes of viral RNA can be separated into four main stages: <br><br>1. <b>Formation of the transcription initiation complex</b><br>The first step is the binding of the transcriptional factor (TF) IID to the TATA-box of viral DNA. TFIID contains a TATA-box binding domain, which can bind itself to this core DNA promoter element and induce profoundly bending of viral DNA. Then, other transcriptional factors are recruited to the viral genome, including TFIIA, TFIIB, and TFIIH as well as the RNA polymerase II. Once the complex is formed, TFIIH unwinds DNA and induces the formation of the transcription bubble, which allows the incoming free RNA nucleotides to bind to the template strand (will be discussed later) of the viral DNA genome. After a short nascent RNA has been made, the C terminal domain of the RPB1 subunit of the RNA polymerase will be phosphorylated by TFIIH. Phosphorylated CTD domain will recruit enzymes to cap 5 prime end of this nascent RNA and to facilitate RNA elongation. <br><br> 2. <b>RNA elongation</b><br>After RNA 5 prime capping, RNA is continuously synthesizing into a certain length and cellular enzymes to will process its 3 prime end to add the poly-A tail.<br><br>3. <b>intron removal (RNA splicing)</b><br>The spliceosome complex will splice the introns out from the newly formed precursor viral RNA. The RNA loop shown in this animation is the intron lariat, which indicates the beginning of RNA splicing. <br><br>4. <b>Mature RNA formation</b> <br>Finally, the introns were removed, and the exons are joining back together to form a shorter mature viral mRNA with a 5 prime cap and a 3 prime poly-A tail. <br><br> At the end of this animation, you should see the viral RNAs in TMs are usually illustrated as the <b>intermediate step</b> of RNA processing as shown in the blue box.'
           },
           
-          //Scroll video for part09
+          
 
            {
             title: 'Viral RNA transcript- Part10',
-            text: 'The significant advantage of illustrating the RNA in broken lines is to help audiences to locate the exact positions of exons and removed introns to the viral genome. <br><br> In this animation, you can follow the dotted guidelines to determine the length and position of every exon as well as every removed intron.',
+            text: 'The significant advantage of illustrating the RNA in broken lines (i.e., the intermediate step) is to help audiences to locate the exact positions of exons and removed introns to the viral genome. <br><br> In this animation, you can follow the dotted guidelines to determine the length and position of every exon as well as every removed intron.',
             animation: animationData16
           },
            
