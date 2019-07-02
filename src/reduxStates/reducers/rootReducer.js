@@ -147,8 +147,14 @@ import animationData24 from '../../assets/Animation/data-24.json';
 import PopupHTML1 from '../../assets/Popup/Popup1.js';
 
 //Video
-import TestVideo1 from '../../assets/video/720x480_2min.webm';
+import TestVideo1 from '../../assets/video/finalllllllllllllllllllllllrender.mp4';
 import TestVideo2 from '../../assets/video/720x480_2min.mp4';
+import TestVideo3 from '../../assets/video/finalrender.mp4';
+import TestVideo4 from '../../assets/video/finalrendershrink.mp4';
+import TestVideo5 from '../../assets/video/finalrendershrink.webm';
+
+//Image Sequence
+import { imageSequence as ImageSequence1 } from '../../assets/imageSequences/test_mp4';
 
 const initialState = {
   pageData:[
@@ -159,7 +165,7 @@ const initialState = {
         name: 'Viral Genome of TM',
         pages: [
           {
-            title: '<b>Basic features of viral transcription map</b>',
+            title: 'Basic features of viral transcription map',
             text: 'The figure on your <b>right-hand side</b> is a typical example of <strong>viral transcription map (TM)</strong> that summarizes all <span style="color: #339966;">aaa</span>the transcriptional information of a DNA virus called the adenovirus, and this figure is adapted and modified from the Fundamentals of Molecular Virology, 2nd Edition (Acheson, 2011). Viral transcription maps usually contain many different graphical features, and they are difficult to understand at first. Viraliterate will not teach you the visual language by going through this graph. Instead, let’s start with a simple hypothetical example of TM, and all the essential features of this hypothetical TM will be introduced step-by-step. Please click the play button of the media controls to play this animation.',
             animation: animationData1,
             animationNoAutoplay: true
@@ -327,6 +333,12 @@ const initialState = {
               title: 'popup1',
               html: PopupHTML1
             }
+          },
+
+           {
+            imageSequence: ImageSequence1,
+            title: 'test image sequence',
+            text: 'test image sequence'
           },
           
           //Scroll video for part09
@@ -527,6 +539,11 @@ const initialState = {
         name: 'section test',
         pages: [
           {
+            imageSequence: ImageSequence1,
+            title: 'test image sequence',
+            text: 'test image sequence'
+          },
+          {
             video: TestVideo1,
             title: 'test video',
             text: 'video description'
@@ -538,6 +555,21 @@ const initialState = {
           },
           {
             video: 'https://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.webm',
+            title: 'test video',
+            text: 'video description'
+          },
+          {
+            video: TestVideo3,
+            title: 'test video',
+            text: 'video description'
+          },
+          {
+            video: TestVideo4,
+            title: 'test video',
+            text: 'video description'
+          },
+          {
+            video: TestVideo5,
             title: 'test video',
             text: 'video description'
           },
