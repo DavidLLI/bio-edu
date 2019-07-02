@@ -1,0 +1,42 @@
+.quiz-image {
+	height: 220px;
+	width: 365px;
+}
+
+.quiz-question {
+	margin-top: 20px;
+	color: white;
+}
+
+.quiz-options {
+	margin-top: 10px;
+	color: white;
+	width: 100%;
+}
+
+.quiz-option-text {
+	margin-left: 10px;
+}
+
+.quiz-submitButton {
+	margin-top: 20px;
+	width: 90px;
+	height: 40px;
+	font-size: 18px;
+	background-color: #0071BC;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.quiz-submitButton:hover {
+	background-color: #1c7bba;
+}
+
+.quiz-result {
+	color: white;
+	height: 40px;
+	width: 90px;
+}

@@ -9,6 +9,7 @@ import VideoPlayer from '../VideoPlayer';
 import ScrollImages from '../ScrollImages';
 import ImageSlider from '../ImageSlider/ImageSlider';
 import PopupWindow from '../PopupWindow/PopupWindow';
+import QuizPage from '../QuizPage';
 
 import Slider from "react-slick";
 import "../../node_modules/slick-carousel/slick/slick.css";
@@ -173,6 +174,11 @@ class ContentSlider extends Component {
                 {article.imageSequence &&
                     <div className='new'>
                         <ScrollImages data={article.imageSequence} />
+                    </div>
+                }
+                {article.quiz &&
+                    <div className='new'>
+                        <QuizPage data={article.quiz} />
                     </div>
                 }
         		{/* <Slider 

@@ -161,19 +161,20 @@ const initialState = {
     // Module 1
     [
       // Section 1
+      //<span style="color: #E78877;"></span>
       {
         name: 'Viral Genome of TM',
         pages: [
           {
             title: 'Basic features of viral transcription map',
-            text: 'The figure on your <b>right-hand side</b> is a typical example of <strong>viral transcription map (TM)</strong> that summarizes all <span style="color: #339966;">aaa</span>the transcriptional information of a DNA virus called the adenovirus, and this figure is adapted and modified from the Fundamentals of Molecular Virology, 2nd Edition (Acheson, 2011). Viral transcription maps usually contain many different graphical features, and they are difficult to understand at first. Viraliterate will not teach you the visual language by going through this graph. Instead, let’s start with a simple hypothetical example of TM, and all the essential features of this hypothetical TM will be introduced step-by-step. Please click the play button of the media controls to play this animation.',
+            text: 'The figure on your right-hand side is a typical example of <b><em>viral transcription map (TM)</em></b> that summarizes all the transcriptional information of a DNA virus called the adenovirus, and this figure is adapted and modified from <em> the Fundamentals of Molecular Virology, 2nd Edition (Acheson, 2011)</em>. <br><br>Viral transcription maps usually contain many different graphical features, and they are difficult to understand at first. Viraliterate will not teach you the visual language by going through this graph. Instead, let’s start with a simple hypothetical example of TM, and all the essential features of viral TMs will be introduced step-by-step by using this hypothetical TM. <br><br>Please click the play button of the media controls to play this animation.',
             animation: animationData1,
             animationNoAutoplay: true
           },
 
           {
             title: 'Viral genome',
-            text: 'When you first look at the TM, you should read from the fundamental element that every TM has: the viral genome. In this case, the two white lines represent the viral genome. After you watch this animation, there will be a slider appears on the left.  By moving this slider, you should notice that the two white lines in TM are the schematical representation of the double-stranded helical viral DNA, and this line representation reduces the visual complexity of the realistic DNA double helix as well as it saves the design space. Please click the plus icon within the blue dialogue box to open up a pop-up window discussing the different types of the viral genome.',
+            text: 'When you first look at the TM, you should read from the fundamental element that every TM has: <b>the viral genome</b>. <br><br>In this case, the two white lines represent the viral genome. After you watch this animation, there will be a slider appears on the left.  By moving this slider, you should notice that the two white lines in TM are the schematical representation of the double-stranded helical viral DNA, and this line representation reduces the visual complexity of the realistic DNA double helix as well as it saves the design space. <br><br>Please click the plus icon within the blue dialogue box to open up a pop-up window discussing the different types of the viral genome.',
             animation: animationData2,
 
             popup: {
@@ -198,7 +199,7 @@ const initialState = {
 
           {
             title: 'Terminal repeats- Part01',
-            text: 'You may notice that both two ends of the viral genome can have these white boxes highlighted in blue. These usually represent the terminal repeats (TR).',
+            text: 'You may notice that both two ends of the viral genome can have these white boxes highlighted in <b><span style="color: #2B93D8;">blue</span></b>. These usually represent the <b>terminal repeats (TR)</b>.',
             animation: animationData3
           },
           {
@@ -208,8 +209,8 @@ const initialState = {
 
             popup: {
               position: {
-                left: 330,
-                top: 170
+                left: 380,
+                top: 200
               },
               title: 'popup1',
               html: PopupHTML1
@@ -226,7 +227,7 @@ const initialState = {
          
           {
             title: 'Visual scale- Part01',
-            text: 'A numerical visual scale is always presented beside to the viral genome, indicating the total length of the genome. The scale provides the accurate coordinates of all RNA transcripts relative to their corresponding viral genome parts. This visual scale is similar to a ruler that is usually marked off in specific units.',
+            text: 'A numerical <b>visual scale</b> is always presented beside to the viral genome, indicating the total length of the genome. The scale provides the accurate coordinates of all RNA transcripts relative to their corresponding viral genome parts. This visual scale is similar to a ruler that is usually marked off in specific units.',
             animation: animationData5
           },
          
@@ -237,8 +238,8 @@ const initialState = {
 
             popup: {
               position: {
-                left: 330,
-                top: 170
+                left: 335,
+                top: 330
               },
               title: 'popup1',
               html: PopupHTML1
@@ -253,13 +254,13 @@ const initialState = {
         pages: [
            {
             title: 'Viral RNA transcript- Part01',
-            text: 'Adjacent to the double-stranded DNA genome, you will find an orange arrow represents the viral RNA transcribed from the viral genome. Keep in your mind from now that the RNA has a specific directionality: 5’ and 3’ ends. This directionality is essential for understanding of this visual element - viral RNA. Click the plus icon to open up a pop-up window to explore more.',
+            text: 'Adjacent to the double-stranded DNA genome, you will find an orange arrow represents the <b><span style="color: #E78877;">viral RNA</span></b> transcribed from the viral genome. <br><br>Keep in your mind from now that the RNA has a specific directionality: 5’ and 3’ ends. This directionality is essential for understanding of this visual element - viral RNA. <br><br>Click the plus icon to open up a pop-up window to explore more.',
             animation: animationData7,
 
             popup: {
               position: {
-                left: 330,
-                top: 170
+                left: 405,
+                top: 140
               },
               title: 'popup1',
               html: PopupHTML1
@@ -268,19 +269,19 @@ const initialState = {
           
           {
             title: 'Viral RNA transcript- Part02',
-            text: 'The viral RNA comprises a vertical bar, a body and an arrowhead.',
+            text: 'The <b><span style="color: #E78877;">viral RNA</span> comprises a vertical bar, a body and an arrowhead.',
             animation: animationData8
           },
           
           {
             title: 'Viral RNA transcript- Part03',
-            text: 'Remember the directionality of RNA and let’s first start with the arrowhead. The arrowhead usually has the dual graphical functions: 1: The direction of transcription: from 5 prime to 3 prime direction. 2. 3 prime end of mRNA transcript, corresponding to the polyadenylation site, which is a type of transcriptional modification created by the host cell mechanism. Click the blue box to open up a pop-up window.',
+            text: 'Remember the directionality of RNA and let’s first start with the <b>arrowhead</b>. <br><br>The arrowhead usually has the dual graphical functions: <br><br>1. The direction of transcription: from 5 prime to 3 prime direction. <br><br>2. 3 prime end of mRNA transcript, corresponding to the polyadenylation site, which is a type of transcriptional modification created by the host cell mechanism. <br><br>Click the blue box to open up a pop-up window.',
             animation: animationData9,
 
             popup: {
               position: {
-                left: 330,
-                top: 170
+                left: 546,
+                top: 70
               },
               title: 'popup1',
               html: PopupHTML1
@@ -289,13 +290,13 @@ const initialState = {
 
            {
             title: 'Viral RNA transcript- Part04',
-            text: 'Since RNA transcript synthesizes from 5’ to 3’,  we can deduce that the vertical bar on the left part of the RNA represents the 5’ end of mRNA, corresponding to the transcriptional promoter/initiation site of transcription as well as another type of transcriptional modification: 5’ capping. Click the blue box to open up a pop-up window.',
+            text: 'Since RNA transcript synthesizes from 5’ to 3’,  we can deduce that the <b>vertical bar</b> on the left part of the RNA represents the 5’ end of mRNA, corresponding to the transcriptional promoter/initiation site of transcription as well as another type of transcriptional modification: 5’ capping. <br><br>Click the blue box to open up a pop-up window.',
             animation: animationData10,
 
             popup: {
               position: {
-                left: 330,
-                top: 170
+                left: 162,
+                top: 70
               },
               title: 'popup1',
               html: PopupHTML1
@@ -316,19 +317,19 @@ const initialState = {
 
           {
             title: 'Viral RNA transcript- Part07',
-            text: 'Let’s check the broken orange lines first; they are exons of the viral mRNA.',
+            text: 'Let’s check the broken orange lines first; they are <b><span style="color: #E78877;">exons</span></b> of the viral mRNA.',
             animation: animationData13
           },
 
           {
             title: 'Viral RNA transcript- Part08',
-            text: 'The gaps are highlighted in light blue, and they are the removed introns. Click plus icon to open up pop-up window. Typically, in TMs, the process of transcription, transcriptional modifications, and intron removal are not explained. Thus, the general steps of the whole RNA transcriptional processes will be illustrated on the next page and the detailed biological mechanism of intron removal will be discussed later in module 2.',
+            text: 'The gaps are highlighted in light blue, and they are the removed <b><span style="color: #2B93D8;">introns</span></b>. Click plus icon to open up pop-up window. Typically, in TMs, the process of transcription, transcriptional modifications, and intron removal are not explained. Thus, the general steps of the whole RNA transcriptional processes will be illustrated on the next page and the detailed biological mechanism of intron removal will be discussed later in module 2.',
             animation: animationData14,
 
             popup: {
               position: {
-                left: 330,
-                top: 170
+                left: 315,
+                top: 109
               },
               title: 'popup1',
               html: PopupHTML1
@@ -345,19 +346,19 @@ const initialState = {
 
            {
             title: 'Viral RNA transcript- Part10',
-            text: 'The significant advantage of illustrating the RNA in broken lines is to help audiences to locate the exact positions of exons and removed introns to the viral genome. In this animation, you can follow the dotted guidelines to determine the length and position of every exon as well as every removed intron.',
+            text: 'The significant advantage of illustrating the RNA in broken lines is to help audiences to locate the exact positions of exons and removed introns to the viral genome. <br><br> In this animation, you can follow the dotted guidelines to determine the length and position of every exon as well as every removed intron.',
             animation: animationData16
           },
            
            {
             title: 'Viral RNA transcript- Part11',
-            text: 'Now, let’s refresh your memory and improve your understanding: please check all the transcription initiation sites in this animation by clicking the little boxes.',
+            text: 'Now, let’s refresh your memory and improve your understanding: <br><br>please check all the transcription initiation sites in this animation by clicking the little boxes.',
             animation: animationData17
           },
 
             {
             title: 'Viral RNA transcript- Part12',
-            text: 'A common misconception would be defining the transcription initiation site of RNA transcripts in TM. If you see any five prime ends of the RNA without a vertical bar or any visual cue, do not be confused, this is not the actual transcription initiation site; instead, these five prime ends without vertical bars located in between the discontinuous RNA transcript correspond to the splice acceptor sites (note: this will be discussed in module 2).',
+            text: 'A common misconception would be defining the transcription initiation site of RNA transcripts in TM. If you see any five prime ends of the RNA without a vertical bar or any visual cue, do not be confused, this is not the actual transcription initiation site; instead, these five prime ends without vertical bars located in between the discontinuous RNA transcript correspond to the splice acceptor sites. <br>(note: this will be discussed in module 2)',
             animation: animationData18
           },
         ],
@@ -376,13 +377,13 @@ const initialState = {
 
           {
             title: 'RNA directionalities- Part02',
-            text: 'You can determine the directions of the DNA double strands by following these two steps processes. Steps 1: Look at your RNA and find its 3’ end (arrow head) and 5’ end (arrow tail). Step 2 : Find the DNA single strand that adjacent to this RNA strand and this DNA strand reads in the opposite direction. Its complementary DNA strand has the same direction as the RNA strand. Click here to open up a pop-up window to explore the details.',
+            text: 'You can determine the directions of the DNA double strands by following these two steps processes: <br><br>Steps 1: Look at your RNA and find its 3’ end (arrow head) and 5’ end (vertical bar). <br><br>Step 2 : Find the DNA single strand that adjacent to this RNA strand and this DNA strand reads in the opposite direction. Its complementary DNA strand has the same direction as the RNA strand. <br><br>Click here to open up a pop-up window to explore the details.',
             animation: animationData20,
 
             popup: {
               position: {
-                left: 330,
-                top: 170
+                left: 25,
+                top: 214
               },
               title: 'popup1',
               html: PopupHTML1
@@ -538,6 +539,26 @@ const initialState = {
       {
         name: 'section test',
         pages: [
+          {
+            quiz: {
+              image: Image1,
+              question: 'hi',
+              choices: ['first', 'second', 'third', 'fourth'],
+              answer: 0
+            },
+            title: 'test quiz',
+            text: 'test quiz'
+          },
+          {
+            quiz: {
+              image: Image1,
+              question: 'hi',
+              choices: ['first', 'second', 'third', 'fourth'],
+              answer: [0, 1]
+            },
+            title: 'test quiz',
+            text: 'test quiz'
+          },
           {
             imageSequence: ImageSequence1,
             title: 'test image sequence',
