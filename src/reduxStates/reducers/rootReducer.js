@@ -155,6 +155,7 @@ import TestVideo5 from '../../assets/video/finalrendershrink.webm';
 
 //Image Sequence
 import { imageSequence as ImageSequence1 } from '../../assets/imageSequences/test_mp4';
+import { imageSequence as FinalRenderSeq } from '../../assets/imageSequences/finalrender';
 
 const initialState = {
   pageData:[
@@ -539,6 +540,11 @@ const initialState = {
       {
         name: 'section test',
         pages: [
+          {
+            imageSequence: FinalRenderSeq,
+            title: 'test image sequence',
+            text: 'test image sequence'
+          },
           {
             quiz: {
               image: Image1,
