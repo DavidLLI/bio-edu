@@ -59,7 +59,6 @@ class ScrollImages extends Component {
 
   onScroll(e) {
   	let index = Math.floor(e.target.scrollTop / this.playbackConst);
-    console.log(index);
     if (index >= this.props.data.length) {
       index = this.props.data.length - 1;
     }
