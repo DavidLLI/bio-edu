@@ -145,7 +145,7 @@ import animationData24 from '../../assets/Animation/data-24.json';
 
 //Popupwindow-numbers
 import PopupHTML1 from '../../assets/Popup/Popup1.js';
-
+import PopupHTML2 from '../../assets/Popup/Popup2.js';
 //Video
 import TestVideo1 from '../../assets/video/finalllllllllllllllllllllllrender.mp4';
 import TestVideo2 from '../../assets/video/720x480_2min.mp4';
@@ -173,7 +173,10 @@ const initialState = {
             animationNoAutoplay: true
           },
 
+          
+
           {
+
             title: 'Viral genome',
             text: 'When you first look at the TM, you should read from the fundamental element that every TM has: <b>the viral genome</b>. <br><br>In this case, the two white lines represent the viral genome. After you watch this animation, there will be a slider appears on the left.  By moving this slider, you should notice that the two white lines in TM are the schematical representation of the double-stranded helical viral DNA, and this line representation reduces the visual complexity of the realistic DNA double helix as well as it saves the design space. <br><br>Please click the plus icon within the blue dialogue box to open up a pop-up window discussing the different types of the viral genome.',
             animation: animationData2,
@@ -214,7 +217,7 @@ const initialState = {
                 top: 200
               },
               title: 'popup1',
-              html: PopupHTML1
+              html: PopupHTML2
             }
 
           },
@@ -338,9 +341,9 @@ const initialState = {
           },
 
            {
-            imageSequence: ImageSequence1,
+            imageSequence: FinalRenderSeq,
             title: 'Viral RNA transcript- Part09',
-            text: 'In this hypothetical scroll-based 3D animation shown on your right-hand side (Use the wheel button of your mouse or trackpad to scroll this animation), the viral pre-processed mRNAs in infected cell nuclei are synthesized by host <b>RNA polymerase II</b>. <br><br>Similar to the host transcriptional mechanism, the entire  transcriptional processes of viral RNA can be separated into four main stages: <br><br>1. <b>Formation of the transcription initiation complex</b><br>The first step is the binding of the transcriptional factor (TF) IID to the TATA-box of viral DNA. TFIID contains a TATA-box binding domain, which can bind itself to this core DNA promoter element and induce profoundly bending of viral DNA. Then, other transcriptional factors are recruited to the viral genome, including TFIIA, TFIIB, and TFIIH as well as the RNA polymerase II. Once the complex is formed, TFIIH unwinds DNA and induces the formation of the transcription bubble, which allows the incoming free RNA nucleotides to bind to the template strand (will be discussed later) of the viral DNA genome. After a short nascent RNA has been made, the C terminal domain of the RPB1 subunit of the RNA polymerase will be phosphorylated by TFIIH. Phosphorylated CTD domain will recruit enzymes to cap 5 prime end of this nascent RNA and to facilitate RNA elongation. <br><br> 2. <b>RNA elongation</b><br>After RNA 5 prime capping, RNA is continuously synthesizing into a certain length and cellular enzymes to will process its 3 prime end to add the poly-A tail.<br><br>3. <b>intron removal (RNA splicing)</b><br>The spliceosome complex will splice the introns out from the newly formed precursor viral RNA. The RNA loop shown in this animation is the intron lariat, which indicates the beginning of RNA splicing. <br><br>4. <b>Mature RNA formation</b> <br>Finally, the introns were removed, and the exons are joining back together to form a shorter mature viral mRNA with a 5 prime cap and a 3 prime poly-A tail. <br><br> At the end of this animation, you should see the viral RNAs in TMs are usually illustrated as the <b>intermediate step</b> of RNA processing as shown in the blue box.'
+            text: 'In this hypothetical scroll-based 3D animation shown on your right-hand side, the viral pre-processed mRNAs in infected cell nuclei are synthesized by host <b>RNA polymerase II</b>.<br> (Use the wheel button of your mouse or trackpad to scroll this animation) <br><br>Similar to the host transcriptional mechanism, the entire  transcriptional processes of viral RNA can be separated into four main stages: <br><br>1. <b>Formation of the transcription initiation complex</b><br>The first step is the binding of the transcriptional factor (TF) IID to the TATA-box of viral DNA. TFIID contains a TATA-box binding domain, which can bind itself to this core DNA promoter element and induce profoundly bending of viral DNA. Then, other transcriptional factors are recruited to the viral genome, including TFIIA, TFIIB, and TFIIH as well as the RNA polymerase II. Once the complex is formed, TFIIH unwinds DNA and induces the formation of the transcription bubble, which allows the incoming free RNA nucleotides to bind to the template strand (will be discussed later) of the viral DNA genome. After a short nascent RNA has been made, the C terminal domain of the RPB1 subunit of the RNA polymerase will be phosphorylated by TFIIH. Phosphorylated CTD domain will recruit enzymes to cap 5 prime end of this nascent RNA and to facilitate RNA elongation. <br><br> 2. <b>RNA elongation</b><br>After RNA 5 prime capping, RNA is continuously synthesizing into a certain length and cellular enzymes to will process its 3 prime end to add the poly-A tail.<br><br>3. <b>intron removal (RNA splicing)</b><br>The spliceosome complex will splice the introns out from the newly formed precursor viral RNA. The RNA loop shown in this animation is the intron lariat, which indicates the beginning of RNA splicing. <br><br>4. <b>Mature RNA formation</b> <br>Finally, the introns were removed, and the exons are joining back together to form a shorter mature viral mRNA with a 5 prime cap and a 3 prime poly-A tail. <br><br> At the end of this animation, you should see the viral RNAs in TMs are usually illustrated as the <b>intermediate step</b> of RNA processing as shown in the blue box.'
           },
           
           
@@ -606,7 +609,7 @@ const initialState = {
             },
             after: Image1,
             title: 'test1',
-            text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te'
+            text: 'e'
           },
           {
             title: 'test2',

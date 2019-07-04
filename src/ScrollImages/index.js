@@ -39,14 +39,13 @@ class ScrollImages extends Component {
   }
 
   componentDidUpdate(prevProps, prevStates) {
-  	this.reactScrollRef.current.style.height = Math.floor(this.props.data.length) * this.playbackConst + "px";
+  	this.reactScrollRef.current.style.height = window.innerHeight + this.props.data.length * this.playbackConst + "px";
   }
 
   onWheel(e) {
   	e.preventDefault();
-
   	let index = this.state.index;
-  	index += Math.floor(e.deltaY / 50);
+  	index += Math.round(e.deltaY / 50);
 
   	if (index >= this.props.data.length) {
   		index = this.props.data.length - 1;
@@ -60,7 +59,9 @@ class ScrollImages extends Component {
 
   onScroll(e) {
   	let index = Math.floor(e.target.scrollTop / this.playbackConst);
-  	console.log(index);
+    if (index >= this.props.data.length) {
+      index = this.props.data.length - 1;
+    }
   	this.setState({index: index});
   }
 
