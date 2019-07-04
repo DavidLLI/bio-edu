@@ -1,7 +1,7 @@
 import React from 'react';
 
 //pop-up-images import
-import Image1 from '../Module 0_V01/Module01-01.jpg';
+import Image3 from '../../assets/PopupWin/DNARNAdirectionality.png';
 
 import './Popup2.css';
 
@@ -29,7 +29,7 @@ export default function (props) {
 			</div>
 
 
-			<img className='popup-image' src={Image1} />
+			<img className='popup-image' src={Image3} />
             
             <div className='popup-font-small'>
 				Other viruses may have a linear single stranded genome, cyclized, or partially double-strand DNA or RNA genome. In TMs, they can be presented by using schematic lines in slightly different ways.
