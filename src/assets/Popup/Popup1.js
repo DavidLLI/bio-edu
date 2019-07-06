@@ -31,7 +31,7 @@ export default function (props) {
                  2.	<a href="https://viralzone.expasy.org/148"><font color="#7AC943"><b>Polyomaviridae</b></font></a> (cyclized double stranded viral genome).
                     <br/> 
 
-                 3.	<a href="https://viralzone.expasy.org/9"><font color="#7AC943"><b>Hepadnaviridae</b></font></a> (partially double stranded viral genome): 
+                 3.	<a href="https://viralzone.expasy.org/9"><font color="#7AC943"><b>Hepadnaviridae</b></font></a> (partially double stranded viral genome).<br/><br/>
                   
 
 			</div>
