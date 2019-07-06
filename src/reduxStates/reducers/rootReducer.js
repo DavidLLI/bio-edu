@@ -4,7 +4,7 @@
 import Image1 from '../../assets/PopupWin/genome-slider.png';
 import Image2 from '../../assets/PopupWin/TR-slider.png';
 import Image3 from '../../assets/PopupWin/DNARNAdirectionality.png';
-import Image4 from '../../assets/PopupWin/Genomevariations.png';
+import Image4 from '../../assets/PopupWin/Genomevariations.jpg';
 import Image5 from '../../assets/PopupWin/RNAslider-04-min-min.jpg';
 import Image6 from '../../assets/PopupWin/TRpop-upwindow V02-04-min.jpg';
 import Image7 from '../../assets/PopupWin/TRpop-upwindow V02-01-min.jpg';
