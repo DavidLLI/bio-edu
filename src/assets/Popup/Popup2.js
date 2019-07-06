@@ -1,7 +1,10 @@
 import React from 'react';
 
 //pop-up-images import
-import Image3 from '../../assets/PopupWin/DNARNAdirectionality.png';
+import Image6 from '../../assets/PopupWin/TRpop-upwindow V02-04-min.jpg';
+import Image7 from '../../assets/PopupWin/TRpop-upwindow V02-01-min.jpg';
+import Image8 from '../../assets/PopupWin/TRpop-upwindow V02-03-min.jpg';
+import Image9 from '../../assets/PopupWin/TRpop-upwindow V02-02-min.jpg';
 
 import './Popup2.css';
 
@@ -10,41 +13,26 @@ export default function (props) {
 		<div className='popup-class-1'>
 
 			<div className='popup-font-big'>
-				Viral genome <br/><br/>
+				<b>Terminal repeats (TR)</b> <br/><br/>
 			</div>
 
 			<div className='popup-font-small'>
-				Other viruses may have a linear single stranded genome, cyclized, or partially double-strand DNA or RNA genome. In TMs, they can be presented by using schematic lines in slightly different ways.
-                You can visit the links provided below to see their visual representations accordingly.<br/>
-                 <br/>ViralZone:<br/>
-                 1.	<a href="https://viralzone.expasy.org/103?outline=all_by_species">Parvoviridae</a> (single stranded viral genome).  
-                    <br/> 
+			    Usually, in a viral genome, we can either have the inverted terminal repeats (ITRs) or the long direct/flanking terminal repeats (LTRs). <br/><br/>
+			    1. The first illustration (Figure 2) shown below illustrates the ITRs in viral genome. The ITR sequences of the same strand are complementary to each other, and the ITR at one end of the DNA strand binds to its reverse complementary repeat at the same end of the complementary DNA strand.<br/><br/>
+			    <img className='popup-image' src={Image6} /> <br/><br/><br/>
 
-                 2.	<a href="https://viralzone.expasy.org/148">Polyomaviridae</a> (cyclized double stranded viral genome).
-                    <br/> 
+			    To test if this is a ITRs, please first separate this double-stranded viral genome apart (Figure 3). After the separation, try to fold each separated DNA strand as the illustration shows and to observe the result. As you can see, the inverted terminal repeats are capable of self-complementary base pairing. The biological function/significance of this self base-pairing of the single-stranded viral DNA is to reform a replication origin as we observed in double-stranded DNA viral genome. Thus, this DNA virus can either use the single-stranded viral DNA or the double-stranded viral genome to improve the viral genome replication efficiency.<br/><br/>
+                <img className='popup-image' src={Image7} /> <br/><br/><br/>
 
-                 3.	<a href="https://viralzone.expasy.org/9">Hepadnaviridae</a> (partially double stranded viral genome): 
-                   <br/> 
+                2. However, long direct terminal repeats (LTRs) have different repeat sequences (Figure 4).<br/><br/>
+                <img className='popup-image' src={Image8} /> <br/><br/><br/>
+                I want you to separate this double-stranded viral genome as well. After separation, you should realize that they cannot form self base-pairing when you try to fold each strand like this. This method is one way to distinguish LTR from ITR. Both of these two types of repeats have different biological functions.<br/><br/>
+               <img className='popup-image' src={Image9} /> <br/><br/>
+                Click the <a href="https://viralzone.expasy.org/103?outline=all_by_species"><font color="#7AC943"><b>TR</b></font></a> to explore more about these two repeats.
 
-			</div>
-
-
-			<img className='popup-image' src={Image3} />
-            
-            <div className='popup-font-small'>
-				Other viruses may have a linear single stranded genome, cyclized, or partially double-strand DNA or RNA genome. In TMs, they can be presented by using schematic lines in slightly different ways.
-                You can visit the links provided below to see their visual representations accordingly.<br/>
-                 <br/>ViralZone:<br/>
-                 1.	<a href="https://viralzone.expasy.org/103?outline=all_by_species">Parvoviridae</a> (single stranded viral genome).  
-                    <br/> 
-
-                 2.	<a href="https://viralzone.expasy.org/148">Polyomaviridae</a> (cyclized double stranded viral genome).
-                    <br/> 
-
-                 3.	<a href="https://viralzone.expasy.org/9">Hepadnaviridae</a> (partially double stranded viral genome): 
-                   <br/> 
 
 			</div>
+
 
 		</div> 
 	);

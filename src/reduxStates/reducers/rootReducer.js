@@ -5,6 +5,22 @@ import Image1 from '../../assets/PopupWin/genome-slider.png';
 import Image2 from '../../assets/PopupWin/TR-slider.png';
 import Image3 from '../../assets/PopupWin/DNARNAdirectionality.png';
 import Image4 from '../../assets/PopupWin/Genomevariations.png';
+import Image5 from '../../assets/PopupWin/RNAslider-04-min-min.jpg';
+import Image6 from '../../assets/PopupWin/TRpop-upwindow V02-04-min.jpg';
+import Image7 from '../../assets/PopupWin/TRpop-upwindow V02-01-min.jpg';
+import Image8 from '../../assets/PopupWin/TRpop-upwindow V02-03-min.jpg';
+import Image9 from '../../assets/PopupWin/TRpop-upwindow V02-02-min.jpg';
+import Image10 from '../../assets/PopupWin/Scalepop-upwindow-01-min.jpg';
+import Image11 from '../../assets/PopupWin/Scalepop-upwindow-04-min.jpg';
+import Image12 from '../../assets/PopupWin/Scalepop-upwindow-03-min.jpg';
+import Image13 from '../../assets/PopupWin/Scalepop-upwindow-02-min.jpg';
+import Image14 from '../../assets/PopupWin/DNARNAdirectionality.png';
+import Image15 from '../../assets/PopupWin/5cap3tail-01-min.jpg';
+import Image16 from '../../assets/PopupWin/5cap3tail-02-min.jpg';
+import Image17 from '../../assets/PopupWin/introntypes-01-min.jpg';
+import Image18 from '../../assets/PopupWin/DNAreading-04-min.jpg';
+import Image19 from '../../assets/PopupWin/DNAreading-03-min.jpg';
+import Image20 from '../../assets/PopupWin/DNAreading-02-min.jpg';
 
 //MODULE 1 2D animations
 import animationData1 from '../../assets/Animation/data-01.json';
@@ -35,6 +51,12 @@ import animationData24 from '../../assets/Animation/data-24.json';
 //Popupwindow-numbers
 import PopupHTML1 from '../../assets/Popup/Popup1.js';
 import PopupHTML2 from '../../assets/Popup/Popup2.js';
+import PopupHTML3 from '../../assets/Popup/Popup3.js';
+import PopupHTML4 from '../../assets/Popup/Popup4.js';
+import PopupHTML5 from '../../assets/Popup/Popup5.js';
+import PopupHTML6 from '../../assets/Popup/Popup6.js';
+import PopupHTML7 from '../../assets/Popup/Popup7.js';
+import PopupHTML8 from '../../assets/Popup/Popup8.js';
 //Video
 import TestVideo1 from '../../assets/video/finalllllllllllllllllllllllrender.mp4';
 import TestVideo2 from '../../assets/video/720x480_2min.mp4';
@@ -75,7 +97,7 @@ const initialState = {
                 left: 360,
                 top: 200
               },
-              title: 'Variations in the viral genome',
+              title: ' ',
               html: PopupHTML1
             }
 
@@ -91,9 +113,13 @@ const initialState = {
         pages: [
 
           {
+            before: {
+              animation: animationData3
+            },
+            after: Image2,
             title: 'Terminal repeats- Part01',
             text: 'You may notice that both two ends of the viral genome may have these white boxes highlighted in <b><span style="color: #2B93D8;">blue</span></b>. These usually represent the <b>terminal repeats (TR)</b>.',
-            animation: animationData3
+            
           },
           {
             title: 'Terminal repeats- Part02',
@@ -105,7 +131,7 @@ const initialState = {
                 left: 380,
                 top: 200
               },
-              title: 'popup1',
+              title: ' ',
               html: PopupHTML2
             }
 
@@ -134,8 +160,8 @@ const initialState = {
                 left: 335,
                 top: 330
               },
-              title: 'popup1',
-              html: PopupHTML1
+              title: ' ',
+              html: PopupHTML3
             }
           },
 
@@ -155,8 +181,8 @@ const initialState = {
                 left: 405,
                 top: 140
               },
-              title: 'popup1',
-              html: PopupHTML1
+              title: ' ',
+              html: PopupHTML4
             }
           },
           
@@ -176,8 +202,8 @@ const initialState = {
                 left: 546,
                 top: 70
               },
-              title: 'popup1',
-              html: PopupHTML1
+              title: ' ',
+              html: PopupHTML5
             }
           },
 
@@ -191,8 +217,8 @@ const initialState = {
                 left: 162,
                 top: 70
               },
-              title: 'popup1',
-              html: PopupHTML1
+              title: ' ',
+              html: PopupHTML6
             }
           },
 
@@ -224,8 +250,8 @@ const initialState = {
                 left: 315,
                 top: 109
               },
-              title: 'popup1',
-              html: PopupHTML1
+              title: ' ',
+              html: PopupHTML7
             }
           },
 
@@ -278,8 +304,8 @@ const initialState = {
                 left: 25,
                 top: 214
               },
-              title: 'popup1',
-              html: PopupHTML1
+              title: ' ',
+              html: PopupHTML8
             }
           },
 
@@ -496,7 +522,7 @@ const initialState = {
             before: {
               animation: animationData1
             },
-            after: Image1,
+            after: Image5,
             title: 'test1',
             text: 'e'
           },

@@ -14,23 +14,23 @@ export default function (props) {
 
 
 			<div className='popup-font-big'>
-				Viral genome <br/><br/>
+				<b>Viral genome</b> <br/><br/>
 			</div>
 
            <img className='popup-image' src={Image4} /> <br/><br/>
 
 
 			<div className='popup-font-small'>
-				<big>O</big>ther viruses may have a linear single stranded genome, cyclized, or partially double-strand DNA or RNA genome. In TMs, they can be presented by using schematic lines in slightly different ways.
+				Other viruses may have a linear single stranded genome, cyclized, or partially double-strand DNA or RNA genome (Figure 1). In TMs, they can be presented by using schematic lines in slightly different ways.
                 You can visit the links provided below to see their visual representations accordingly.<br/>
-                 <br/>ViralZone:<br/>
-                 1.	<a href="https://viralzone.expasy.org/103?outline=all_by_species">Parvoviridae</a> (single stranded viral genome).  
+                 <br/><b>ViralZone:</b><br/>
+                 1.	<a href="https://viralzone.expasy.org/103?outline=all_by_species"><font color="#7AC943"><b>Parvoviridae</b></font></a> (single stranded viral genome).  
                     <br/> 
 
-                 2.	<a href="https://viralzone.expasy.org/148">Polyomaviridae</a> (cyclized double stranded viral genome).
+                 2.	<a href="https://viralzone.expasy.org/148"><font color="#7AC943"><b>Polyomaviridae</b></font></a> (cyclized double stranded viral genome).
                     <br/> 
 
-                 3.	<a href="https://viralzone.expasy.org/9">Hepadnaviridae</a> (partially double stranded viral genome): 
+                 3.	<a href="https://viralzone.expasy.org/9"><font color="#7AC943"><b>Hepadnaviridae</b></font></a> (partially double stranded viral genome): 
                   
 
 			</div>
