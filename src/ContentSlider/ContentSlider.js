@@ -145,6 +145,11 @@ class ContentSlider extends Component {
                         <ImageSlider
                             before={{animationRef: this.animationRef, animation: article.before.animation, noAutoplay: article.before.animationNoAutoplay}}
                             after={article.after}
+                            data={article}
+                            animationStatusChange={this.animationStatusChange}
+                            modalOpen={ this.openModal }
+                            modalClose={ this.closeModal }
+                            show={ this.state.isAnimationComplete }
                         />
                     </div>
                 }
