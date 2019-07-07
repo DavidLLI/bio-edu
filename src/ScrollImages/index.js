@@ -29,10 +29,9 @@ class ScrollImages extends Component {
 
     this.state = {
       index: 0,
-      imageIsReady: false
+      imageIsReady: false,
+      imageReadyCount: 0
     };
-
-    this.imageReadyCount = 0;
 
 	this.onWheel = this.onWheel.bind(this);
 	this.onScroll = this.onScroll.bind(this);
@@ -53,9 +52,8 @@ class ScrollImages extends Component {
       img.src = imageSrc;
       img.onload = () => {
         // when it finishes loading, update the component state
-        console.log(this.imageReadyCount);
-        this.imageReadyCount += 1;
-        if (this.imageReadyCount == Math.floor(this.props.data.length * 0.3)) {
+        this.setState({ imageReadyCount: this.state.imageReadyCount + 1 });
+        if (this.state.imageReadyCount == this.props.data.length) {
           this.setState({ imageIsReady: true });
         }
         
@@ -146,13 +144,13 @@ class ScrollImages extends Component {
 
   	let index = this.state.index;
     let imageIsReady = this.state.imageIsReady;
-    console.log('render');
   	return (
       <div >
       { 
         imageIsReady &&
     	  <div ref={this.ScrollImages}
     	  	onScroll={this.onScroll}
+          className='scroll-images'
     	  	style={{overflow: 'scroll', height: '100%', width: '100%'}}>
             <div ref={this.reactScrollRef}
               className='image-player'>
@@ -182,6 +180,7 @@ class ScrollImages extends Component {
               color={'#123abc'}
               loading={!imageIsReady}
             />
+            {(this.state.imageReadyCount / this.props.data.length * 100).toFixed(2) + '%'}
           </div> 
       }
       </div>

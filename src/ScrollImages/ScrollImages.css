@@ -1,5 +1,9 @@
-.scroll-images {
+.scroll-images::-webkit-scrollbar {
+  width: 0 !important;
+}
 
+.sweet-loading {
+  color: white;
 }
 
 .single-image-in-seq {
