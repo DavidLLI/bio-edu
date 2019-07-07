@@ -12,8 +12,8 @@
 }
 
 .image-player {
-	display: block;
-	width: 100%;
+	display: inline-block;
+	width: 730px;
 }
 
 .image-controlButton {

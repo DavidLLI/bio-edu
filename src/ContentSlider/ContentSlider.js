@@ -55,7 +55,7 @@ class ContentSlider extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         let content = store.getState().pageData;
-    	let { pageData, currentModule, currentSection, currentPage} = store.getState();
+    	  let { pageData, currentModule, currentSection, currentPage} = store.getState();
         let noAutoplay = false;
         if (pageData[currentModule][currentSection].pages[currentPage].animationNoAutoplay === true) {
             noAutoplay = true;
