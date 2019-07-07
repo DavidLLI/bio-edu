@@ -100,7 +100,10 @@ const initialState = {
 
             title: 'Viral genome',
             text: 'When you first look at the TM, you should read from the fundamental element that every TM has: <b>the viral genome</b>. <br><br>In this case, the two white lines represent the viral genome. After you watch this animation, there will be a slider appears on the left.  By moving this slider, you should notice that the two white lines in TM are the schematical representation of the double-stranded helical viral DNA, and this line representation reduces the visual complexity of the realistic DNA double helix as well as it saves the design space. <br><br>Please click the plus icon within the blue dialogue box to open up a pop-up window discussing the different types of the viral genome.',
-            animation: animationData2,
+            before: {
+              animation: animationData2
+            },
+            after: Image2,
 
             popup: {
               position: {

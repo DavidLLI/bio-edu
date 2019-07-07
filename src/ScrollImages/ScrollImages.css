@@ -1,5 +1,9 @@
-.scroll-images {
+.scroll-images::-webkit-scrollbar {
+  width: 0 !important;
+}
 
+.sweet-loading {
+  color: white;
 }
 
 .single-image-in-seq {
@@ -12,8 +16,8 @@
 }
 
 .image-player {
-	display: block;
-	width: 100%;
+	display: inline-block;
+	width: 730px;
 }
 
 .image-controlButton {

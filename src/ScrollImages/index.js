@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { css } from '@emotion/core';
+// First way to import
+import { ClipLoader } from 'react-spinners';
 
 import store from '../reduxStates/stores/rootStore';
 import { changePage, changeSection } from '../reduxStates/actions/ScrollbarAction';
@@ -8,6 +12,12 @@ import {ReactComponent as NextButton} from '../assets/assets-svg/next-media.svg'
 
 import './ScrollImages.css';
 
+const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+`;
+
 class ScrollImages extends Component {
 
   constructor(props) {
@@ -15,10 +25,12 @@ class ScrollImages extends Component {
     this.ScrollImages = React.createRef();
     this.reactScrollRef = React.createRef();
 
-    this.playbackConst = 20;
+    this.playbackConst = 50;
 
     this.state = {
-      index: 0
+      index: 0,
+      imageIsReady: false,
+      imageReadyCount: 0
     };
 
 	this.onWheel = this.onWheel.bind(this);
@@ -32,6 +44,21 @@ class ScrollImages extends Component {
       passive: false
     };
     //this.ScrollImages.current.addEventListener('wheel', this.onWheel, options);
+    // Preload images
+    let img = {};
+    console.log('start loading');
+    this.props.data.forEach((imageSrc, index) => {
+      const img = new Image();
+      img.src = imageSrc;
+      img.onload = () => {
+        // when it finishes loading, update the component state
+        this.setState({ imageReadyCount: this.state.imageReadyCount + 1 });
+        if (this.state.imageReadyCount == this.props.data.length) {
+          this.setState({ imageIsReady: true });
+        }
+        
+      };
+    });
   }
 
   componentWillUnmount() {
@@ -39,7 +66,16 @@ class ScrollImages extends Component {
   }
 
   componentDidUpdate(prevProps, prevStates) {
-  	this.reactScrollRef.current.style.height = window.innerHeight + this.props.data.length * this.playbackConst + "px";
+    let { pageData, currentModule, currentSection, currentPage} = store.getState();
+    if (currentModule !== prevProps.currentModule ||
+        currentSection !== prevProps.currentSection ||
+        currentPage !== prevProps.currentPage) {
+      this.imageReadyCount = 0;
+      this.setState({index: 0, imageIsReady: false});
+    }
+    if (this.reactScrollRef.current && this.state.imageIsReady && !prevStates.imageIsReady) {
+  	 this.reactScrollRef.current.style.height = window.innerHeight + this.props.data.length * this.playbackConst + "px";
+    }
   }
 
   onWheel(e) {
@@ -107,30 +143,58 @@ class ScrollImages extends Component {
     }
 
   	let index = this.state.index;
-	return (
-	  <div ref={this.ScrollImages} 
-	  	onScroll={this.onScroll}
-	  	style={{overflow: 'scroll', height: '100%', width: '100%'}}>
-        <div ref={this.reactScrollRef}
-          className='image-player'>
-  	      <img className='single-image-in-seq' 
-	  		src={this.props.data[index]} />
-        </div>
-        <div className='image-controlButton'>
-            <PrevButton
-                className={'image-media-prev-button' + prevClass}
-                onClick={this.handlePrev} />
-            <ReplayButton
-                className='image-replayButton'
-                onClick={() => {this.ScrollImages.current.scrollTop = 0}} />
-            <NextButton
-                className={'image-media-next-button' + nextClass}
-                onClick={this.handleNext} />
-        </div>
+    let imageIsReady = this.state.imageIsReady;
+  	return (
+      <div >
+      { 
+        imageIsReady &&
+    	  <div ref={this.ScrollImages}
+    	  	onScroll={this.onScroll}
+          className='scroll-images'
+    	  	style={{overflow: 'scroll', height: '100%', width: '100%'}}>
+            <div ref={this.reactScrollRef}
+              className='image-player'>
+      	      <img className='single-image-in-seq' 
+    	  		src={this.props.data[index]} />
+            </div>
+            <div className='image-controlButton'>
+                <PrevButton
+                    className={'image-media-prev-button' + prevClass}
+                    onClick={this.handlePrev} />
+                <ReplayButton
+                    className='image-replayButton'
+                    onClick={() => {this.ScrollImages.current.scrollTop = 0}} />
+                <NextButton
+                    className={'image-media-next-button' + nextClass}
+                    onClick={this.handleNext} />
+            </div>
+          </div>
+      }
+      {
+        imageIsReady || 
+          <div className='sweet-loading'>
+            <ClipLoader
+              css={override}
+              sizeUnit={"px"}
+              size={150}
+              color={'#123abc'}
+              loading={!imageIsReady}
+            />
+            {(this.state.imageReadyCount / this.props.data.length * 100).toFixed(2) + '%'}
+          </div> 
+      }
       </div>
-	);
+  	);
   }
 }
 
-export default ScrollImages;
+const mapStateToProps = state => {
+  return {
+    currentPage: state.currentPage,
+    currentModule: state.currentModule,
+    currentSection: state.currentSection,
+  }
+}
+
+export default connect(mapStateToProps)(ScrollImages);
 

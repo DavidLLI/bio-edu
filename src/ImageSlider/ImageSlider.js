@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BlockImage from 'react-block-image';
 
 import LottieController from '../ContentSlider/LottieController';
+import PopupWindow from '../PopupWindow/PopupWindow';
 
 import { ReactComponent as SliderIcon } from '../assets/assets-svg/move.svg';
 
@@ -65,7 +66,15 @@ class ContentSlider extends Component {
         		<LottieController 
                     ref={this.props.before.animationRef}
                     animation={this.props.before.animation}
-                    noAutoplay={this.props.before.animationNoAutoplay}/>
+                    noAutoplay={this.props.before.animationNoAutoplay}
+                    animationStatusChange={this.props.animationStatusChange} />
+              {this.props.data.popup &&
+                <PopupWindow 
+                  data={ this.props.data.popup }
+                  modalOpen={ this.props.modalOpen }
+                  modalClose={ this.props.modalClose }
+                  show={ this.props.show }/>
+              }
             	<div className='image-after'
             		style={{ width: `${100 * this.state.progress}%` }}>
             		<BlockImage 
