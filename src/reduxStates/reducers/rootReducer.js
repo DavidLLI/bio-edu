@@ -372,76 +372,79 @@ const initialState = {
             quiz: {
               image: Image21,
               question: 'All quiz questions are on the left section. Please select the correct answer for this question.',
-              choices: ['first', 'second', 'third', 'fourth'],
-              answer: 3
+              choices: ['Visual scale, viral genome, and terminal repeats', 'Viral genome, visual scale, and terminal repeats', 'Viral genome, terminal repeats, and visual scale', 'Viral RNA, 5 prime cap, and visual scale'],
+              answer: 2
             },
             title: 'Question 01',
             text: 'What do the <span style="color: #1B75BC;"><b>blue</b></span>, <span style="color: #2BB673;"><b>green</b></span> and <span style="color: #5A5FAA;"><b>purple</b></span> boxes indicate respectively?'
           },
-{
+         
+
+         {
             quiz: {
               image: Image22,
               question: 'Please select the correct answer for this question.',
-              choices: ['first', 'second', 'third', 'fourth'],
-              answer: 3
+              choices: ['1240 nts', '700 nts', '540 nts', '480 nts'],
+              answer: 1
             },
             title: 'Question 02',
-            text: 'test quiz'
-          },
+            text: 'How many base pairs (bp) in total do the exons of this RNA transcript have?'
+          },  
+
 
           {
             quiz: {
               image: Image23,
-              question: 'hi',
-              choices: ['first', 'second', 'third', 'fourth'],
-              answer: [0, 1]
+              question: 'Select all applicable choices.',
+              choices: ['[5’-AAUAAA- 3’]  poly-A signal itself is sufficient to specify poly(A) addition.', 'A stretch of RNA that contains only adenosine monophosphates.', 'All the adenine bases are linked by 5’-5’ triphosphate bridge. ', 'This RNA modification plays crucial role in stability of mature mRNA and translation.'],
+              answer: [1, 3]
             },
             title: 'Question 03',
-            text: 'test quiz'
+            text: 'Which of following option/s regarding the arrowhead is/are true?'
           },
 
             {
             quiz: {
               image: Image24,
-              question: 'hi',
-              choices: ['first', 'second', 'third', 'fourth'],
-              answer: [0, 1]
+              question: 'Select all applicable choices.',
+              choices: ['The transcriptional promoter.', 'N8-methylguanosine cap', 'The N7-methylguanosine linked to the viral mRNA through a 5′-5′ triphosphate bridge.', 'A post translational modification plays crucial role in the translation and stability of mature mRNA.'],
+              answer: [0, 2]
             },
             title: 'Question 04',
-            text: 'test quiz'
+            text: 'What does this vertical bar indicate? '
           },
 
             {
             quiz: {
               image: Image25,
-              question: 'hi',
-              choices: ['first', 'second', 'third', 'fourth'],
-              answer: [0, 1]
+              question: 'Please select the correct answer for this question.',
+              choices: ['The gap between these two RNA transcripts; 2 transcripts', 'Removed intron; 1 transcript', 'This region includes a 5’ cap; 1 transcript', 'This region includes a 3’ poly-A tail; 1 transcript'],
+              answer: 1
             },
             title: 'Question 05',
-            text: 'test quiz'
+            text: '(a) What is the visual meaning of the area highlighted in <span style="color: #1B75BC;"><b>blue</b></span>? (b) How many transcript/s do/es this TM show?'
           },
 
             {
             quiz: {
               image: Image26,
-              question: 'hi',
-              choices: ['first', 'second', 'third', 'fourth'],
-              answer: [0, 1]
+              question: 'Please select the correct answer for this question.',
+              choices: ['A- 3 prime, B- 5 prime, C- 5 prime, D- 3 prime, E- 3 prime, F- 5 prime; bottom DNA strand', 'A- 5 prime, B- 3 prime, C- 3 prime, D- 5 prime, E- 5 prime, F- 3 prime; bottom DNA strand', 'A- 5 prime, B- 5 prime, C- 3 prime, D- 3 prime, E- 5 prime, F- 5 prime; top DNA strand', 'A- 5 prime, B- 3 prime, C- 5 prime, D- 3 prime, E- 5 prime, F- 3 prime; top DNA strand'],
+              answer: 0
             },
             title: 'Question 06',
-            text: 'test quiz'
+            text: 'An RNA transcript is given in this scenario, and please determine the directionalities of both this RNA transcript and the double-stranded DNA. <br/> Which DNA strand can be used to hybridize with this newly synthesized RNA?'
           },
 
             {
             quiz: {
               image: Image27,
-              question: 'hi',
-              choices: ['first', 'second', 'third', 'fourth'],
-              answer: [0, 1]
+              question: 'Please select the correct answer for this question.',
+              choices: ['1', '1,2', '1,2,3,4', '4'],
+              answer: 0
             },
             title: 'Question 07',
-            text: 'test quiz'
+            text: 'Please find all the 5’ ends in this RNA transcript by selecting these numbers.'
           },
           
           
