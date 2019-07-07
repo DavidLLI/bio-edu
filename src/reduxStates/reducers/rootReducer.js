@@ -103,7 +103,7 @@ const initialState = {
             before: {
               animation: animationData2
             },
-            after: Image2,
+            after: Image1,
 
             popup: {
               position: {
@@ -126,10 +126,8 @@ const initialState = {
         pages: [
 
           {
-            before: {
-              animation: animationData3
-            },
-            after: Image2,
+            
+            animation: animationData3,
             title: 'Terminal repeats- Part01',
             text: 'You may notice that both two ends of the viral genome may have these white boxes highlighted in <b><span style="color: #2B93D8;">blue</span></b>. These usually represent the <b>terminal repeats (TR)</b>.',
             
@@ -137,8 +135,12 @@ const initialState = {
           {
             title: 'Terminal repeats- Part02',
             text: 'Check the realistic visual representation of TR by moving the slider, or click the plus icon to open up a pop-up window for additional information about the TR.',
-            animation: animationData4,
-
+            
+              before: {
+              animation: animationData4
+            },
+            after: Image2,
+          
             popup: {
               position: {
                 left: 380,
@@ -187,7 +189,11 @@ const initialState = {
            {
             title: 'Viral RNA transcript- Part01',
             text: 'Adjacent to the double-stranded DNA genome, you will find an arrow represents the <b><span style="color: #E78877;">viral RNA</span></b> transcribed from the viral genome. <br><br>Keep in your mind from now that the RNA has a specific directionality: 5’ and 3’ ends. This directionality is essential for understanding of this visual element - viral RNA. <br><br>Click the plus icon to open up a pop-up window to explore more.',
-            animation: animationData7,
+            
+            before: {
+              animation: animationData7
+            },
+            after: Image5,
 
             popup: {
               position: {

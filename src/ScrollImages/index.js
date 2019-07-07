@@ -170,14 +170,16 @@ class ScrollImages extends Component {
             </div>
           </div>
       }
+     
+
       {
         imageIsReady || 
           <div className='sweet-loading'>
             <ClipLoader
               css={override}
               sizeUnit={"px"}
-              size={150}
-              color={'#123abc'}
+              size={70}
+              color={'#005F93'}
               loading={!imageIsReady}
             />
             {(this.state.imageReadyCount / this.props.data.length * 100).toFixed(2) + '%'}
