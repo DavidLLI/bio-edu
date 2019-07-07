@@ -72,7 +72,7 @@ class ContentSlider extends Component {
                         className='image-container'
                         backgroundSize='contain'
                         src={this.props.after}
-                        style={{width: '58vw'}} />
+                        style={{width: '60vw'} } />
             	</div>
             </div>
     	);

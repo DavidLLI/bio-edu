@@ -22,6 +22,16 @@ import Image18 from '../../assets/PopupWin/DNAreading-04-min.jpg';
 import Image19 from '../../assets/PopupWin/DNAreading-03-min.jpg';
 import Image20 from '../../assets/PopupWin/DNAreading-02-min.jpg';
 
+
+//module1 quiz section
+import Image21 from '../../assets/Quiz/quiz01.jpg';
+import Image22 from '../../assets/Quiz/quiz02.jpg';
+import Image23 from '../../assets/Quiz/quiz03.jpg';
+import Image24 from '../../assets/Quiz/quiz04.jpg';
+import Image25 from '../../assets/Quiz/quiz05.jpg';
+import Image26 from '../../assets/Quiz/quiz06.jpg';
+import Image27 from '../../assets/Quiz/quiz07.jpg';
+
 //MODULE 1 2D animations
 import animationData1 from '../../assets/Animation/data-01.json';
 import animationData2 from '../../assets/Animation/data-02.json';
@@ -173,7 +183,7 @@ const initialState = {
         pages: [
            {
             title: 'Viral RNA transcript- Part01',
-            text: 'Adjacent to the double-stranded DNA genome, you will find an orange arrow represents the <b><span style="color: #E78877;">viral RNA</span></b> transcribed from the viral genome. <br><br>Keep in your mind from now that the RNA has a specific directionality: 5’ and 3’ ends. This directionality is essential for understanding of this visual element - viral RNA. <br><br>Click the plus icon to open up a pop-up window to explore more.',
+            text: 'Adjacent to the double-stranded DNA genome, you will find an arrow represents the <b><span style="color: #E78877;">viral RNA</span></b> transcribed from the viral genome. <br><br>Keep in your mind from now that the RNA has a specific directionality: 5’ and 3’ ends. This directionality is essential for understanding of this visual element - viral RNA. <br><br>Click the plus icon to open up a pop-up window to explore more.',
             animation: animationData7,
 
             popup: {
@@ -329,10 +339,124 @@ const initialState = {
 
         ],
       },
-
-
-
     ],
+
+
+
+
+
+
+
+
+
+
+
+
+    // Module for Test
+    [
+      // Section for Test
+      {
+        name: 'Module 1 quiz section',
+        pages: [
+          
+          {
+            quiz: {
+              image: Image21,
+              question: 'All quiz questions are on the left section. Please select the correct answer for this question.',
+              choices: ['first', 'second', 'third', 'fourth'],
+              answer: 3
+            },
+            title: 'Question 01',
+            text: 'What do the <span style="color: #1B75BC;"><b>blue</b></span>, <span style="color: #2BB673;"><b>green</b></span> and <span style="color: #5A5FAA;"><b>purple</b></span> boxes indicate respectively?'
+          },
+{
+            quiz: {
+              image: Image22,
+              question: 'Please select the correct answer for this question.',
+              choices: ['first', 'second', 'third', 'fourth'],
+              answer: 3
+            },
+            title: 'Question 02',
+            text: 'test quiz'
+          },
+
+          {
+            quiz: {
+              image: Image23,
+              question: 'hi',
+              choices: ['first', 'second', 'third', 'fourth'],
+              answer: [0, 1]
+            },
+            title: 'Question 03',
+            text: 'test quiz'
+          },
+
+            {
+            quiz: {
+              image: Image24,
+              question: 'hi',
+              choices: ['first', 'second', 'third', 'fourth'],
+              answer: [0, 1]
+            },
+            title: 'Question 04',
+            text: 'test quiz'
+          },
+
+            {
+            quiz: {
+              image: Image25,
+              question: 'hi',
+              choices: ['first', 'second', 'third', 'fourth'],
+              answer: [0, 1]
+            },
+            title: 'Question 05',
+            text: 'test quiz'
+          },
+
+            {
+            quiz: {
+              image: Image26,
+              question: 'hi',
+              choices: ['first', 'second', 'third', 'fourth'],
+              answer: [0, 1]
+            },
+            title: 'Question 06',
+            text: 'test quiz'
+          },
+
+            {
+            quiz: {
+              image: Image27,
+              question: 'hi',
+              choices: ['first', 'second', 'third', 'fourth'],
+              answer: [0, 1]
+            },
+            title: 'Question 07',
+            text: 'test quiz'
+          },
+          
+          
+          
+          
+        ],
+      },
+    ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 
@@ -452,6 +576,8 @@ const initialState = {
         ],
       },
     ],
+
+
     // Module for Test
     [
       // Section for Test
