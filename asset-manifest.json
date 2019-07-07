@@ -1,7 +1,7 @@
 {
   "main.css": "/bio-edu/static/css/main.0fcf0fb4.chunk.css",
-  "main.js": "/bio-edu/static/js/main.a96fca26.chunk.js",
-  "main.js.map": "/bio-edu/static/js/main.a96fca26.chunk.js.map",
+  "main.js": "/bio-edu/static/js/main.2515496b.chunk.js",
+  "main.js.map": "/bio-edu/static/js/main.2515496b.chunk.js.map",
   "static/css/1.a9544dfc.chunk.css": "/bio-edu/static/css/1.a9544dfc.chunk.css",
   "static/js/1.b233212b.chunk.js": "/bio-edu/static/js/1.b233212b.chunk.js",
   "static/js/1.b233212b.chunk.js.map": "/bio-edu/static/js/1.b233212b.chunk.js.map",
@@ -27,7 +27,7 @@
   "static/media/RNAslider-04-min-min.jpg": "/bio-edu/static/media/RNAslider-04-min-min.b1da4a7f.jpg",
   "static/media/TR-slider.png": "/bio-edu/static/media/TR-slider.c5de201b.png",
   "static/media/quiz01.jpg": "/bio-edu/static/media/quiz01.c6cd5156.jpg",
-  "static/media/quiz02.jpg": "/bio-edu/static/media/quiz02.5ed19e7f.jpg",
+  "static/media/quiz02.jpg": "/bio-edu/static/media/quiz02.3b48393a.jpg",
   "static/media/quiz03.jpg": "/bio-edu/static/media/quiz03.177bc4bd.jpg",
   "static/media/quiz04.jpg": "/bio-edu/static/media/quiz04.ce83beb4.jpg",
   "static/media/quiz05.jpg": "/bio-edu/static/media/quiz05.8d99f16a.jpg",
@@ -3143,9 +3143,9 @@
   "static/media/menu.82654597.svg": "/bio-edu/static/media/menu.82654597.svg",
   "static/media/expand.ed718a5f.svg": "/bio-edu/static/media/expand.ed718a5f.svg",
   "static/media/collapse.c62e1b2f.svg": "/bio-edu/static/media/collapse.c62e1b2f.svg",
-  "static/css/1.a9544dfc.chunk.css.map": "/bio-edu/static/css/1.a9544dfc.chunk.css.map",
   "static/css/main.0fcf0fb4.chunk.css.map": "/bio-edu/static/css/main.0fcf0fb4.chunk.css.map",
+  "static/css/1.a9544dfc.chunk.css.map": "/bio-edu/static/css/1.a9544dfc.chunk.css.map",
   "index.html": "/bio-edu/index.html",
-  "precache-manifest.2430e54f31a9a17da67992bb85d46b4a.js": "/bio-edu/precache-manifest.2430e54f31a9a17da67992bb85d46b4a.js",
+  "precache-manifest.533937a66f14ff6d17c6db55208814d0.js": "/bio-edu/precache-manifest.533937a66f14ff6d17c6db55208814d0.js",
   "service-worker.js": "/bio-edu/service-worker.js"
 }
