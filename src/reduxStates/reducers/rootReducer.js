@@ -57,6 +57,18 @@ import animationData21 from '../../assets/Animation/data-21.json';
 import animationData22 from '../../assets/Animation/data-22.json';
 import animationData23 from '../../assets/Animation/data-23.json';
 import animationData24 from '../../assets/Animation/data-24.json';
+import animationData25 from '../../assets/Animation/data-25.json';
+import animationData26 from '../../assets/Animation/data-26.json';
+import animationData27 from '../../assets/Animation/data-27.json';
+import animationData28 from '../../assets/Animation/data-28.json';
+import animationData29 from '../../assets/Animation/data-29.json';
+import animationData30 from '../../assets/Animation/data-30.json';
+import animationData31 from '../../assets/Animation/data-31.json';
+import animationData32 from '../../assets/Animation/data-32.json';
+import animationData33 from '../../assets/Animation/data-33.json';
+import animationData34 from '../../assets/Animation/data-34.json';
+
+
 
 //Popupwindow-numbers
 import PopupHTML1 from '../../assets/Popup/Popup1.js';
@@ -361,7 +373,7 @@ const initialState = {
 
 
 
-    // Module for Test
+    // Module01 quiz section
     [
       // Section for Test
       {
@@ -481,52 +493,61 @@ const initialState = {
           {
             title: 'sub1',
             text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
-            animation: animationData1
+            animation: animationData25
           },
           {
             title: 'sub2',
             text: 'text2',
-            animation: animationData2
+            animation: animationData26
           },
           {
             title: 'sub3',
             text: 'text3',
-            animation: animationData3
+            animation: animationData27
           },
           {
             title: 'sub4',
             text: 'text4',
-            animation: animationData4
+            animation: animationData28
           },
           {
             title: 'sub1',
             text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
-            animation: animationData1
+            animation: animationData29
           },
           {
             title: 'sub2',
             text: 'text2',
-            animation: animationData2
+            animation: animationData30,
+            popup: {
+              position: {
+                left: 480,
+                top: 310
+              },
+              title: ' ',
+              html: PopupHTML3
+            }
+
           },
           {
             title: 'sub3',
             text: 'text3',
-            animation: animationData3
+            animation: animationData31
           },
           {
             title: 'sub1',
             text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
-            animation: animationData1
+            animation: animationData32
           },
           {
             title: 'sub2',
             text: 'text2',
-            animation: animationData2
+            animation: animationData33
           },
           {
             title: 'sub3',
             text: 'text3',
-            animation: animationData3
+            imageSequence: ImageSequence1,
           }
         ],
       },
