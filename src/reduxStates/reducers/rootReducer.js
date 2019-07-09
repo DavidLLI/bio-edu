@@ -67,7 +67,13 @@ import animationData31 from '../../assets/Animation/data-31.json';
 import animationData32 from '../../assets/Animation/data-32.json';
 import animationData33 from '../../assets/Animation/data-33.json';
 import animationData34 from '../../assets/Animation/data-34.json';
-
+import animationData35 from '../../assets/Animation/data-35.json';
+import animationData36 from '../../assets/Animation/data-36.json';
+import animationData37 from '../../assets/Animation/data-37.json';
+import animationData38 from '../../assets/Animation/data-38.json';
+import animationData39 from '../../assets/Animation/data-39.json';
+import animationData40 from '../../assets/Animation/data-40.json';
+import animationData41 from '../../assets/Animation/data-41.json';
 
 
 //Popupwindow-numbers
@@ -558,37 +564,45 @@ const initialState = {
           {
             title: 'sub1',
             text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
-            animation: animationData1
+            animation: animationData35
           },
           {
             title: 'sub2',
             text: 'text2',
-            animation: animationData2
+            animation: animationData36
           },
           {
             title: 'sub3',
             text: 'text3',
-            animation: animationData3
+            animation: animationData37
           },
           {
             title: 'sub4',
             text: 'text4',
-            animation: animationData4
+            animation: animationData38,
+            popup: {
+              position: {
+                left: 255,
+                top: 40
+              },
+              title: ' ',
+              html: PopupHTML3
+            }
           },
           {
             title: 'sub1',
             text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
-            animation: animationData1
+            animation: animationData39
           },
           {
             title: 'sub2',
             text: 'text2',
-            animation: animationData2
+            animation: animationData40
           },
           {
             title: 'sub3',
             text: 'text3',
-            animation: animationData3
+            animation: animationData41
           },
         ],
       },
