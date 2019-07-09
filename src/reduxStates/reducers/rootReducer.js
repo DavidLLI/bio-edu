@@ -360,7 +360,7 @@ const initialState = {
 
           {
             title: 'RNA directionalities- Part05',
-            text: 'In the second scenario, the top DNA strand is no longer the template strand as the transcriptional direction of the viral RNA 2 is going on the opposite way. Therefore, the bottom DNA strand is the template strand.',
+            text: 'In the second scenario, the top DNA strand is no longer the template strand as the transcriptional direction of the viral RNA 2 is going on the opposite way. Therefore, the bottom DNA strand is the template strand. <br/><br/> <b>Well done!</b><br/> Now you have finished the module 1 and possessed basic skills of TM interpretation. Now I want you to either take a break or click the buttons shown below to take the quiz or jump into the next module. <br/><span style="color: #1B75BC;"><b><em>Quiz for module 01</em></b></span> <br/> <span style="color: #1B75BC;"><b><em>Module 02</em></b></span>',
             animation: animationData24
           },
 
@@ -494,36 +494,47 @@ const initialState = {
     [
       // Section 1
       {
-        name: 'section 1 title',
+        name: 'Alternative transcription initiation sites',
         pages: [
           {
-            title: 'sub1',
-            text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
+            title: 'Variations at 5’ end of the transcript - Part01',
+            text: 'Welcome back to ViraLiterate module 2! <br/> I hope you already familiarize with the basic features of TM. However, in real-world examples, TMs can be complicated because there are <b><em>variations</em></b> in the visual representation of the RNA transcripts. <br/><br/>Before introducing these variations, please review the first module and identify the meaning of this vertical bar shown in the blue box.',
             animation: animationData25
           },
           {
-            title: 'sub2',
-            text: 'text2',
+            title: 'Variations at 5’ end of the transcript - Part02',
+            text: 'Good job! This represents the transcriptional initiation site as well as the 5’ cap (5 prime end of viral RNA).',
             animation: animationData26
           },
           {
-            title: 'sub3',
-            text: 'text3',
+            title: 'Variations at 5’ end of the transcript - Part03',
+            text: 'However, in some viruses TM, you may have <b> multiple transcriptional starting sites (TSS) </b> - i.e., the multiple vertical bars. These alternative TSS all serve as potential starting sites for RNA polymerase to bind and to initiate transcription.',
             animation: animationData27
           },
           {
-            title: 'sub4',
-            text: 'text4',
+            title: 'Variations at 5’ end of the transcript - Part04',
+            text: 'For each round of transcription, the polymerase can choose any one of these vertical bars as the transcription initiation site. For each round of transcription, the polymerase can choose any one of these vertical bars as the transcription initiation site. <br/><br/>Note: the composition of the viral RNA is not affected by different TSSs.',
             animation: animationData28
           },
+          
+        ],
+      },
+      // Section 2
+      {
+        name: 'Alternative poly-A addition sites',
+        pages: [
+
+
+
           {
-            title: 'sub1',
-            text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
+            title: 'Variations at 3’ end of the transcript - Part01',
+            text: 'At three prime end of viral RNA, you also can have the variations as this animation shown: the RNAs transcribed from the common transcriptional starting site, but end up with different 3’ ends.',
             animation: animationData29
           },
+
           {
-            title: 'sub2',
-            text: 'text2',
+            title: 'Variations at 3’ end of the transcript - Part02',
+            text: 'This variation at three prime ends is called <b><span style="color: #2B93D8;">alternative polyadenylation</span></b> - a phenomenon that the mature RNA molecules with different 3′ ends <b><span style="color: #2B93D8;">(A,B,C,D)</span></b> originate from distinct polyadenylation sites of a single gene product/precursor RNA. <br><br>Please click the plus icon within the blue dialogue box to open up a pop-up window discussing the details of this variation.',
             animation: animationData30,
             popup: {
               position: {
@@ -535,50 +546,60 @@ const initialState = {
             }
 
           },
+
+
+
+
+
+          
+        ],
+      },
+      // Section 3
+      {
+        name: 'Alternative splicing',
+        pages: [
+
+
           {
-            title: 'sub3',
-            text: 'text3',
+            title: 'Variations of the transcript body part - Part01',
+            text: 'Please review the first module and identify the meaning of this gap shown in the blue box.',
             animation: animationData31
           },
           {
-            title: 'sub1',
-            text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
+            title: 'Variations of the transcript body part - Part02',
+            text: 'This is a removed intron. Now, it is essential for you to understand that intron removal is facilitated by a biological mechanism called <b>RNA splicing</b>.',
             animation: animationData32
           },
           {
-            title: 'sub2',
-            text: 'text2',
+            title: 'Variations of the transcript body part - Part03',
+            text: 'After transcription, five prime and three prime modifications, precursor viral RNA includes <b><span style="color: #E78877;">exons</span></b>, <b><span style="color: #2B93D8;">introns</span></b>. <br/><br/ >Another type of visual representation is used here to show this biological mechanism clearly.',
             animation: animationData33
           },
           {
-            title: 'sub3',
-            text: 'text3',
+            title: 'Variations of the transcript body part - Part04',
+            text: 'This 2D scrollable animation explicitly introduces the mechanism of RNA splicing. <br/>(Use the wheel button of your mouse or trackpad to scroll and play this animation) <br/><br/> Within introns, a <b>splicing donor site</b> at the five prime end of the intron, and a <b>splicing acceptor site</b> at the three end of the intron are required to facilitate the intron removal. Although intron removal can occur automatically through chemical reactions, the splicing reactions need to perform in really high accuracy with the help of a splicing factory called <span style="color: #2BB673;"><b>spliceosome</b></span>. Spliceosome guarantees that the coding information is not lost or altered due to the inaccurate splicing. <br/><br/> 1. The first step of RNA splicing is characterized by the assembling of the spliceosome, which controls the chemical reactions of the splicing. Then, we can observe an intron lariat - “loop structure.” <br/><br/> 2. The first chemical reaction detaches the five prime end of the intron from the splice donor site. <br/><br/> 3. After the second reaction, the intron lariat is released from the splicing acceptor site of the intron. At the same time, the exons are joining back together. <br/><br/> 3. Lastly, a shorter mature spliced RNA transcript is formed.',
             imageSequence: ImageSequence1,
-          }
-        ],
-      },
-      // Section 2
-      {
-        name: 'section 2 title',
-        pages: [
+          },
+
+
           {
-            title: 'sub1',
-            text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
+            title: 'Variations of the transcript body part - Part05',
+            text: 'Now, I assume you understand the mechanism of RNA splicing. Please identify all the splice donor sites.',
             animation: animationData35
           },
           {
-            title: 'sub2',
-            text: 'text2',
+            title: 'Variations of the transcript body part - Part06',
+            text: 'Good! The second one is the splice donor site for this RNA transcript.',
             animation: animationData36
           },
           {
-            title: 'sub3',
-            text: 'text3',
+            title: 'Variations of the transcript body part - Part07',
+            text: 'In many complex viral transcription maps, viral RNAs have different intron removal (splicing) patterns - variations of the viral RNA body part.',
             animation: animationData37
           },
           {
-            title: 'sub4',
-            text: 'text4',
+            title: 'Variations of the transcript body part - Part08',
+            text: 'To make this clearer, I added all introns back to each of the viral RNA. These intron variations are also known as <b>alternative intron removal or alternative splicing.</b> <br/><br/>Please click the plus icon to open up a pop-up window discussing different types of RNA splicing mechanisms to generate these intron variations.',
             animation: animationData38,
             popup: {
               position: {
@@ -590,130 +611,33 @@ const initialState = {
             }
           },
           {
-            title: 'sub1',
-            text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
+            title: 'Variations of the transcript body part - Part09',
+            text: 'Many viruses do not express all their genes at once. Instead, they tightly control their gene expressions at different stages of infection. TMs visually communicate these stages using techniques such as color-coding with labels or labels only. In this example, we are using different colors as well as labels to indicate three different transcription stages.<br/><br/> E - early<br/> I - Intermediate<br/> L - Late<br/>',
             animation: animationData39
           },
           {
-            title: 'sub2',
-            text: 'text2',
+            title: 'Variations of the transcript body part - Part10',
+            text: 'Adjacent to each RNA transcript, you may find a label indicating the identity of the corresponding protein product. For instance, RNA transcript with “Viral protein A” label beside it indicating that this RNA will finally translate into the protein A used to perform a specific function in viral infection, viral assembly, etc.',
             animation: animationData40
-          },
+          }
+        ],
+      },
+      
+      // Section 4
+
+      {
+        name: 'ViraLiterate summary',
+        pages: [
           {
-            title: 'sub3',
-            text: 'text3',
+            title: 'Summary',
+            text: 'Adenovirus transcription map is used here to show all the critical steps of viral gene expressions, including transcription initiation, elongation, alternative polyadenylation, alternative splicing, and gene regulation at different infection stages. <br/><br/> Congratulations! <br/> Now you have finished all the modules in Viraliterate. For your interest only, There is an external website link that explains an example of viral transcription map, adenovirus transcription map, and how scientists take advantage of adenovirus transcription map to treat human diseases.  <br/> <a href="http://winfoc.com/wireframe/#"><span style="color: #1B75BC;"><b><em>Adenovirus Transcription Map</em></b></span> <br/></a>',
             animation: animationData41
-          },
-        ],
-      },
-      // Section 3
-      {
-        name: 'section 3 title',
-        pages: [
-          {
-            title: 'sub1',
-            text: 'text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1textxt1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1text1te1texxt1text1text1text1tet1text1xt1text1text1text1text1text1text1text1text1text1text1text1te',
-            animation: animationData1
-          },
-          {
-            title: 'sub2',
-            text: 'text2',
-            animation: animationData2
           }
         ],
       },
-    ],
 
 
-    // Module for Test
-    [
-      // Section for Test
-      {
-        name: 'section test',
-        pages: [
-          {
-            imageSequence: FinalRenderSeq,
-            title: 'test image sequence',
-            text: 'test image sequence'
-          },
-          {
-            quiz: {
-              image: Image1,
-              question: 'hi',
-              choices: ['first', 'second', 'third', 'fourth'],
-              answer: 0
-            },
-            title: 'test quiz',
-            text: 'test quiz'
-          },
-          {
-            quiz: {
-              image: Image1,
-              question: 'hi',
-              choices: ['first', 'second', 'third', 'fourth'],
-              answer: [0, 1]
-            },
-            title: 'test quiz',
-            text: 'test quiz'
-          },
-          {
-            imageSequence: ImageSequence1,
-            title: 'test image sequence',
-            text: 'test image sequence'
-          },
-          {
-            video: TestVideo1,
-            title: 'test video',
-            text: 'video description'
-          },
-          {
-            video: TestVideo2,
-            title: 'test video',
-            text: 'video description'
-          },
-          {
-            video: 'https://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.webm',
-            title: 'test video',
-            text: 'video description'
-          },
-          {
-            video: TestVideo3,
-            title: 'test video',
-            text: 'video description'
-          },
-          {
-            video: TestVideo4,
-            title: 'test video',
-            text: 'video description'
-          },
-          {
-            video: TestVideo5,
-            title: 'test video',
-            text: 'video description'
-          },
-          {
-            before: {
-              animation: animationData1
-            },
-            after: Image5,
-            title: 'test1',
-            text: 'e'
-          },
-          {
-            title: 'test2',
-            text: 'text2',
-            animation: animationData2,
-            popup: {
-              position: {
-                left: 360,
-                top: 200
-              },
-              title: 'popup1',
-              html: PopupHTML1
-            }
-          }
-        ],
-      },
+
     ],
   ],
   focus: 0,
