@@ -15,7 +15,8 @@ export default function (props) {
 
 			<div className='popup-font-small'>
 			   
-               The great majority of viral and cellular mature mRNAs possess the same 5’ cap: m7G-ppp- N (any nucleotide). m7G stands for a methyl group attaches to the 7th nitrogen of guanosine. ppp is the 5’,5’-triphosphate bridge. This bridge connects the m7G with any nucleotide (N) of the 5’ end of mRNA primary transcript.<br/><br/>
+               The great majority of viral and cellular mature mRNAs possess the same 5’ cap: m7G-ppp- N (any nucleotide) (Figure 11). m7G stands for a methyl group attaches to the 7th nitrogen of guanosine. ppp is the 5’,5’-triphosphate bridge. This bridge connects the m7G with any nucleotide (N) of the 5’ end of mRNA primary transcript.<br/><br/>
+               <b>Figure 11:</b>
                <img className='popup-image' src={Image16} /> <br/><br/><br/>
                Different viruses synthesize 5' cap structure in different ways:<br/>
                1. 5' cap can be made by cellular enzymes.<br/>

@@ -18,11 +18,14 @@ export default function (props) {
 			<div className='popup-font-small'>
 			   
                
-               The two viral DNA strands have different names during the transcription. In this case, the bottom strand refers to the template strand, which serves as a template during transcription. The top strand is called the coding strand; which sequence is the same as the newly formed RNA sequence (Note: all the Ts in RNA are replaced by Us). <br/><br/>
+               The two viral DNA strands have different names during the transcription. In this case, the bottom strand refers to the template strand, which serves as a template during transcription. The top strand is called the coding strand; which sequence is the same as the newly formed RNA sequence (Note: all the Ts in RNA are replaced by Us) (Figure 13). <br/><br/>
+               <b>Figure 13:</b>
                <img className='popup-image' src={Image18} /> <br/><br/><br/>
-               The template strand is the only strand used in transcription since RNA polymerase can’t use both strands at each round of gene expression.<br/><br/>
+               The template strand is the only strand used in transcription since RNA polymerase can’t use both strands at each round of gene expression (Figure 14).<br/><br/>
+               <b>Figure 14:</b>
                <img className='popup-image' src={Image19} /> <br/><br/><br/>
-               RNA polymerase will scan through the template DNA strand from 3’ to 5’, and RNA synthesis is from 5’ to 3’. Since newly synthesized RNA is complementary to the template strand, scientists can hybridize the newly synthesized RNAs with their template DNA strands to deduce their genome positions of these RNAs – this experiment is known as DNA-RNA hybridization, which significantly helped scientists to create these viral transcription maps.<br/><br/>
+               RNA polymerase will scan through the template DNA strand from 3’ to 5’, and RNA synthesis is from 5’ to 3’ (Figure 15). Since newly synthesized RNA is complementary to the template strand, scientists can hybridize the newly synthesized RNAs with their template DNA strands to deduce their genome positions of these RNAs – this experiment is known as DNA-RNA hybridization, which significantly helped scientists to create these viral transcription maps.<br/><br/>
+               <b>Figure 15:</b>
                <img className='popup-image' src={Image20} /> <br/><br/><br/>
 		
 
