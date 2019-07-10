@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/bio-edu/precache-manifest.b779a00f1da5f22048a624c32af73a6f.js"
+  "/bio-edu/precache-manifest.058599fed7c0a84310bb220987b95c19.js"
 );
 
 workbox.clientsClaim();
