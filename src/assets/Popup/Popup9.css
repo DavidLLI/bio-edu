@@ -1,0 +1,17 @@
+.popup-font-small {
+	font-size: 14px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.popup-font-big {
+	font-size: 20px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.popup-image {
+	height: 100px;
+	width: 100px;
+	
+}

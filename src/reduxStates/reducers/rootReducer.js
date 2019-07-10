@@ -22,6 +22,10 @@ import Image18 from '../../assets/PopupWin/DNAreading-04-min.jpg';
 import Image19 from '../../assets/PopupWin/DNAreading-03-min.jpg';
 import Image20 from '../../assets/PopupWin/DNAreading-02-min.jpg';
 
+import Image28 from '../../assets/PopupWin/alternative poly-A-01-min.jpg';
+import Image29 from '../../assets/PopupWin/splicing types-03-min.jpg';
+import Image30 from '../../assets/PopupWin/alternative splicing-02-min.jpg';
+
 
 //module1 quiz section
 import Image21 from '../../assets/Quiz/quiz01.jpg';
@@ -85,6 +89,8 @@ import PopupHTML5 from '../../assets/Popup/Popup5.js';
 import PopupHTML6 from '../../assets/Popup/Popup6.js';
 import PopupHTML7 from '../../assets/Popup/Popup7.js';
 import PopupHTML8 from '../../assets/Popup/Popup8.js';
+import PopupHTML9 from '../../assets/Popup/Popup9.js';
+import PopupHTML10 from '../../assets/Popup/Popup10.js';
 //Video
 import TestVideo1 from '../../assets/video/finalllllllllllllllllllllllrender.mp4';
 import TestVideo2 from '../../assets/video/720x480_2min.mp4';
@@ -360,7 +366,7 @@ const initialState = {
 
           {
             title: 'RNA directionalities- Part05',
-            text: 'In the second scenario, the top DNA strand is no longer the template strand as the transcriptional direction of the viral RNA 2 is going on the opposite way. Therefore, the bottom DNA strand is the template strand. <br/><br/> <b>Well done!</b><br/> Now you have finished the module 1 and possessed basic skills of TM interpretation. Now I want you to either take a break or click the buttons shown below to take the quiz or jump into the next module. <br/><span style="color: #1B75BC;"><b><em>Quiz for module 01</em></b></span> <br/> <span style="color: #1B75BC;"><b><em>Module 02</em></b></span>',
+            text: 'In the second scenario, the top DNA strand is no longer the template strand as the transcriptional direction of the viral RNA 2 is going on the opposite way. Therefore, the bottom DNA strand is the template strand. <br/><br/> <b>Well done!</b><br/> Now you have finished the module 1 and possessed basic skills of TM interpretation. Now I want you to either take a break or click the buttons shown below to take the quiz to enhance your understanding of module 01 or to enter the next module. <br/><span style="color: #1B75BC;"><b><em>Quiz for module 01</em></b></span> <br/> <span style="color: #1B75BC;"><b><em>Module 02</em></b></span>',
             animation: animationData24
           },
 
@@ -394,7 +400,7 @@ const initialState = {
               answer: 2
             },
             title: 'Question 01',
-            text: 'What do the <span style="color: #1B75BC;"><b>blue</b></span>, <span style="color: #2BB673;"><b>green</b></span> and <span style="color: #5A5FAA;"><b>purple</b></span> boxes indicate respectively?'
+            text: 'Welcome to the quiz section for module 01.<br/> This quiz section consists of seven multiple-choice questions designed to improve your understanding of the basic knowledge of viral transcription map. There is no time limitation, and you can start whenever you want.<br/><br/> What do the <span style="color: #1B75BC;"><b>blue</b></span>, <span style="color: #2BB673;"><b>green</b></span> and <span style="color: #5A5FAA;"><b>purple</b></span> boxes indicate respectively?'
           },
          
 
@@ -542,7 +548,7 @@ const initialState = {
                 top: 310
               },
               title: ' ',
-              html: PopupHTML3
+              html: PopupHTML10
             }
 
           },
@@ -607,7 +613,7 @@ const initialState = {
                 top: 40
               },
               title: ' ',
-              html: PopupHTML3
+              html: PopupHTML9
             }
           },
           {
@@ -630,7 +636,7 @@ const initialState = {
         pages: [
           {
             title: 'Summary',
-            text: 'Adenovirus transcription map is used here to show all the critical steps of viral gene expressions, including transcription initiation, elongation, alternative polyadenylation, alternative splicing, and gene regulation at different infection stages. <br/><br/> Congratulations! <br/> Now you have finished all the modules in Viraliterate. For your interest only, There is an external website link that explains an example of viral transcription map, adenovirus transcription map, and how scientists take advantage of adenovirus transcription map to treat human diseases.  <br/> <a href="http://winfoc.com/wireframe/#"><span style="color: #1B75BC;"><b><em>Adenovirus Transcription Map</em></b></span> <br/></a>',
+            text: 'To summarize the whole story of a viral transcription map, an animation describing the adenovirus transcription map is used here to show all the critical steps of viral gene expressions, including transcription initiation, elongation, alternative polyadenylation, alternative splicing, and gene regulation at different infection stages. <br/><br/> Congratulations! <br/> Now you have finished all the modules in Viraliterate. For your interest only, There is an external website link that explains an example of viral transcription map, adenovirus transcription map, and how scientists take advantage of adenovirus transcription map to treat human diseases.  <br/> <a href="http://winfoc.com/wireframe/#"><span style="color: #1B75BC;"><b><em>Adenovirus Transcription Map</em></b></span> <br/></a>',
             animation: animationData41
           }
         ],
