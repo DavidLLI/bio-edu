@@ -314,13 +314,13 @@ const initialState = {
            
            {
             title: 'Viral RNA transcript- Part11',
-            text: 'Now, let’s refresh your memory and improve your understanding: <br><br>please check all the transcription initiation sites in this animation by clicking the little boxes.',
+            text: 'Now, let’s refresh your memory and improve your understanding: <br><br>Please check all the transcription initiation sites in this animation by clicking the little boxes.',
             animation: animationData17
           },
 
             {
             title: 'Viral RNA transcript- Part12',
-            text: 'A common misconception would be defining the transcription initiation site of RNA transcripts in TM. If you see any five prime ends of the RNA without a vertical bar or any visual cue, do not be confused, this is not the actual transcription initiation site; instead, these five prime ends without vertical bars located in between the discontinuous RNA transcript correspond to the splice acceptor sites. <br>(note: this will be discussed in module 2)',
+            text: 'A common misconception would be defining the transcription initiation site of RNA transcripts in TM. If you see any five prime ends of the RNA without a vertical bar or any visual cue, do not be confused, this is not the actual transcription initiation site; instead, these five prime ends without vertical bars located in between the discontinuous RNA transcript correspond to a splice acceptor site. <br>(note: this will be discussed in module 2)',
             animation: animationData18
           },
         ],
@@ -468,7 +468,7 @@ const initialState = {
               answer: 0
             },
             title: 'Question 07',
-            text: 'Please find all the 5’ ends in this RNA transcript by selecting these numbers.'
+            text: 'Please find all the 5’ ends in this RNA transcript by selecting these numbers. <br/><br/>Nice! I assume you learned the basic knowledge of viral TM by going through both module 1 and this quiz section. Now I want you to either go back to review the module 1 or enter the next module by clicking these buttons shown below. <br/><span style="color: #1B75BC;"><b><em>Module 01</em></b></span> <br/> <span style="color: #1B75BC;"><b><em>Module 02</em></b></span>'
           },
           
           
@@ -540,7 +540,7 @@ const initialState = {
 
           {
             title: 'Variations at 3’ end of the transcript - Part02',
-            text: 'This variation at three prime ends is called <b><span style="color: #2B93D8;">alternative polyadenylation</span></b> - a phenomenon that the mature RNA molecules with different 3′ ends <b><span style="color: #2B93D8;">(A,B,C,D)</span></b> originate from distinct polyadenylation sites of a single gene product/precursor RNA. <br><br>Please click the plus icon within the blue dialogue box to open up a pop-up window discussing the details of this variation.',
+            text: 'This variation at three prime ends is called <b><span style="color: #2B93D8;">alternative polyadenylation</span></b> - a phenomenon that the mature RNA molecules with different 3′ ends <b><span style="color: #2B93D8;">(A,B,C,D)</span></b> originate from distinct polyadenylation sites of a single gene. <br><br>Please click the plus icon within the blue dialogue box to open up a pop-up window discussing the details of this variation.',
             animation: animationData30,
             popup: {
               position: {
@@ -605,7 +605,7 @@ const initialState = {
           },
           {
             title: 'Variations of the transcript body part - Part08',
-            text: 'To make this clearer, I added all introns back to each of the viral RNA. These intron variations are also known as <b>alternative intron removal or alternative splicing.</b> <br/><br/>Please click the plus icon to open up a pop-up window discussing different types of RNA splicing mechanisms to generate these intron variations.',
+            text: 'To make this clearer, all the introns are added back to each of the viral RNA. These intron variations are also known as <b>alternative intron removal or alternative splicing.</b> <br/><br/>Please click the plus icon to open up a pop-up window discussing different types of RNA splicing mechanisms to generate these intron variations.',
             animation: animationData38,
             popup: {
               position: {

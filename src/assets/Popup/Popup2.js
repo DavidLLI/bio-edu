@@ -22,7 +22,7 @@ export default function (props) {
 			    <b>Figure 2:</b>
 			    <img className='popup-image' src={Image6} /> <br/><br/><br/>
 
-			    To test if this is a ITRs, please first separate this double-stranded viral genome apart (Figure 3). After the separation, try to fold each separated DNA strand as the illustration shows and to observe the result. As you can see, the inverted terminal repeats are capable of self-complementary base pairing. The biological function/significance of this self base-pairing of the single-stranded viral DNA is to reform a replication origin as we observed in double-stranded DNA viral genome. Thus, this DNA virus can either use the single-stranded viral DNA or the double-stranded viral genome to improve the viral genome replication efficiency.<br/><br/>
+			    To test if this is a ITRs, please first separate this double-stranded viral genome apart (Figure 3). After the separation, try to fold each separated DNA strand as the illustration shows and to observe the result. As you can see, the inverted terminal repeats are capable of self-complementary base-pairing. The biological function/significance of this self base-pairing of the single-stranded viral DNA is to reform a replication origin as we observed in double-stranded DNA viral genome. Thus, this DNA virus can either use the single-stranded viral DNA or the double-stranded viral genome to improve the viral genome replication efficiency.<br/><br/>
                 <b>Figure 3:</b>
                 <img className='popup-image' src={Image7} /> <br/><br/><br/>
 

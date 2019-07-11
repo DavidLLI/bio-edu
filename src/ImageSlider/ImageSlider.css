@@ -6,9 +6,10 @@
 .image-after {
   position: absolute;
   left: 0;
-  top: -24vh;
+  top: 0vh;
   bottom: 0;
-  width: 50%;
+  width: 70%;
+  height:70%;
   overflow: hidden;
 }
 
