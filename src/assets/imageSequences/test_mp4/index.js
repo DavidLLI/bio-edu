@@ -198,8 +198,69 @@ import Image197 from './finalrender/Renderseq_00196.png';
 import Image198 from './finalrender/Renderseq_00197.png';
 import Image199 from './finalrender/Renderseq_00198.png';
 import Image200 from './finalrender/Renderseq_00199.png';
-import Image201 from './finalrender/Renderseq_00200.png';
 
+
+import Image201 from './finalrender/Renderseq_00200.png';
+import Image202 from './finalrender/Renderseq_00201.png';
+import Image203 from './finalrender/Renderseq_00202.png';
+import Image204 from './finalrender/Renderseq_00203.png';
+import Image205 from './finalrender/Renderseq_00204.png';
+import Image206 from './finalrender/Renderseq_00205.png';
+import Image207 from './finalrender/Renderseq_00206.png';
+import Image208 from './finalrender/Renderseq_00207.png';
+import Image209 from './finalrender/Renderseq_00208.png';
+import Image210 from './finalrender/Renderseq_00209.png';
+import Image211 from './finalrender/Renderseq_00210.png';
+import Image212 from './finalrender/Renderseq_00211.png';
+import Image213 from './finalrender/Renderseq_00212.png';
+import Image214 from './finalrender/Renderseq_00213.png';
+import Image215 from './finalrender/Renderseq_00214.png';
+import Image216 from './finalrender/Renderseq_00215.png';
+import Image217 from './finalrender/Renderseq_00216.png';
+import Image218 from './finalrender/Renderseq_00217.png';
+import Image219 from './finalrender/Renderseq_00218.png';
+import Image220 from './finalrender/Renderseq_00219.png';
+import Image221 from './finalrender/Renderseq_00220.png';
+import Image222 from './finalrender/Renderseq_00221.png';
+import Image223 from './finalrender/Renderseq_00222.png';
+import Image224 from './finalrender/Renderseq_00223.png';
+import Image225 from './finalrender/Renderseq_00224.png';
+import Image226 from './finalrender/Renderseq_00225.png';
+import Image227 from './finalrender/Renderseq_00226.png';
+import Image228 from './finalrender/Renderseq_00227.png';
+import Image229 from './finalrender/Renderseq_00228.png';
+import Image230 from './finalrender/Renderseq_00229.png';
+import Image231 from './finalrender/Renderseq_00230.png';
+import Image232 from './finalrender/Renderseq_00231.png';
+import Image233 from './finalrender/Renderseq_00232.png';
+import Image234 from './finalrender/Renderseq_00233.png';
+import Image235 from './finalrender/Renderseq_00234.png';
+import Image236 from './finalrender/Renderseq_00235.png';
+import Image237 from './finalrender/Renderseq_00236.png';
+import Image238 from './finalrender/Renderseq_00237.png';
+import Image239 from './finalrender/Renderseq_00238.png';
+import Image240 from './finalrender/Renderseq_00239.png';
+import Image241 from './finalrender/Renderseq_00240.png';
+import Image242 from './finalrender/Renderseq_00241.png';
+import Image243 from './finalrender/Renderseq_00242.png';
+import Image244 from './finalrender/Renderseq_00243.png';
+import Image245 from './finalrender/Renderseq_00244.png';
+import Image246 from './finalrender/Renderseq_00245.png';
+import Image247 from './finalrender/Renderseq_00246.png';
+import Image248 from './finalrender/Renderseq_00247.png';
+import Image249 from './finalrender/Renderseq_00248.png';
+import Image250 from './finalrender/Renderseq_00249.png';
+import Image251 from './finalrender/Renderseq_00250.png';
+import Image252 from './finalrender/Renderseq_00251.png';
+import Image253 from './finalrender/Renderseq_00252.png';
+import Image254 from './finalrender/Renderseq_00253.png';
+import Image255 from './finalrender/Renderseq_00254.png';
+import Image256 from './finalrender/Renderseq_00255.png';
+import Image257 from './finalrender/Renderseq_00256.png';
+import Image258 from './finalrender/Renderseq_00257.png';
+import Image259 from './finalrender/Renderseq_00258.png';
+import Image260 from './finalrender/Renderseq_00259.png';
+import Image261 from './finalrender/Renderseq_00260.png';
 
 
 //import Image from './finalrender/Renderseq_000.png';
@@ -405,6 +466,66 @@ export const imageSequence = [
     Image199,
     Image200,
     Image201,
+Image202,
+Image203,
+Image204, 
+Image205,
+Image206,
+Image207,
+Image208,
+Image209,
+Image210,
+Image211,
+Image212,
+Image213,
+Image214,
+Image215,
+Image216,
+Image217,
+Image218,
+Image219,
+Image220,
+Image221,
+Image222,
+Image223,
+Image224,
+Image225,
+Image226,
+Image227,
+Image228,
+Image229,
+Image230,
+Image231,
+Image232,
+Image233,
+Image234,
+Image235,
+Image236,
+Image237,
+Image238,
+Image239,
+Image240,
+Image241,
+Image242,
+Image243,
+Image244,
+Image245,
+Image246,
+Image247,
+Image248,
+Image249,
+Image250,
+Image251,
+Image252,
+Image253,
+Image254,
+Image255,
+Image256,
+Image257, 
+Image258,
+Image259,
+Image260, 
+
 	//Image,
 
 ];

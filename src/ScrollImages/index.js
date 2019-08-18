@@ -25,7 +25,7 @@ class ScrollImages extends Component {
     this.ScrollImages = React.createRef();
     this.reactScrollRef = React.createRef();
 
-    this.playbackConst = 20;
+    this.playbackConst = 50;
 
     this.state = {
       index: 0,
@@ -170,14 +170,16 @@ class ScrollImages extends Component {
             </div>
           </div>
       }
+     
+
       {
         imageIsReady || 
           <div className='sweet-loading'>
             <ClipLoader
               css={override}
               sizeUnit={"px"}
-              size={150}
-              color={'#123abc'}
+              size={70}
+              color={'#005F93'}
               loading={!imageIsReady}
             />
             {(this.state.imageReadyCount / this.props.data.length * 100).toFixed(2) + '%'}

@@ -15,7 +15,8 @@ export default function (props) {
 
 			<div className='popup-font-small'>
 			   
-               Other visual methods indicated the removed introns include dotted lines or interruptions that are connected by a “V” shape. <br/><br/>
+               Other visual methods indicated the removed introns include dotted lines or interruptions that are connected by a “V” shape (Figure 12). <br/><br/>
+               <b>Figure 12:</b>
                <img className='popup-image' src={Image17} /> <br/><br/><br/>
                
 		

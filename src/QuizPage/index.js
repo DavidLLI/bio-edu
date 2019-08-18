@@ -50,10 +50,10 @@ class QuizPage extends Component {
 	onSubmit() {
 		if (typeof(this.props.data.answer) === 'number') {
 			if (this.props.data.answer.toString() === this.state.singleSelected) {
-				this.setState({result: 'right'});
+				this.setState({result: 'Correct!'});
 			}
 			else {
-				this.setState({result: 'wrong'});
+				this.setState({result: 'Incorrect'});
 			}
 		}
 		else if (typeof(this.props.data.answer) === 'object') {
@@ -70,7 +70,7 @@ class QuizPage extends Component {
 					result = false;
 				}
 			});
-			this.setState({result: result ? 'right' : 'wrong'});
+			this.setState({result: result ? 'Correct!' : 'Incorrect'});
 			//console.log(result);
 		}
 	}

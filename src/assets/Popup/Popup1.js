@@ -21,9 +21,10 @@ export default function (props) {
 
 
 			<div className='popup-font-small'>
-				Other viruses may have a linear single stranded genome, cyclized, or partially double-strand DNA or RNA genome (Figure 1). In TMs, they can be presented by using schematic lines in slightly different ways.
-                You can visit the links provided below to see their visual representations accordingly.<br/><br/>
+				Other viruses may have a linear single-stranded genome, cyclized, or partially double-strand DNA or RNA genome (Figure 1). In TMs, they can be presented by using schematic lines in slightly different ways. <br/><br/>
+                <b>Figure 1:</b>
                 <img className='popup-image' src={Image4} /> <br/><br/>
+                You can visit the links provided below to see the visual representations of their TMs accordingly.<br/>
                  <br/><b>ViralZone:</b><br/>
                  1.	<a href="https://viralzone.expasy.org/103?outline=all_by_species"><font color="#7AC943"><b>Parvoviridae</b></font></a> (single stranded viral genome).  
                     <br/> 
