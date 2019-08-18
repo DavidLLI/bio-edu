@@ -6,6 +6,8 @@ import { changeModule, changeSection } from '../reduxStates/actions/ScrollbarAct
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
+import { modules } from '../data';
+
 import {ReactComponent as MenuSVG} from '../assets/assets-svg/menu.svg';
 import {ReactComponent as ExpandSVG} from '../assets/assets-svg/expand.svg';
 import {ReactComponent as CollapseSVG} from '../assets/assets-svg/collapse.svg';
@@ -106,7 +108,7 @@ class HamMenu extends Component {
                       
                       <div className='module-itself'
                           onClick={() => {this.handleChangeModule(moduleIndex)}}>
-                        {'Module ' + (moduleIndex + 1)}
+                        {modules[moduleIndex]}
                       </div>
                     </div>
                     <div className={'module-section ' + sectionClassname}>

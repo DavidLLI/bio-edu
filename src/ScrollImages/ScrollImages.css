@@ -4,6 +4,9 @@
 
 .sweet-loading {
   color: white;
+  position: relative;
+  left: 100px;
+  top: 200px;
 }
 
 .single-image-in-seq {

@@ -24,8 +24,7 @@
   bottom: 0;
   height: 100%;
   width: 2px;
-  background: linear-gradient(to top, transparent 10%, #0071BC 70%, transparent 100%); 
-
+  background: linear-gradient(to top, transparent 10%, #0071BC 70%, transparent 100%);
   height: 500px;;
   z-index: 21;
 

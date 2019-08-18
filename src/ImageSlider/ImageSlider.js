@@ -36,15 +36,15 @@ class ContentSlider extends Component {
 
     handleMouseMove(e) {
         let windowWidth = window.innerWidth;
-        if ((e.pageX - windowWidth * 0.385) / windowWidth / 0.65 <= 0.9 &&
+        if ((e.pageX - windowWidth * 0.385) / windowWidth / 0.65 <= 0.8 &&
             (e.pageX - windowWidth * 0.385) / windowWidth / 0.65 >= 0) {
         	this.setState({ progress: (e.pageX - windowWidth * 0.385)/ windowWidth / 0.65 });
         }
         else if ((e.pageX - windowWidth * 0.385) / windowWidth / 0.65 < 0) {
         	this.setState({ progress: 0 });
         }
-        else if ((e.pageX - windowWidth * 0.385) / windowWidth / 0.65 > 0.9) {
-        	this.setState({ progress: 0.9 });
+        else if ((e.pageX - windowWidth * 0.385) / windowWidth / 0.65 > 0.8) {
+        	this.setState({ progress: 0.8 });
         }
         
     }
@@ -52,7 +52,7 @@ class ContentSlider extends Component {
     render() {
     	return (
             <div className='image-slider'
-            	style={{ width: '58vw' }}>
+            	style={{ width: '55vw' }}>
             	{ !this.props.after || 
             		<div  
                     	className='vertical-separator'
@@ -81,7 +81,7 @@ class ContentSlider extends Component {
                         className='image-container'
                         backgroundSize='contain'
                         src={this.props.after}
-                        style={{width: '58vw'}} />
+                        style={{width: '55vw'}} />
             	</div>
             </div>
     	);

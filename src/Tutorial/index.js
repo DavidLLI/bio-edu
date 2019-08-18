@@ -79,23 +79,28 @@ class Tutorial extends Component {
 	handleJoyrideCallback(data) {
 		const { action, index, status, type } = data;
 
-		if (index >= 1 && index <= 4) {
-	    	store.dispatch(navActive(true));
-	    }
-	    else {
-	    	store.dispatch(navActive(false));
-	    }
+    if (action === 'close') {
+      store.dispatch(changeTutorial(false));
+      this.setState({ stepIndex: 0 });
+      return;
+    }
+		else if (index >= 1 && index <= 4) {
+    	store.dispatch(navActive(true));
+    }
+    else {
+    	store.dispatch(navActive(false));
+    }
 
-	    if ([EVENTS.STEP_AFTER, EVENTS.TARGET_NOT_FOUND].includes(type)) {
-	      // Update state to advance the tour
-	      this.setState({ stepIndex: index + (action === ACTIONS.PREV ? -1 : 1) });
-	    }
-	    else if ([STATUS.FINISHED, STATUS.SKIPPED].includes(status)) {
-	      // Need to set our running state to false, so we can restart if we click start again.
-	      this.setState({ stepIndex: 0 });
-	      store.dispatch(changeTutorial(false));
-	      store.dispatch(navActive(false));
-	    } 
+    if ([EVENTS.STEP_AFTER, EVENTS.TARGET_NOT_FOUND].includes(type)) {
+      // Update state to advance the tour
+      this.setState({ stepIndex: index + (action === ACTIONS.PREV ? -1 : 1) });
+    }
+    else if ([STATUS.FINISHED, STATUS.SKIPPED].includes(status)) {
+      // Need to set our running state to false, so we can restart if we click start again.
+      this.setState({ stepIndex: 0 });
+      store.dispatch(changeTutorial(false));
+      store.dispatch(navActive(false));
+    } 
 	}
 
 	render() {
@@ -105,8 +110,8 @@ class Tutorial extends Component {
 				<div className='tutorial-button'
 					style={{color: this.state.hover ? '#0071BC' : 'white'}}
 					onMouseEnter={() => {this.setState({hover: true})}}
-              		onMouseLeave={() => {this.setState({hover: false})}}
-              		onClick={() => {store.dispatch(changeTutorial(true));}}>
+          onMouseLeave={() => {this.setState({hover: false})}}
+          onClick={() => {store.dispatch(changeTutorial(true));}}>
 					<div style={{fontSize: '39.8px', lineHeight: '38.8px'}}>
 						?
 					</div>
@@ -115,7 +120,7 @@ class Tutorial extends Component {
 					</div>
 				</div>
 				<Joyride
-				  callback={this.handleJoyrideCallback}
+				      callback={this.handleJoyrideCallback}
 		          run={store.getState().tutorialActive}
 		          steps={steps}
 		          stepIndex={stepIndex}

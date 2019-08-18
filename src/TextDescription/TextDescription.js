@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import store from '../reduxStates/stores/rootStore';
 import { changeFocus, changePage } from '../reduxStates/actions/ScrollbarAction';
 
+import { modules } from '../data';
+
 import './TextDescription.css';
 
 class TextDescription extends Component {
@@ -20,7 +22,7 @@ class TextDescription extends Component {
     	return (
             <div className='text-description'>
                 <div className='text-module'>
-                    {'Module ' + (currentModule + 1)}
+                    {modules[currentModule]}
                 </div>
                 <div className='text-section'>
                     {'Section ' + (currentSection + 1)}
